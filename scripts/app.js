@@ -1,25 +1,29 @@
-'use strict';
+import './services.js';
+import './directives.js';
+import './controllers.js';
+import './filters.js';
+import '../styles/style.css';
 
 /* App Module */
 
-var cacheCleaner = angular.module('cacheCleaner',
-                    ['ui.bootstrap', 
-                     'ngRoute', 
-                     'ngCookies', 
+const cacheCleaner = angular.module('cacheCleaner',
+                    ['ui.bootstrap',
+                     'ngRoute',
+                     'ngCookies',
                      'ngSanitize',
-                     'cacheCleanerDirectives', 
-                     'cacheCleanerControllers', 
+                     'cacheCleanerDirectives',
+                     'cacheCleanerControllers',
                      'cacheCleanerServices',
                      'cacheCleanerFilters',
                      'd2Services',
                      'd2Controllers',
-                     'angularLocalStorage', 
+                     'angularLocalStorage',
                      'pascalprecht.translate',
                      'd2HeaderBar'])
-              
+
 .value('DHIS2URL', '..')
 
-.config(function($translateProvider) {   
+.config(($translateProvider) => {
     $translateProvider.preferredLanguage('en');
     $translateProvider.useSanitizeValueStrategy('escaped');
     $translateProvider.useLoader('i18nLoader');
