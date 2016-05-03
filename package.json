@@ -1,0 +1,24 @@
+{
+  "name": "cache-cleaner-app",
+  "version": "1.0.0",
+  "description": "Cache Cleaner app for DHIS2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "(rm -r build && mkdir build) || mkdir build",
+    "build": "cp -r i18n build/i18n && cp -r scripts build/scripts && cp -r views build/views && cp -r styles build/styles && cp index.html build/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhis2/cache-cleaner-app.git"
+  },
+  "keywords": [
+    "DHIS2"
+  ],
+  "author": "Abyot Asalefew Gizaw",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/dhis2/cache-cleaner-app/issues"
+  },
+  "homepage": "https://github.com/dhis2/cache-cleaner-app#readme"
+}
