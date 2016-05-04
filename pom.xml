@@ -8,7 +8,7 @@
   <artifactId>dhis-app-cache-cleaner</artifactId>
   <version>2.24-SNAPSHOT</version>
   <packaging>jar</packaging>
-  <name>Maintenance</name>
+  <name>Cache cleaner</name>
   <description>DHIS 2 cache cleaner app</description>
   <url>https://github.com/dhis2/cache-cleaner-app</url>
 

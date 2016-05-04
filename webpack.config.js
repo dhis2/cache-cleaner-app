@@ -33,19 +33,19 @@ module.exports = {
         inline: true,
         proxy: {
             '/api/*': {
-                target: 'http://localhost:8080/dhis/',
+                target: 'http://localhost:9090/dhis/',
                 rewrite: function(req) {
                     req.headers.Authorization = 'Basic YWRtaW46ZGlzdHJpY3Q=';
                 }
             },
             '/dhis-web-commons/*': {
-                target: 'http://localhost:8080/dhis/',
+                target: 'http://localhost:9090/dhis/',
                 rewrite: function(req) {
                     req.headers.Authorization = 'Basic YWRtaW46ZGlzdHJpY3Q=';
                 }
             },
             '/icons/*': {
-                target: 'http://localhost:8080/dhis/',
+                target: 'http://localhost:9090/dhis/',
                 rewrite: function(req) {
                     req.headers.Authorization = 'Basic YWRtaW46ZGlzdHJpY3Q=';
                 }
