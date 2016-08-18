@@ -1,3 +1,14 @@
-build
-/target/
+# Jetbrains files
+.idea
+*.iml
+
+# Project folders/dependencies
 node_modules
+build
+target
+coverage
+manifest.webapp
+
+# Misc files
+npm-debug.log
+
