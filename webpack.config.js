@@ -1,6 +1,8 @@
 var webpack = require('webpack');
 var path = require('path');
 
+var proxyTarget = 'http://localhost:8080/dhis';
+
 module.exports = {
     context: __dirname,
     entry: './scripts/index.js',
@@ -31,25 +33,15 @@ module.exports = {
         colors: true,
         port: 8081,
         inline: true,
-        proxy: {
-            '/api/*': {
-                target: 'http://localhost:9090/dhis/',
-                rewrite: function(req) {
+        proxy: [
+            {
+                context: ['/api/**', '/dhis-web-commons/**', '/icons/**'],
+                target: proxyTarget,
+                secure: false,
+                bypass: function(req) {
                     req.headers.Authorization = 'Basic YWRtaW46ZGlzdHJpY3Q=';
-                }
+                },
             },
-            '/dhis-web-commons/*': {
-                target: 'http://localhost:9090/dhis/',
-                rewrite: function(req) {
-                    req.headers.Authorization = 'Basic YWRtaW46ZGlzdHJpY3Q=';
-                }
-            },
-            '/icons/*': {
-                target: 'http://localhost:9090/dhis/',
-                rewrite: function(req) {
-                    req.headers.Authorization = 'Basic YWRtaW46ZGlzdHJpY3Q=';
-                }
-            },
-        }
+        ],
     },
 };
