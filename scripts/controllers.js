@@ -20,15 +20,17 @@ var cacheCleanerControllers = angular.module('cacheCleanerControllers', [])
         $scope.dbKeys = [];
         $scope.ssKeys = [];
 
+        var reservedStorageKeys = ['key', 'getItem', 'setItem', 'removeItem', 'clear', 'length'];
+
         for(var key in $window.sessionStorage){
-            $scope.ssKeys.push({id: key, remove: false});
-            $scope.ssCacheExists = true;
+            if (reservedStorageKeys.indexOf(key) === -1) {
+                $scope.ssKeys.push({id: key, remove: false});
+                $scope.ssCacheExists = true;
+            }
         }
 
-        var reservedLocalStorageKeys = ['key', 'getItem', 'setItem', 'removeItem', 'clear', 'length'];
         for(var key in $window.localStorage){
-            if(reservedLocalStorageKeys.indexOf(key) === -1)
-            {
+            if(reservedStorageKeys.indexOf(key) === -1) {
                 $scope.lsKeys.push({id: key, remove: false});
                 $scope.lsCacheExists = true;
             }
@@ -37,7 +39,7 @@ var cacheCleanerControllers = angular.module('cacheCleanerControllers', [])
         var idxDBs = ['dhis2ou', 'dhis2', 'dhis2tc', 'dhis2ec', 'dhis2de'];
         angular.forEach(idxDBs, function(db){
             idbStorageService.dbExists(db).then(function(res){
-                if( res ){
+                if( res ) {
                     $scope.dbKeys.push({id: db, remove: false});
                     $scope.idCacheExists = true;
                 }
