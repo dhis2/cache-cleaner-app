@@ -15,3 +15,19 @@ table
     table-layout: fixed;
     margin-bottom: 10px;
 }
+
+.page {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+td:nth-child(2) {
+    width: 10%;
+    text-align: center;
+}
+
+html {
+    font-size: 14px;
+}

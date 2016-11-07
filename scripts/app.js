@@ -19,8 +19,7 @@ const cacheCleaner = angular.module('cacheCleaner',
                      'd2Controllers',
                      'angularLocalStorage',
                      'pascalprecht.translate',
-                     'd2HeaderBar'])
-
+                    ])
 .value('DHIS2URL', '..')
 
 .config(($translateProvider) => {
