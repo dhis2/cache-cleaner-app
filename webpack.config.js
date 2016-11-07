@@ -35,7 +35,7 @@ module.exports = {
         inline: true,
         proxy: [
             {
-                context: ['/api/**', '/dhis-web-commons/**', '/icons/**'],
+                context: ['/api/**', '/dhis-web-commons/**', '/dhis-web-core-resource/**', '/icons/**'],
                 target: proxyTarget,
                 secure: false,
                 bypass: function(req) {
