@@ -6,7 +6,7 @@
 
   <groupId>org.hisp.dhis</groupId>
   <artifactId>dhis-app-cache-cleaner</artifactId>
-  <version>2.24-SNAPSHOT</version>
+  <version>2.25</version>
   <packaging>jar</packaging>
   <name>Cache cleaner</name>
   <description>DHIS 2 cache cleaner app</description>
