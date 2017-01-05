@@ -3,7 +3,7 @@ node_js:
 - '6'
 cache:
   yarn: true
-   directories:
+  directories:
     - node_modules
 script:
 - npm run build
