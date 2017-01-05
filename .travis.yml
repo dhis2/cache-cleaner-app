@@ -5,7 +5,7 @@ cache:
   yarn: true
 script:
 - npm run build
-after_sucess: mvn clean deploy --settings settings.xml"
+after_sucess: mvn clean deploy --settings settings.xml
 env:
   global:
   - secure: 0dUVyi+/5iCFos6oBOgwXyfx2uvX+thQNFJKhJjYFrPyJqGSuBg+eHFkOfmpKRrfJlV/CS+YvBTHD4K/Pgm7qerpbFHxJR2ri/Wzzr44+qc6h3df8t2AUkCwHQ4nO1WeVF/QQv4aIO7AovIn/o1+mj73PjHbQ7txAaMKhQtRCLuArHtW9RpE8IWmcUWMyhg2M7y3iuT0pzG3p3eA83w76SefyPxnuYGXrGFglf1zpF1BB7v67hC9WPIFFFYB/i2MpTn67gnQW4V9otIzYwDNPXUid5vKvVTRmfljpauC+JX5Z1q5pZ6tF6AFsfN1kwz2Q2JKyTJN0wVBKafTubaM5KVG9yNKu1Mq98AeBsYOAV3vWdgf/fnPgZsLshZC6ih8JuGWwA5Igen543ju/OPPx8zDKshrTSztCsCdEwClGjnIEOVH+vsjLfyM416C0pek+LV07z3uWAO2eykTJ/he8ItaOhpVPFru4mPNHcz72kO/wuVteWFoEiOA3ZN0RGuatBlxFmoAmCeA13hwnt2JhjHMATyb1UYlQo7tajyi6QcEc0f0w54wnlHwi3bo9lWczrunnxBf7KiKZ8IIfLInWCzZWzxxB7/GNCY+YbyBpZINDmKYVAfLHT25Lt5MX/EG5pmXlKg8b11tEHs/orj8HXkVrl7i3FSuBEu7a5rSDYE=
