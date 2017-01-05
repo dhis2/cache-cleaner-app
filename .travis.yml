@@ -8,8 +8,9 @@ branches:
   - travis
 cache:
   yarn: true
-script: npm run build
-after_success: mvn deploy --settings target/travis/settings.xml
+script: 
+    - npm run build
+    - '[[ -z $TRAVIS_TAG ]] || mvn clean deploy --settings settings.xml'
 env:
   global:
   - secure: QP2DmVuzFurIcAAWzn0AIFZyCeHHPiAUv5wj9VkILlFdaLwZoT6DvlYMtBf1+2Jtd1yGLAoolkx2+bLevvF8FlI6OXkG4eUJaE9Th4hyfJXWVy0Uk1y5PCpqf3bh6kbZZ470JY3DPZtW7dPrxjOOsWWo5pjk94j2GtmFArYpoKEw8ECx3NwPQmvxio3OEir8QJRW4UmhkxnLt94TrhvP435s6hK8V+cQG4f2GkdbDLjs3TKWXuYg85xfVlra075e0i3jFRDBvyuDY+a52iUO8FnoQtoLk3HBZw3YuxzSFggAEVpXsEFDOHCqItPHt5y0BwPmHRuU7b8grLpi/qJHFDqT8GBCFhi4LTu2jRw/mKiGper2LMxjmdNeB6SP/hh/bdYMWH+YFSfw0x0RykGW5KlIOnw9kwFnfAWvN4EiEAr0zzScvXszuyjQ9cGV6/CdeAcy5a8rX6FbG7fwQDSXbLMZz0gHOTloXsqR4IyO9ZMnb1voi+srRfg2+Cu7FXhBsBSpB+kw7zejKWll4/WuWN3kZGWaAsBvKuss5JEEm7uLJPHuDcvBeMfwclSB+i5STkbaYtwKesRNj+0y7s/bnCgfsZ0aAlRwelkIItKC89NIReR0W9OzkxyG1J/JB0+gb7FY6wFHBiplpChsmIeDbdMudmjXHOPj9iXU78OWiBo=
