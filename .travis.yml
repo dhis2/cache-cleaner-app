@@ -3,6 +3,8 @@ node_js:
 - '6'
 cache:
   yarn: true
+   directories:
+    - node_modules
 script:
 - npm run build
 - '[[ -z $TRAVIS_TAG ]] || mvn clean deploy --settings settings.xml'
