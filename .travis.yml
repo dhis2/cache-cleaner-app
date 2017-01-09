@@ -7,10 +7,13 @@ cache:
   - node_modules
 script:
 - npm run build
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: deploy/deploy.sh
+after_success:
+- if [[ "$TRAVIS_BRANCH" == "master" ]] && [[ "$TRAVIS_REPO_SLUG" == "dhis2/cache-cleaner-app" ]]  && [[ "$TRAVIS_PULL_REQUEST" == "false" ]]; then 
+    mvn clean deploy --settings deploy/settings.xml && exit 0; 
+  fi
+- if [[ "$TRAVIS_BRANCH" =~ "^v[0-9]{2}$" ]] && [[ -z $TRAVIS_TAG ]]  && [[ "$TRAVIS_REPO_SLUG" == "dhis2/cache-cleaner-app" ]]  && [[ "$TRAVIS_PULL_REQUEST" == "false" ]]; then
+    mvn clean deploy --settings deploy/settings.xml  && exit 0; 
+  fi
 env:
   global:
   - secure: WjwaDRWXcTCK4/OoQyGBM2A+zd1bh1sdqgJh3JHnXewSiUceYnObCtMCEQUERpIT2y8iya65grQMvVJqSGDn4JaeieD3QXqgZF3Nf0Rr2qKKAu1momU7BMmTN2OypEmI9+BRXH6FZ6YUl3p+C8oSU7aXtX+swjVNSwmNICYPqv7J0kJWUfxN2016ILH9BdOeKoLlj/Y56MJuJjQEJibgcKrc2fec1/N+qbPzuLJasvdFPcK/oo6rvtp5cLXG8IUcojeVOXWi8uwNlUk2Q4jLcGlsXXhVNpg7OrQz0nNXjfM2CFTgpIXsRhu3BhddqKpmHffYsxszaCIUEvW5+2csDWGXkqEQJVEGqsZwRdGwwMRT3WIj9u0gzBtIKYPJggjgqF9WMSZoHP3KFf/DEVNHGiKkcE50QvlZW2UOVElG9NSUAKEWN3vAKSiuu1Bt8pEwETvKBYBWORhqWeYhlg7SkjVDKWHBwCEZt3MXlGaNcqvgxX0JkWgkMGq4kLKyuJVc9VeZt4jNqtxe6nW6FwXcFaqH57PEtRpCJc331YGRyt7xnPVfCoEiMi9N6lOCyqTbVqpPYU7sZEipQyrtj5FXCioTL4WMJyhrw+0ww/KLwt3iS9oBf0Yshh7ibsjJDpHIppuHH9rmc3QsgtVd5MTvOU8V7raULJQ7PYPkHJOu8zw=
