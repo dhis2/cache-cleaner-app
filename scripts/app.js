@@ -15,15 +15,12 @@ const cacheCleaner = angular.module('cacheCleaner',
                      'cacheCleanerControllers',
                      'cacheCleanerServices',
                      'cacheCleanerFilters',
-                     'd2Services',
-                     'd2Controllers',
                      'angularLocalStorage',
-                     'pascalprecht.translate',
+                     'pascalprecht.translate'
                     ])
 .value('DHIS2URL', '..')
 
 .config(($translateProvider) => {
     $translateProvider.preferredLanguage('en');
     $translateProvider.useSanitizeValueStrategy('escaped');
-    $translateProvider.useLoader('i18nLoader');
 });
