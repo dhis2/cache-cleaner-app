@@ -18,7 +18,7 @@ const cacheCleaner = angular.module('cacheCleaner',
                      'angularLocalStorage',
                      'pascalprecht.translate'
                     ])
-.value('DHIS2URL', '..')
+.value('DHIS2URL', '../api')
 
 .config(($translateProvider) => {
     $translateProvider.preferredLanguage('en');
