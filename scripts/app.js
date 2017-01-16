@@ -20,7 +20,8 @@ const cacheCleaner = angular.module('cacheCleaner',
                     ])
 .value('DHIS2URL', '../api')
 
-.config(($translateProvider) => {
+.config(function($translateProvider)  {
     $translateProvider.preferredLanguage('en');
     $translateProvider.useSanitizeValueStrategy('escaped');
+    $translateProvider.useLoader('i18nLoader');
 });
