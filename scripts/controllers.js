@@ -6,7 +6,11 @@
 var cacheCleanerControllers = angular.module('cacheCleanerControllers', [])
 
 //Controller for settings page
-.controller('MainController', function($scope, storage, $window, idbStorageService, ModalService) {
+.controller('MainController', function($scope, storage, $window, idbStorageService, ModalService, i18nLoader) {
+
+    /* FIXME it should be started in other place */
+    /* setting correct user language */
+    i18nLoader();
 
     $scope.afterClearing = false;
 
@@ -52,10 +56,10 @@ var cacheCleanerControllers = angular.module('cacheCleanerControllers', [])
     $scope.clearCache = function(){
 
         var modalOptions = {
-            closeButtonText: 'cancel',
-            actionButtonText: 'proceed',
-            headerText: 'clearing_cache',
-            bodyText: 'proceed_cleaning'
+            closeButtonText: 'Cancel',
+            actionButtonText: 'Proceed',
+            headerText: 'Clearing cache',
+            bodyText: 'Are you sure you want to proceed with the cleaning?'
         };
 
         ModalService.showModal({}, modalOptions).then(function(){

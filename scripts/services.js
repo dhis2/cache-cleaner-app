@@ -9,7 +9,7 @@ var cacheCleanerServices = angular.module('cacheCleanerServices', ['ngResource']
 cacheCleanerServices.service('idbStorageService', function ($window, $q) {
 
     var indexedDB = $window.indexedDB;
-    
+
     var db = null;
 
     var open = function (dbName) {
@@ -28,42 +28,42 @@ cacheCleanerServices.service('idbStorageService', function ($window, $q) {
 
         return deferred.promise;
     };
-    
+
     var dbExists = function(dbName){
-        
+
         var deferred = $q.defer();
 
         var request = indexedDB.open(dbName);
-        
+
         var existed = true;
-        
+
         request.onsuccess = function (e) {
             request.result.close();
-            
+
             if(!existed){
                 indexedDB.deleteDatabase(dbName);
-            } 
-            
+            }
+
             deferred.resolve( existed );
         };
 
         request.onerror = function () {
             deferred.reject();
         };
-        
+
         request.onupgradeneeded = function () {
             existed = false;
         };
-        
+
         return deferred.promise;
     };
-    
+
     var getObjectStores = function(dbName){
-        
+
         var deferred = $q.defer();
 
         var request = indexedDB.open(dbName);
-        
+
         request.onsuccess = function (e) {
             var db = e.target.result;
             deferred.resolve( db.objectStoreNames );
@@ -74,13 +74,13 @@ cacheCleanerServices.service('idbStorageService', function ($window, $q) {
         };
         return deferred.promise;
     };
-    
+
     var deleteDb = function(dbName){
-        
+
         var deferred = $q.defer();
 
         var request = indexedDB.deleteDatabase(dbName);
-        
+
         request.onsuccess = function (e) {
             deferred.resolve( true );
         };
@@ -91,7 +91,7 @@ cacheCleanerServices.service('idbStorageService', function ($window, $q) {
         };
         return deferred.promise;
     };
-    
+
     return {
         open: open,
         deleteDb: deleteDb,
@@ -166,67 +166,19 @@ cacheCleanerServices.service('idbStorageService', function ($window, $q) {
         }
     };
 })
-.factory('i18nLoader', function ($q, $http, SessionStorageService, DHIS2URL) {
-
-        var getTranslationStrings = function (locale) {
-            var defaultUrl = 'i18n/i18n_app.properties';
-            var url = '';
-            if (locale === 'en' || !locale) {
-                url = defaultUrl;
-            }
-            else {
-                url = 'i18n/i18n_app_' + locale + '.properties';
-            }
-
-            var tx = {locale: locale};
-
-            var promise = $http.get(url).then(function (response) {
-                tx = {locale: locale, keys: dhis2.util.parseJavaProperties(response.data)};
-                return tx;
-            }, function () {
-
-                var p = $http.get(defaultUrl).then(function (response) {
-                    tx = {locale: locale, keys: dhis2.util.parseJavaProperties(response.data)};
-                    return tx;
-                });
-                return p;
-            });
-            return promise;
-        };
-
-        var getLocale = function () {
-            var locale = 'en';
-
-            var promise = $http.get( DHIS2URL + '/me/profile.json').then(function (response) {
-                SessionStorageService.set('USER_PROFILE', response.data);
-                if (response.data && response.data.settings && response.data.settings.keyUiLocale) {
-                    locale = response.data.settings.keyUiLocale;
-                }
-                return locale;
-            }, function () {
-                return locale;
-            });
-
-            return promise;
-        };
-        return function () {
-            var deferred = $q.defer(), translations;
+.factory('i18nLoader', function ($http, SessionStorageService, DHIS2URL) {
+    return function () {
             var userProfile = SessionStorageService.get('USER_PROFILE');
             if (userProfile && userProfile.settings && userProfile.settings.keyUiLocale) {
-                getTranslationStrings(userProfile.settings.keyUiLocale).then(function (response) {
-                    translations = response.keys;
-                    deferred.resolve(translations);
-                });
-                return deferred.promise;
+               i18next.changeLanguage(userProfile.settings.keyUiLocale);
             }
             else {
-                getLocale().then(function (locale) {
-                    getTranslationStrings(locale).then(function (response) {
-                        translations = response.keys;
-                        deferred.resolve(translations);
-                    });
-                });
-                return deferred.promise;
+              $http.get( DHIS2URL + '/me/profile.json').then(function (response) {
+                SessionStorageService.set('USER_PROFILE', response.data);
+                if (response.data && response.data.settings && response.data.settings.keyUiLocale) {
+                  i18next.changeLanguage(response.data.settings.keyUiLocale);
+                }
+              });
             }
         };
     });

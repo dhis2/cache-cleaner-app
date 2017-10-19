@@ -4,8 +4,17 @@ import './controllers.js';
 import './filters.js';
 import '../styles/style.css';
 
-/* App Module */
+i18next
+  .use(i18nextXHRBackend)
+  .init({
+    fallbackLng: 'en',
+    keySeparator: '|',
+    backend: {
+      loadPath: '/i18n/{{lng}}.json'
+    }
+});
 
+/* App Module */
 const cacheCleaner = angular.module('cacheCleaner',
                     ['ui.bootstrap',
                      'ngRoute',
@@ -16,12 +25,6 @@ const cacheCleaner = angular.module('cacheCleaner',
                      'cacheCleanerServices',
                      'cacheCleanerFilters',
                      'angularLocalStorage',
-                     'pascalprecht.translate'
+                     'jm.i18next'
                     ])
-.value('DHIS2URL', '../api')
-
-.config(function($translateProvider)  {
-    $translateProvider.preferredLanguage('en');
-    $translateProvider.useSanitizeValueStrategy('escaped');
-    $translateProvider.useLoader('i18nLoader');
-});
+.value('DHIS2URL', '../api');
