@@ -29,7 +29,7 @@ const addKeysFromFileContent = (fileContent) => {
   }
 };
 
-const fileContent = readFileSync('views/index.html', 'utf-8');
+const fileContent = readFileSync('index.html', 'utf-8');
 addKeysFromFileContent(fileContent);
 
 recursive('views', function (err, files) {

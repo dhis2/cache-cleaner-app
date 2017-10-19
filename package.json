@@ -37,9 +37,5 @@
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1"
   },
-  "dependencies": {
-    "i18next": "^10.0.1",
-    "i18next-xhr-backend": "^1.4.3",
-    "ng-i18next": "^1.0.5"
-  }
+  "dependencies": {}
 }
