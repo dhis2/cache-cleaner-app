@@ -19,7 +19,7 @@ const save = (target) => {
 
 let translations = {};
 
-const functionRegex = new RegExp( "{{'(.*)' | i18next}}", 'g' );
+const functionRegex = new RegExp("{{'(.*)' | i18next}}", 'g');
 const addKeysFromFileContent = (fileContent) => {
   let matches;
   while (( matches = functionRegex.exec(fileContent))) {
@@ -35,7 +35,6 @@ addKeysFromFileContent(fileContent);
 recursive('views', function (err, files) {
   for (let file of files) {
     if (getFileExtension(file) === 'html') {
-      console.log(file);
       const fileContent = readFileSync(file, 'utf-8');
       addKeysFromFileContent(fileContent);
     }

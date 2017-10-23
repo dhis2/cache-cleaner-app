@@ -7,7 +7,8 @@ import '../styles/style.css';
 i18next
   .use(i18nextXHRBackend)
   .init({
-    fallbackLng: 'en',
+    returnEmptyString: false,
+    fallbackLng: false,
     keySeparator: '|',
     backend: {
       loadPath: '/i18n/{{lng}}.json'
