@@ -5,6 +5,9 @@ const recursive = require("recursive-readdir");
 const argv = require('minimist')(process.argv.slice(2));
 const filename = argv['o'] || 'en.pot';
 
+const HTML_FUNCTION_REGEX = new RegExp("{{'(.*)' | i18next}}", 'g');
+const JS_FUNCTION_REGEX = new RegExp("\\\$i18next\\.t\\('(.*)'\\)", 'g');
+
 const getFileExtension = (filename) => {
   return filename.split('.').pop();
 };
@@ -17,9 +20,7 @@ const save = (target) => {
 };
 
 let translations = {};
-
-const functionRegex = new RegExp("{{'(.*)' | i18next}}", 'g');
-const addKeysFromFileContent = (fileContent) => {
+const addKeysFromFileContent = (fileContent, functionRegex) => {
   let matches;
   while (( matches = functionRegex.exec(fileContent))) {
     if (matches[1]) {
@@ -30,9 +31,11 @@ const addKeysFromFileContent = (fileContent) => {
 
 recursive('.', function (err, files) {
   for (let file of files) {
-    if (getFileExtension(file) === 'html') {
-      const fileContent = readFileSync(file, 'utf-8');
-      addKeysFromFileContent(fileContent);
+    const fileExtension = getFileExtension(file);
+    if (fileExtension === 'html') {
+      addKeysFromFileContent(readFileSync(file, 'utf-8'), HTML_FUNCTION_REGEX);
+    } else if (fileExtension === 'js') {
+      addKeysFromFileContent(readFileSync(file, 'utf-8'), JS_FUNCTION_REGEX);
     }
   }
 
