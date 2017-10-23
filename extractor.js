@@ -1,4 +1,3 @@
-const path = require('path');
 const { readFileSync, writeFileSync } = require('fs');
 const { i18nextToPot } = require('i18next-conv');
 const recursive = require("recursive-readdir");
