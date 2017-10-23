@@ -29,10 +29,7 @@ const addKeysFromFileContent = (fileContent) => {
   }
 };
 
-const fileContent = readFileSync('index.html', 'utf-8');
-addKeysFromFileContent(fileContent);
-
-recursive('views', function (err, files) {
+recursive('.', function (err, files) {
   for (let file of files) {
     if (getFileExtension(file) === 'html') {
       const fileContent = readFileSync(file, 'utf-8');
