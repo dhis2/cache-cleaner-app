@@ -112,7 +112,6 @@
                     </tr>
                 </table>
 
-                <!--<span class="alert alert-warning">{{'clears_local_cache'| translate}}</span>-->
                 <button type="button" class="btn btn-danger" ng-click="clearCache()">{{'Clear' | i18next}}</button>
                 <button type="button" class="btn btn-primary" ng-click="selectAll()">{{ (ssKeys | filter: {remove: true}).length > 0 || (lsKeys | filter: {remove: true}).length > 0 || (dbKeys | filter: {remove: true}).length > 0 ? 'Unselect all' : 'Select all' | i18next}}</button>
 
