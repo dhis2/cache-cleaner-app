@@ -6,11 +6,7 @@
 var cacheCleanerControllers = angular.module('cacheCleanerControllers', [])
 
 //Controller for settings page
-.controller('MainController', function($scope, storage, $window, idbStorageService, ModalService, i18nLoader) {
-
-    /* FIXME it should be started in other place */
-    /* setting correct user language */
-    i18nLoader();
+.controller('MainController', function($scope, storage, $window, idbStorageService, ModalService) {
 
     $scope.afterClearing = false;
 

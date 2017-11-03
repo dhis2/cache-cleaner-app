@@ -16,16 +16,19 @@ i18next
 });
 
 /* App Module */
-const cacheCleaner = angular.module('cacheCleaner',
-                    ['ui.bootstrap',
-                     'ngRoute',
-                     'ngCookies',
-                     'ngSanitize',
-                     'cacheCleanerDirectives',
-                     'cacheCleanerControllers',
-                     'cacheCleanerServices',
-                     'cacheCleanerFilters',
-                     'angularLocalStorage',
-                     'jm.i18next'
-                    ])
-.value('DHIS2URL', '../api');
+const cacheCleaner = angular.module('cacheCleaner', [
+    'ui.bootstrap',
+    'ngRoute',
+    'ngCookies',
+    'ngSanitize',
+    'cacheCleanerDirectives',
+    'cacheCleanerControllers',
+    'cacheCleanerServices',
+    'cacheCleanerFilters',
+    'angularLocalStorage',
+    'jm.i18next'
+  ])
+  .value('DHIS2URL', '../api')
+  .run(function(i18nLoader) {
+    i18nLoader();
+  });
