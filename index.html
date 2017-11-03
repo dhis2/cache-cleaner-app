@@ -76,7 +76,7 @@
         <!-- top bar ends -->
 
         <div class="row" ng-if="ssCacheExists || lsCacheExists || idCacheExists">
-            <div class="col-sm-6"><h3 ng-if="ssCacheExists" ng-i18next="Session storage"></h3>
+            <div class="col-sm-6"><h3 ng-if="ssCacheExists">{{'Session storage' | i18next}}</h3>
                 <table class="table table-bordered table-striped" ng-if="ssCacheExists">
                     <tr ng-repeat="ssKey in ssKeys">
                         <td>
