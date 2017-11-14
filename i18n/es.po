@@ -1,10 +1,10 @@
-#. extracted from i18n_app_es.properties
+#. extracted from i18n_app.properties, i18n_app_es.properties
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-14 11:01+0200\n"
+"POT-Creation-Date: 2017-11-14 12:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,101 +14,101 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.13.0\n"
 
 #: home
-msgid "Casa"
-msgstr ""
+msgid "Home"
+msgstr "Casa"
 
 #: dhis2
 msgid "DHIS 2"
-msgstr ""
+msgstr "DHIS 2"
 
 #: dhis2_home
-msgid "Inicio DHIS 2"
-msgstr ""
+msgid "DHIS 2 Home"
+msgstr "Inicio DHIS 2"
 
 #: profile
-msgid "Perfil"
-msgstr ""
+msgid "Profile"
+msgstr "Perfil"
 
 #: applications
 msgid "Apps"
-msgstr ""
+msgstr "Apps"
 
 #: more_applications
-msgid "Más apps"
-msgstr ""
+msgid "More apps"
+msgstr "Más apps"
 
 #: search_apps
-msgid "Buscar apps"
-msgstr ""
+msgid "Search apps"
+msgstr "Buscar apps"
 
 #: settings
-msgid "Configuración"
-msgstr ""
+msgid "Settings"
+msgstr "Configuración"
 
 #: account
-msgid "Cuenta"
-msgstr ""
+msgid "Account"
+msgstr "Cuenta"
 
 #: log_out
-msgid "Salir"
-msgstr ""
+msgid "Log out"
+msgstr "Salir"
 
 #: about_dhis2
-msgid "Sobre DHIS 2"
-msgstr ""
+msgid "About DHIS 2"
+msgstr "Sobre DHIS 2"
 
 #: session_storage
-msgid "Almacenamiento de la sesión"
-msgstr ""
+msgid "Session storage"
+msgstr "Almacenamiento de la sesión"
 
 #: local_storage
-msgid "Almacenamiento local"
-msgstr ""
+msgid "Local storage"
+msgstr "Almacenamiento local"
 
 #: indexed_db
-msgid "BD indexada"
-msgstr ""
+msgid "IndexedDB"
+msgstr "BD indexada"
 
 #: clearing_dhis2_browser_cache
-msgid "DHIS 2 limpiador de la caché del navegador"
-msgstr ""
+msgid "DHIS 2 browser cache cleaner"
+msgstr "DHIS 2 limpiador de la caché del navegador"
 
 #: clears_local_cache
-msgid "Esto borra los elementos seleccionados de la caché de tu navegador"
-msgstr ""
+msgid "This clears the selected items from your browser cache"
+msgstr "Esto borra los elementos seleccionados de la caché de tu navegador"
 
 #: proceed_cleaning
-msgid "¿Estás seguro de que quieres proseguir con el borrado?"
-msgstr ""
+msgid "Are you sure you want to proceed with the cleaning?"
+msgstr "¿Estás seguro de que quieres proseguir con el borrado?"
 
 #: cache_cleared
-msgid "La caché del navegador está libre"
-msgstr ""
+msgid "Browser cache is cleared."
+msgstr "La caché del navegador está libre"
 
 #: nothing_to_clear
-msgid "La caché del navegador está vacía. Nada que borrar"
-msgstr ""
+msgid "Browser cache is empty. Nothing to clear."
+msgstr "La caché del navegador está vacía. Nada que borrar"
 
 #: clearing_cache
-msgid "Borrando caché"
-msgstr ""
+msgid "Clearing cache"
+msgstr "Borrando caché"
 
 #: proceed
-msgid "Proceder"
-msgstr ""
+msgid "Proceed"
+msgstr "Proceder"
 
 #: select_all
-msgid "Seleccionar todo"
-msgstr ""
+msgid "Select all"
+msgstr "Seleccionar todo"
 
 #: unselect_all
-msgid "Deseleccionar todo"
-msgstr ""
+msgid "Unselect all"
+msgstr "Deseleccionar todo"
 
 #: cancel
-msgid "Cancelar"
-msgstr ""
+msgid "Cancel"
+msgstr "Cancelar"
 
 #: clear
-msgid "Limpiar"
-msgstr ""
+msgid "Clear"
+msgstr "Limpiar"

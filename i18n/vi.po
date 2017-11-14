@@ -1,10 +1,10 @@
-#. extracted from i18n_app_vi.properties
+#. extracted from i18n_app.properties, i18n_app_vi.properties
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-14 11:02+0200\n"
+"POT-Creation-Date: 2017-11-14 12:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,101 +14,101 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.13.0\n"
 
 #: home
-msgid "Trang chủ"
-msgstr ""
+msgid "Home"
+msgstr "Trang chủ"
 
 #: dhis2
 msgid "DHIS 2"
-msgstr ""
+msgstr "DHIS 2"
 
 #: dhis2_home
-msgid "Trang chủ DHIS 2"
-msgstr ""
+msgid "DHIS 2 Home"
+msgstr "Trang chủ DHIS 2"
 
 #: profile
-msgid "Hồ sơ"
-msgstr ""
+msgid "Profile"
+msgstr "Hồ sơ"
 
 #: applications
-msgid "Ứng dụng"
-msgstr ""
+msgid "Apps"
+msgstr "Ứng dụng"
 
 #: more_applications
-msgid "Thêm ứng dụng"
-msgstr ""
+msgid "More apps"
+msgstr "Thêm ứng dụng"
 
 #: search_apps
-msgid "Tìm ứng dụng"
-msgstr ""
+msgid "Search apps"
+msgstr "Tìm ứng dụng"
 
 #: settings
-msgid "Cài đặt"
-msgstr ""
+msgid "Settings"
+msgstr "Cài đặt"
 
 #: account
-msgid "Tài khoản"
-msgstr ""
+msgid "Account"
+msgstr "Tài khoản"
 
 #: log_out
-msgid "Đăng xuất"
-msgstr ""
+msgid "Log out"
+msgstr "Đăng xuất"
 
 #: about_dhis2
-msgid "Giới thiệu về DHIS2"
-msgstr ""
+msgid "About DHIS 2"
+msgstr "Giới thiệu về DHIS2"
 
 #: session_storage
-msgid "Lưu trữ phiên"
-msgstr ""
+msgid "Session storage"
+msgstr "Lưu trữ phiên"
 
 #: local_storage
-msgid "Lưu trữ cục bộ"
-msgstr ""
+msgid "Local storage"
+msgstr "Lưu trữ cục bộ"
 
 #: indexed_db
-msgid "Chỉ mục cơ sở dữ liệu"
-msgstr ""
+msgid "IndexedDB"
+msgstr "Chỉ mục cơ sở dữ liệu"
 
 #: clearing_dhis2_browser_cache
-msgid "Trình xóa dữ liệu cục bộ trong DHIS 2"
-msgstr ""
+msgid "DHIS 2 browser cache cleaner"
+msgstr "Trình xóa dữ liệu cục bộ trong DHIS 2"
 
 #: clears_local_cache
-msgid "Xóa dữ liệu trong các mục đã chọn"
-msgstr ""
+msgid "This clears the selected items from your browser cache"
+msgstr "Xóa dữ liệu trong các mục đã chọn"
 
 #: proceed_cleaning
-msgid "Bạn có chắc chắn muốn thực thi việc xóa dữ liệu cục bộ?"
-msgstr ""
+msgid "Are you sure you want to proceed with the cleaning?"
+msgstr "Bạn có chắc chắn muốn thực thi việc xóa dữ liệu cục bộ?"
 
 #: cache_cleared
-msgid "Dữ liệu cục bộ đã được xóa"
-msgstr ""
+msgid "Browser cache is cleared."
+msgstr "Dữ liệu cục bộ đã được xóa"
 
 #: nothing_to_clear
-msgid "Trình duyệt không có dữ liệu cục bộ. Không có gì để xóa."
-msgstr ""
+msgid "Browser cache is empty. Nothing to clear."
+msgstr "Trình duyệt không có dữ liệu cục bộ. Không có gì để xóa."
 
 #: clearing_cache
-msgid "Đang xóa..."
-msgstr ""
+msgid "Clearing cache"
+msgstr "Đang xóa..."
 
 #: proceed
-msgid "Thực hiện"
-msgstr ""
+msgid "Proceed"
+msgstr "Thực hiện"
 
 #: select_all
-msgid "Chọn tất cả"
-msgstr ""
+msgid "Select all"
+msgstr "Chọn tất cả"
 
 #: unselect_all
-msgid "Bỏ chọn tất cả"
-msgstr ""
+msgid "Unselect all"
+msgstr "Bỏ chọn tất cả"
 
 #: cancel
-msgid "Hủy"
-msgstr ""
+msgid "Cancel"
+msgstr "Hủy"
 
 #: clear
-msgid "Xóa"
-msgstr ""
+msgid "Clear"
+msgstr "Xóa"

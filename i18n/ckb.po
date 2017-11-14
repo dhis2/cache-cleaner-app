@@ -1,10 +1,10 @@
-#. extracted from i18n_app_ckb.properties
+#. extracted from i18n_app.properties, i18n_app_ckb.properties
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-14 11:00+0200\n"
+"POT-Creation-Date: 2017-11-14 11:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,101 +14,101 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.13.0\n"
 
 #: home
-msgid "ماڵةوة"
-msgstr ""
+msgid "Home"
+msgstr "ماڵةوة"
 
 #: dhis2
-msgid "دي ئيج اي اس 2"
-msgstr ""
+msgid "DHIS 2"
+msgstr "دي ئيج اي اس 2"
 
 #: dhis2_home
-msgid "مالةوة دي اج اي اس"
-msgstr ""
+msgid "DHIS 2 Home"
+msgstr "مالةوة دي اج اي اس"
 
 #: profile
-msgid "بروفايل"
-msgstr ""
+msgid "Profile"
+msgstr "بروفايل"
 
 #: applications
-msgid "بةرنامةكان"
-msgstr ""
+msgid "Apps"
+msgstr "بةرنامةكان"
 
 #: more_applications
-msgid "بةؤنامةي زياتر"
-msgstr ""
+msgid "More apps"
+msgstr "بةؤنامةي زياتر"
 
 #: search_apps
-msgid "كةران بةدواي بةرنامةكان"
-msgstr ""
+msgid "Search apps"
+msgstr "كةران بةدواي بةرنامةكان"
 
 #: settings
-msgid "ريكخستن"
-msgstr ""
+msgid "Settings"
+msgstr "ريكخستن"
 
 #: account
-msgid "حساب"
-msgstr ""
+msgid "Account"
+msgstr "حساب"
 
 #: log_out
-msgid "جونةدةرةوة"
-msgstr ""
+msgid "Log out"
+msgstr "جونةدةرةوة"
 
 #: about_dhis2
-msgid "دةربارةي دي اج اي اس 2 "
-msgstr ""
+msgid "About DHIS 2"
+msgstr "دةربارةي دي اج اي اس 2 "
 
 #: session_storage
-msgid "كوكردنةوي كويوونةوة"
-msgstr ""
+msgid "Session storage"
+msgstr "كوكردنةوي كويوونةوة"
 
 #: local_storage
-msgid "كؤكردنةوةي ناوخؤيي"
-msgstr ""
+msgid "Local storage"
+msgstr "كؤكردنةوةي ناوخؤيي"
 
 #: indexed_db
-msgid "ثيوانة"
-msgstr ""
+msgid "IndexedDB"
+msgstr "ثيوانة"
 
 #: clearing_dhis2_browser_cache
-msgid "باكردنةوةي زيادةي براوسيري دي اج اي اس 2"
-msgstr ""
+msgid "DHIS 2 browser cache cleaner"
+msgstr "باكردنةوةي زيادةي براوسيري دي اج اي اس 2"
 
 #: clears_local_cache
-msgid "ئةم خاوينكردنةوانة هةلبزيردراون لة زيادةكاني براوسةرةكةت"
-msgstr ""
+msgid "This clears the selected items from your browser cache"
+msgstr "ئةم خاوينكردنةوانة هةلبزيردراون لة زيادةكاني براوسةرةكةت"
 
 #: proceed_cleaning
-msgid "دلنايي ئةتةويت باكردنةوة ئةنجام بدةيت ؟ "
-msgstr ""
+msgid "Are you sure you want to proceed with the cleaning?"
+msgstr "دلنايي ئةتةويت باكردنةوة ئةنجام بدةيت ؟ "
 
 #: cache_cleared
-msgid "براوسير باك كرايةوة لة زيادةكان"
-msgstr ""
+msgid "Browser cache is cleared."
+msgstr "براوسير باك كرايةوة لة زيادةكان"
 
 #: nothing_to_clear
-msgid "براوسةرةكةت باكة هيج نية بؤ باك ردنةوة"
-msgstr ""
+msgid "Browser cache is empty. Nothing to clear."
+msgstr "براوسةرةكةت باكة هيج نية بؤ باك ردنةوة"
 
 #: clearing_cache
-msgid "باكردنةوةي زيادةكان"
-msgstr ""
+msgid "Clearing cache"
+msgstr "باكردنةوةي زيادةكان"
 
 #: proceed
-msgid "ئةنجام دان"
-msgstr ""
+msgid "Proceed"
+msgstr "ئةنجام دان"
 
 #: select_all
-msgid "هةلبزاردني هةموان"
-msgstr ""
+msgid "Select all"
+msgstr "هةلبزاردني هةموان"
 
 #: unselect_all
-msgid "هةلنةبزاردني هةموان"
-msgstr ""
+msgid "Unselect all"
+msgstr "هةلنةبزاردني هةموان"
 
 #: cancel
-msgid "لابردن"
-msgstr ""
+msgid "Cancel"
+msgstr "لابردن"
 
 #: clear
-msgid "باك"
-msgstr ""
+msgid "Clear"
+msgstr "باك"

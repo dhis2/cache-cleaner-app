@@ -1,10 +1,10 @@
-#. extracted from i18n_app_fr.properties
+#. extracted from i18n_app.properties, i18n_app_fr.properties
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-14 11:01+0200\n"
+"POT-Creation-Date: 2017-11-14 12:04+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,101 +14,101 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.13.0\n"
 
 #: home
-msgid "Accueil"
-msgstr ""
+msgid "Home"
+msgstr "Accueil"
 
 #: dhis2
 msgid "DHIS 2"
-msgstr ""
+msgstr "DHIS 2"
 
 #: dhis2_home
-msgid "Accueil DHIS 2"
-msgstr ""
+msgid "DHIS 2 Home"
+msgstr "Accueil DHIS 2"
 
 #: profile
-msgid "Profil"
-msgstr ""
+msgid "Profile"
+msgstr "Profil"
 
 #: applications
-msgid "Applications"
-msgstr ""
+msgid "Apps"
+msgstr "Applications"
 
 #: more_applications
-msgid "Plus d'applis"
-msgstr ""
+msgid "More apps"
+msgstr "Plus d'applis"
 
 #: search_apps
-msgid "Chercher applications"
-msgstr ""
+msgid "Search apps"
+msgstr "Chercher applications"
 
 #: settings
-msgid "Paramètres"
-msgstr ""
+msgid "Settings"
+msgstr "Paramètres"
 
 #: account
-msgid "Compte"
-msgstr ""
+msgid "Account"
+msgstr "Compte"
 
 #: log_out
-msgid "Déconnexion"
-msgstr ""
+msgid "Log out"
+msgstr "Déconnexion"
 
 #: about_dhis2
-msgid "A propos de DHIS2"
-msgstr ""
+msgid "About DHIS 2"
+msgstr "A propos de DHIS2"
 
 #: session_storage
-msgid "Stockate de session"
-msgstr ""
+msgid "Session storage"
+msgstr "Stockate de session"
 
 #: local_storage
-msgid "Stockage local"
-msgstr ""
+msgid "Local storage"
+msgstr "Stockage local"
 
 #: indexed_db
 msgid "IndexedDB"
-msgstr ""
+msgstr "IndexedDB"
 
 #: clearing_dhis2_browser_cache
-msgid "Videur du cache navigateur DHIS2"
-msgstr ""
+msgid "DHIS 2 browser cache cleaner"
+msgstr "Videur du cache navigateur DHIS2"
 
 #: clears_local_cache
-msgid "Ceci efface les éléments sélectionnés de votre cache navigateur"
-msgstr ""
+msgid "This clears the selected items from your browser cache"
+msgstr "Ceci efface les éléments sélectionnés de votre cache navigateur"
 
 #: proceed_cleaning
-msgid "Êtes-vous sûr de vouloir procéder au nettoyage ?"
-msgstr ""
+msgid "Are you sure you want to proceed with the cleaning?"
+msgstr "Êtes-vous sûr de vouloir procéder au nettoyage ?"
 
 #: cache_cleared
-msgid "Cache du navigateur vidé"
-msgstr ""
+msgid "Browser cache is cleared."
+msgstr "Cache du navigateur vidé"
 
 #: nothing_to_clear
-msgid "Le cache du navigateur est vide. Rien à vider."
-msgstr ""
+msgid "Browser cache is empty. Nothing to clear."
+msgstr "Le cache du navigateur est vide. Rien à vider."
 
 #: clearing_cache
-msgid "Vidange du cache"
-msgstr ""
+msgid "Clearing cache"
+msgstr "Vidange du cache"
 
 #: proceed
-msgid "Poursuivre"
-msgstr ""
+msgid "Proceed"
+msgstr "Poursuivre"
 
 #: select_all
-msgid "Sélectionner tout"
-msgstr ""
+msgid "Select all"
+msgstr "Sélectionner tout"
 
 #: unselect_all
-msgid "Désélectionner tout"
-msgstr ""
+msgid "Unselect all"
+msgstr "Désélectionner tout"
 
 #: cancel
-msgid "Annuler"
-msgstr ""
+msgid "Cancel"
+msgstr "Annuler"
 
 #: clear
-msgid "Effacer"
-msgstr ""
+msgid "Clear"
+msgstr "Effacer"
