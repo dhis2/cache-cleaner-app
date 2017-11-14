@@ -1,10 +1,10 @@
-#. extracted from i18n_app_lo.properties
+#. extracted from i18n_app.properties, i18n_app_lo.properties
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-14 11:01+0200\n"
+"POT-Creation-Date: 2017-11-14 12:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,69 +14,101 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.13.0\n"
 
 #: home
-msgid "ໜ້າຫຼັກ"
+msgid "Home"
+msgstr "ໜ້າຫຼັກ"
+
+#: dhis2
+msgid "DHIS 2"
+msgstr ""
+
+#: dhis2_home
+msgid "DHIS 2 Home"
 msgstr ""
 
 #: profile
-msgid "ໂປຟາຍ"
+msgid "Profile"
+msgstr "ໂປຟາຍ"
+
+#: applications
+msgid "Apps"
+msgstr ""
+
+#: more_applications
+msgid "More apps"
 msgstr ""
 
 #: search_apps
-msgid "ຊອກຫາ"
-msgstr ""
+msgid "Search apps"
+msgstr "ຊອກຫາ"
 
 #: settings
-msgid "ການຕັ້ງຄ່າ"
-msgstr ""
+msgid "Settings"
+msgstr "ການຕັ້ງຄ່າ"
 
 #: account
-msgid "ບັນຊີ"
-msgstr ""
+msgid "Account"
+msgstr "ບັນຊີ"
 
 #: log_out
-msgid "ອອກຈາກລະບົບ"
-msgstr ""
+msgid "Log out"
+msgstr "ອອກຈາກລະບົບ"
 
 #: about_dhis2
-msgid "ກ່ຽວກັບ DHIS 2"
+msgid "About DHIS 2"
+msgstr "ກ່ຽວກັບ DHIS 2"
+
+#: session_storage
+msgid "Session storage"
+msgstr ""
+
+#: local_storage
+msgid "Local storage"
+msgstr ""
+
+#: indexed_db
+msgid "IndexedDB"
 msgstr ""
 
 #: clearing_dhis2_browser_cache
-msgid "ລ້າງຂໍ້ມູນຂອງ DHIS 2 ໃນເຄດລອງບາວເຊີ້"
+msgid "DHIS 2 browser cache cleaner"
+msgstr "ລ້າງຂໍ້ມູນຂອງ DHIS 2 ໃນເຄດລອງບາວເຊີ້"
+
+#: clears_local_cache
+msgid "This clears the selected items from your browser cache"
 msgstr ""
 
 #: proceed_cleaning
-msgid "ເຈົ້າຕ້ອງການລ້າງຂໍ້ມູນນີ້ອອກຈາກບາວເຊີ້ແທ້ບໍ?"
-msgstr ""
+msgid "Are you sure you want to proceed with the cleaning?"
+msgstr "ເຈົ້າຕ້ອງການລ້າງຂໍ້ມູນນີ້ອອກຈາກບາວເຊີ້ແທ້ບໍ?"
 
 #: cache_cleared
-msgid "ຂໍ້ມູນໃນບາວເຊີ້ຖືກລ້າງແລ້ວ"
-msgstr ""
+msgid "Browser cache is cleared."
+msgstr "ຂໍ້ມູນໃນບາວເຊີ້ຖືກລ້າງແລ້ວ"
 
 #: nothing_to_clear
-msgid "ບໍ່ມີຂໍ້ມູນໃນຄວາມຈຳຂອງບາວເຊີ້"
-msgstr ""
+msgid "Browser cache is empty. Nothing to clear."
+msgstr "ບໍ່ມີຂໍ້ມູນໃນຄວາມຈຳຂອງບາວເຊີ້"
 
 #: clearing_cache
-msgid "ລ້າງຂໍ້ມູນ"
-msgstr ""
+msgid "Clearing cache"
+msgstr "ລ້າງຂໍ້ມູນ"
 
 #: proceed
-msgid "ກຳລັງດຳເນີນ"
-msgstr ""
+msgid "Proceed"
+msgstr "ກຳລັງດຳເນີນ"
 
 #: select_all
-msgid "ເລືອກທັງໝົດ"
-msgstr ""
+msgid "Select all"
+msgstr "ເລືອກທັງໝົດ"
 
 #: unselect_all
-msgid "ບໍ່ເລືອກທັງໝົດ"
-msgstr ""
+msgid "Unselect all"
+msgstr "ບໍ່ເລືອກທັງໝົດ"
 
 #: cancel
-msgid "ຍົກເລີກ"
-msgstr ""
+msgid "Cancel"
+msgstr "ຍົກເລີກ"
 
 #: clear
-msgid "ລ້າງ"
-msgstr ""
+msgid "Clear"
+msgstr "ລ້າງ"

@@ -1,10 +1,10 @@
-#. extracted from i18n_app_ps.properties
+#. extracted from i18n_app.properties, i18n_app_prs.properties
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-14 11:01+0200\n"
+"POT-Creation-Date: 2017-11-14 12:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,103 +14,101 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.13.0\n"
 
 #: home
-msgid "کورپاڼه"
-msgstr ""
+msgid "Home"
+msgstr "صفحه اصلی"
 
 #: dhis2
 msgid "DHIS 2"
-msgstr ""
+msgstr "دی اچ ای اس 2"
 
 #: dhis2_home
-msgid "د DHIS 2 کور پاڼه"
-msgstr ""
+msgid "DHIS 2 Home"
+msgstr "صفحه اصلی DHIS 2"
 
 #: profile
-msgid "ځانګړتیا"
-msgstr ""
+msgid "Profile"
+msgstr "مشخصات"
 
 #: applications
-msgid "اپلیکېشنونه"
-msgstr ""
+msgid "Apps"
+msgstr "برنامه ها"
 
 #: more_applications
-msgid "نور اپلیکېشنونه"
-msgstr ""
+msgid "More apps"
+msgstr "برنامه های بیشتر"
 
 #: search_apps
-msgid "اپلیکېشنونه ولټوئ"
-msgstr ""
+msgid "Search apps"
+msgstr "جستجوی برنامه"
 
 #: settings
-msgid "تنظیمات"
-msgstr ""
+msgid "Settings"
+msgstr "تنظیمات"
 
 #: account
-msgid "د حساب (اکاونټ) جوړول"
-msgstr ""
+msgid "Account"
+msgstr "حساب"
 
 #: log_out
-msgid "له اکاونټ څخه وتل"
-msgstr ""
+msgid "Log out"
+msgstr "خروج از سیستم"
 
 #: about_dhis2
-msgid "د DHIS 2 په هکله"
-msgstr ""
+msgid "About DHIS 2"
+msgstr "در باره دی اچ ای اس 2"
 
 #: session_storage
-msgid "د ناستې د جریان زېرمه کول"
-msgstr ""
+msgid "Session storage"
+msgstr "ذخیر کردن سیشن"
 
 #: local_storage
-msgid "ځایي زېرمه کول"
-msgstr ""
+msgid "Local storage"
+msgstr "ذخیره سازی داخلی"
 
 #: indexed_db
-msgid "په انټرنیټي جدول کې درجول (IndexedDB)"
-msgstr ""
+msgid "IndexedDB"
+msgstr "IndexedDB"
 
 #: clearing_dhis2_browser_cache
-msgid "د DHIS 2 په لټوونکي کې د ثبت پاکوونکی "
-msgstr ""
+msgid "DHIS 2 browser cache cleaner"
+msgstr "پاک کننده حافظه بروزر DHIS 2"
 
 #: clears_local_cache
-msgid "دا ستاسو د لټوونکي له ساتنځي څخه ټاکل شوي توکي پاکوي "
-msgstr ""
+msgid "This clears the selected items from your browser cache"
+msgstr "این کار باعث پاک کردن موارد انتخابی از حافظه بروزر شما میشود"
 
 #: proceed_cleaning
-msgid "آیا د پاکولو بهیر ته د دوام ورکولو په برخه کې ډاډه یاست؟"
-msgstr ""
+msgid "Are you sure you want to proceed with the cleaning?"
+msgstr "آیا شما مطمین هستید با انجام پاک سازی؟"
 
 #: cache_cleared
-msgid "د لټوونکي ساتنځای پاک شو."
-msgstr ""
+msgid "Browser cache is cleared."
+msgstr "حافظه بروزر تان پاک شده."
 
 #: nothing_to_clear
-msgid "د لټوونکي ساتنځای خالي دی. د پاکولو لپاره هېڅ شی هم نه لري."
-msgstr ""
+msgid "Browser cache is empty. Nothing to clear."
+msgstr "حافظه بروزر تان خالی است. هیچ چیزی برای پاک کردن نیست."
 
 #: clearing_cache
-msgid "ساتنځای د پاکولو په حال کې دی"
-msgstr ""
+msgid "Clearing cache"
+msgstr "پاک سازی حافظه بروزر"
 
 #: proceed
-msgid "دوام ورکول"
-msgstr ""
+msgid "Proceed"
+msgstr "اقدام کردن"
 
 #: select_all
-msgid "ټول انتخاب کړئ"
-msgstr ""
+msgid "Select all"
+msgstr "انتخاب همه"
 
 #: unselect_all
-msgid "ټول له انتاب څخه وباسئ"
-msgstr ""
+msgid "Unselect all"
+msgstr "لغو انتخاب همه"
 
 #: cancel
-msgctxt "cancel"
-msgid "پاک یې کړئ"
-msgstr ""
+msgid "Cancel"
+msgstr "انصراف"
 
 #: clear
-msgctxt "clear"
-msgid "پاک یې کړئ"
-msgstr ""
+msgid "Clear"
+msgstr "پاک کردن"

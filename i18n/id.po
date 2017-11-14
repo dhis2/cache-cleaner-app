@@ -1,10 +1,10 @@
-#. extracted from i18n_app_id.properties
+#. extracted from i18n_app.properties, i18n_app_id.properties
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-14 11:01+0200\n"
+"POT-Creation-Date: 2017-11-14 12:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,101 +14,101 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.13.0\n"
 
 #: home
-msgid "Beranda"
-msgstr ""
+msgid "Home"
+msgstr "Beranda"
 
 #: dhis2
 msgid "DHIS 2"
-msgstr ""
+msgstr "DHIS 2"
 
 #: dhis2_home
-msgid "Beranda DHIS 2"
-msgstr ""
+msgid "DHIS 2 Home"
+msgstr "Beranda DHIS 2"
 
 #: profile
-msgid "Profil"
-msgstr ""
+msgid "Profile"
+msgstr "Profil"
 
 #: applications
 msgid "Apps"
-msgstr ""
+msgstr "Apps"
 
 #: more_applications
-msgid "More Apps"
-msgstr ""
+msgid "More apps"
+msgstr "More Apps"
 
 #: search_apps
-msgid "Cari Apps"
-msgstr ""
+msgid "Search apps"
+msgstr "Cari Apps"
 
 #: settings
-msgid "Setting"
-msgstr ""
+msgid "Settings"
+msgstr "Setting"
 
 #: account
-msgid "Akun"
-msgstr ""
+msgid "Account"
+msgstr "Akun"
 
 #: log_out
-msgid "Keluar"
-msgstr ""
+msgid "Log out"
+msgstr "Keluar"
 
 #: about_dhis2
-msgid "Tentang DHIS 2"
-msgstr ""
+msgid "About DHIS 2"
+msgstr "Tentang DHIS 2"
 
 #: session_storage
-msgid "Session Storage"
-msgstr ""
+msgid "Session storage"
+msgstr "Session Storage"
 
 #: local_storage
-msgid "Local Storage"
-msgstr ""
+msgid "Local storage"
+msgstr "Local Storage"
 
 #: indexed_db
 msgid "IndexedDB"
-msgstr ""
+msgstr "IndexedDB"
 
 #: clearing_dhis2_browser_cache
 msgid "DHIS 2 browser cache cleaner"
-msgstr ""
+msgstr "DHIS 2 browser cache cleaner"
 
 #: clears_local_cache
-msgid "Proses ini membersihkan item terpilih pada cache di browser anda"
-msgstr ""
+msgid "This clears the selected items from your browser cache"
+msgstr "Proses ini membersihkan item terpilih pada cache di browser anda"
 
 #: proceed_cleaning
-msgid "Apakah anda yakin untuk melanjutkan proses cleaning?"
-msgstr ""
+msgid "Are you sure you want to proceed with the cleaning?"
+msgstr "Apakah anda yakin untuk melanjutkan proses cleaning?"
 
 #: cache_cleared
-msgid "Cache pada browser anda telah dihapus."
-msgstr ""
+msgid "Browser cache is cleared."
+msgstr "Cache pada browser anda telah dihapus."
 
 #: nothing_to_clear
-msgid "Cache pada Browser sudah tidak ada."
-msgstr ""
+msgid "Browser cache is empty. Nothing to clear."
+msgstr "Cache pada Browser sudah tidak ada."
 
 #: clearing_cache
-msgid "Bersihkan cache"
-msgstr ""
+msgid "Clearing cache"
+msgstr "Bersihkan cache"
 
 #: proceed
-msgid "Lanjutkan"
-msgstr ""
+msgid "Proceed"
+msgstr "Lanjutkan"
 
 #: select_all
-msgid "Pilih semua"
-msgstr ""
+msgid "Select all"
+msgstr "Pilih semua"
 
 #: unselect_all
-msgid "Batalkan semua pilihan"
-msgstr ""
+msgid "Unselect all"
+msgstr "Batalkan semua pilihan"
 
 #: cancel
-msgid "Batal"
-msgstr ""
+msgid "Cancel"
+msgstr "Batal"
 
 #: clear
-msgid "Hapus"
-msgstr ""
+msgid "Clear"
+msgstr "Hapus"
