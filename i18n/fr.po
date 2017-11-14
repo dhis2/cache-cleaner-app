@@ -1,0 +1,114 @@
+#. extracted from i18n_app.properties, i18n_app_fr.properties
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-14 12:04+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 1.13.0\n"
+
+#: home
+msgid "Home"
+msgstr "Accueil"
+
+#: dhis2
+msgid "DHIS 2"
+msgstr "DHIS 2"
+
+#: dhis2_home
+msgid "DHIS 2 Home"
+msgstr "Accueil DHIS 2"
+
+#: profile
+msgid "Profile"
+msgstr "Profil"
+
+#: applications
+msgid "Apps"
+msgstr "Applications"
+
+#: more_applications
+msgid "More apps"
+msgstr "Plus d'applis"
+
+#: search_apps
+msgid "Search apps"
+msgstr "Chercher applications"
+
+#: settings
+msgid "Settings"
+msgstr "Paramètres"
+
+#: account
+msgid "Account"
+msgstr "Compte"
+
+#: log_out
+msgid "Log out"
+msgstr "Déconnexion"
+
+#: about_dhis2
+msgid "About DHIS 2"
+msgstr "A propos de DHIS2"
+
+#: session_storage
+msgid "Session storage"
+msgstr "Stockate de session"
+
+#: local_storage
+msgid "Local storage"
+msgstr "Stockage local"
+
+#: indexed_db
+msgid "IndexedDB"
+msgstr "IndexedDB"
+
+#: clearing_dhis2_browser_cache
+msgid "DHIS 2 browser cache cleaner"
+msgstr "Videur du cache navigateur DHIS2"
+
+#: clears_local_cache
+msgid "This clears the selected items from your browser cache"
+msgstr "Ceci efface les éléments sélectionnés de votre cache navigateur"
+
+#: proceed_cleaning
+msgid "Are you sure you want to proceed with the cleaning?"
+msgstr "Êtes-vous sûr de vouloir procéder au nettoyage ?"
+
+#: cache_cleared
+msgid "Browser cache is cleared."
+msgstr "Cache du navigateur vidé"
+
+#: nothing_to_clear
+msgid "Browser cache is empty. Nothing to clear."
+msgstr "Le cache du navigateur est vide. Rien à vider."
+
+#: clearing_cache
+msgid "Clearing cache"
+msgstr "Vidange du cache"
+
+#: proceed
+msgid "Proceed"
+msgstr "Poursuivre"
+
+#: select_all
+msgid "Select all"
+msgstr "Sélectionner tout"
+
+#: unselect_all
+msgid "Unselect all"
+msgstr "Désélectionner tout"
+
+#: cancel
+msgid "Cancel"
+msgstr "Annuler"
+
+#: clear
+msgid "Clear"
+msgstr "Effacer"

@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: i18next-conv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"POT-Creation-Date: 2017-11-14T09:57:02.915Z\n"
+"PO-Revision-Date: 2017-11-14T09:57:02.915Z\n"
+
+msgid "DHIS 2 browser cache cleaner"
+msgstr ""
+
+msgid "Session storage"
+msgstr ""
+
+msgid "Local storage"
+msgstr ""
+
+msgid "indexedDB"
+msgstr ""
+
+msgid "Clear"
+msgstr ""
+
+msgid "Clearing cache"
+msgstr ""
+
+msgid "Are you sure you want to proceed with the cleaning?"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Proceed"
+msgstr ""
