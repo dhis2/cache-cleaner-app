@@ -51,14 +51,7 @@ var cacheCleanerControllers = angular.module('cacheCleanerControllers', [])
 
     $scope.clearCache = function(){
 
-        var modalOptions = {
-            closeButtonText: 'Cancel',
-            actionButtonText: 'Proceed',
-            headerText: 'Clearing cache',
-            bodyText: 'Are you sure you want to proceed with the cleaning?'
-        };
-
-        ModalService.showModal({}, modalOptions).then(function(){
+        ModalService.showModal({}).then(function(){
 
             angular.forEach($scope.ssKeys, function(ssKey){
                 if(ssKey.remove){
