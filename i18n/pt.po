@@ -1,0 +1,114 @@
+#. extracted from i18n_app_pt.properties
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-14 11:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 1.13.0\n"
+
+#: home
+msgid "Pagina inicial"
+msgstr ""
+
+#: dhis2
+msgid "DHIS 2"
+msgstr ""
+
+#: dhis2_home
+msgid "DHIS 2 domicílio"
+msgstr ""
+
+#: profile
+msgid "Perfil"
+msgstr ""
+
+#: applications
+msgid "Aplicativos"
+msgstr ""
+
+#: more_applications
+msgid "Mais aplicativos"
+msgstr ""
+
+#: search_apps
+msgid "Pesquisar aplicativos"
+msgstr ""
+
+#: settings
+msgid "Configurações"
+msgstr ""
+
+#: account
+msgid "Conta"
+msgstr ""
+
+#: log_out
+msgid "Sair"
+msgstr ""
+
+#: about_dhis2
+msgid "Sobre DHIS 2"
+msgstr ""
+
+#: session_storage
+msgid "Armazenamento da sessão"
+msgstr ""
+
+#: local_storage
+msgid "Armazenamento local"
+msgstr ""
+
+#: indexed_db
+msgid "Base de dados indexada"
+msgstr ""
+
+#: clearing_dhis2_browser_cache
+msgid "Limpador do cache do navegador do DHIS 2"
+msgstr ""
+
+#: clears_local_cache
+msgid "Esta accão vai limpar os itens seleccionados do cache do navegador"
+msgstr ""
+
+#: proceed_cleaning
+msgid "Deseja prosseguir com a limpeza?"
+msgstr ""
+
+#: cache_cleared
+msgid "Cache do navegador foi apagado"
+msgstr ""
+
+#: nothing_to_clear
+msgid "Cache do navegador esta vazio. Nada a limpar."
+msgstr ""
+
+#: clearing_cache
+msgid "Esvaziando o cache"
+msgstr ""
+
+#: proceed
+msgid "Prosseguir"
+msgstr ""
+
+#: select_all
+msgid "Selecionar tudo"
+msgstr ""
+
+#: unselect_all
+msgid "Desselecionar tudo"
+msgstr ""
+
+#: cancel
+msgid "Cancelar"
+msgstr ""
+
+#: clear
+msgid "Limpar"
+msgstr ""
