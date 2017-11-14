@@ -11,7 +11,7 @@ i18next
     fallbackLng: false,
     keySeparator: '|',
     backend: {
-      loadPath: '/i18n/{{lng}}.json'
+      loadPath: './i18n/{{lng}}.json'
     }
 });
 
