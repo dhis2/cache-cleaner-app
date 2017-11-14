@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 
-var proxyTarget = 'http://localhost:8080/dhis';
+var proxyTarget = 'http://localhost:8085';
 
 module.exports = {
     context: __dirname,
@@ -31,7 +31,7 @@ module.exports = {
         contentBase: '.',
         progress: true,
         colors: true,
-        port: 8081,
+        port: 8082,
         inline: true,
         proxy: [
             {
