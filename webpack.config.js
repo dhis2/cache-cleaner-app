@@ -21,6 +21,10 @@ module.exports = {
                 test: /\.css$/,
                 loader: 'style-loader!css-loader',
             },
+            {
+                test: /\.po$/,
+                loaders: ['i18next-po-loader']
+            }
         ],
     },
     plugins: [
