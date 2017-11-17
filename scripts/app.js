@@ -3,12 +3,13 @@ import './directives.js';
 import './controllers.js';
 import './filters.js';
 import '../styles/style.css';
+import i18nextResources from './i18nextResources';
 
 i18next.init({
   returnEmptyString: false,
   fallbackLng: false,
   keySeparator: '|',
-  resources: {
+  resources: i18nextResources/*{
     ar: { translation: require('../i18n/ar.po') },
     ckb: { translation: require('../i18n/ckb.po') },
     es: { translation: require('../i18n/es.po') },
@@ -20,7 +21,7 @@ i18next.init({
     pt: { translation: require('../i18n/pt.po') },
     sv: { translation: require('../i18n/sv.po') },
     vi: { translation: require('../i18n/vi.po') }
-  }
+  }*/
 });
 
 /* App Module */
