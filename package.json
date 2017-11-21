@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "(rm -r build && mkdir build) || mkdir build",
-    "build": "webpack && cp -r i18n build/i18n && cp -r views build/views && cp -r styles build/styles && cp index.html build/",
-    "start": "webpack-dev-server",
+    "build": "node poTranslator.js && webpack && cp -r i18n build/i18n && cp -r views build/views && cp -r styles build/styles && cp index.html build/",
+    "start": "node poTranslator.js && webpack-dev-server",
     "extractor": "node extractor.js"
   },
   "repository": {

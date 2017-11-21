@@ -3,16 +3,13 @@ import './directives.js';
 import './controllers.js';
 import './filters.js';
 import '../styles/style.css';
+import i18nextResources from './i18nextResources';
 
-i18next
-  .use(i18nextXHRBackend)
-  .init({
-    returnEmptyString: false,
-    fallbackLng: false,
-    keySeparator: '|',
-    backend: {
-      loadPath: './i18n/{{lng}}.json'
-    }
+i18next.init({
+  returnEmptyString: false,
+  fallbackLng: false,
+  keySeparator: '|',
+  resources: i18nextResources
 });
 
 /* App Module */
