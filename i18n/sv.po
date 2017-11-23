@@ -1,10 +1,11 @@
 # Jason Pickering <jason.p.pickering@gmail.com>, 2017.
+#. extracted from i18n_app.properties
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-03-20 15:44+0200\n"
-"PO-Revision-Date: 2017-11-14 12:17+0100\n"
+"PO-Revision-Date: 2017-03-20 15:46+0200\n"
 "Last-Translator: Jason Pickering <jason.p.pickering@gmail.com>\n"
 "Language-Team: DHIS2\n"
 "Language: sv\n"
@@ -12,11 +13,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Virtaal 0.7.1\n"
 
 #: home
 msgid "Home"
-msgstr "Hem"
+msgstr ""
 
 #: dhis2
 msgid "DHIS 2"
@@ -60,11 +61,11 @@ msgstr "Om DHIS 2"
 
 #: session_storage
 msgid "Session Storage"
-msgstr "Session lagring"
+msgstr ""
 
 #: local_storage
 msgid "Local Storage"
-msgstr "Lokal lagring"
+msgstr ""
 
 #: indexed_db
 msgid "IndexedDB"
@@ -72,11 +73,11 @@ msgstr "IndexedDB"
 
 #: clearing_dhis2_browser_cache
 msgid "DHIS 2 browser cache cleaner"
-msgstr ""
+msgstr "\t\t"
 
 #: clears_local_cache
 msgid "This clears selected items from your browser cache"
-msgstr "Detta rensar valda objekt från din webbläsarens cache"
+msgstr ""
 
 #: proceed_cleaning
 msgid "Are your sure you want to proceed with the cleaning?"
@@ -84,15 +85,15 @@ msgstr "Är du säkert du vil forstätta med rensning?"
 
 #: cache_cleared
 msgid "Browser cache is cleared."
-msgstr "Webbläsarens cache har rensats."
+msgstr ""
 
 #: nothing_to_clear
 msgid "Browser cache is empty. Nothing to clear."
-msgstr "Webbläsarens cache är tomt. Inget att rensa."
+msgstr ""
 
 #: clearing_cache
 msgid "Clearing cache"
-msgstr "Rensa cacheminnet"
+msgstr ""
 
 #: proceed
 msgid "Proceed"
@@ -100,15 +101,15 @@ msgstr "Fortsätta"
 
 #: select_all
 msgid "Select all"
-msgstr "Välj alla"
+msgstr ""
 
 #: unselect_all
 msgid "Unselect all"
-msgstr "Ta bort alla"
+msgstr ""
 
 #: cancel
 msgid "Cancel"
-msgstr "Annulera"
+msgstr ""
 
 #: clear
 msgid "Clear"
