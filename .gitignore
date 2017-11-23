@@ -12,3 +12,6 @@ manifest.webapp
 # Misc files
 npm-debug.log
 .DS_Store
+
+# Do not include JS translation resources regenrated by po-converter.js
+i18n/resources.js

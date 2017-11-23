@@ -6,9 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "(rm -r build && mkdir build) || mkdir build",
-    "build": "node poTranslator.js && webpack && cp -r i18n build/i18n && cp -r views build/views && cp -r styles build/styles && cp index.html build/",
-    "start": "node poTranslator.js && webpack-dev-server",
-    "extractor": "node extractor.js"
+    "build": "npm run convert-po && webpack && cp -r i18n build/i18n && cp -r views build/views && cp -r styles build/styles && cp index.html build/",
+    "start": "npm run convert-po && webpack-dev-server",
+    "convert-po": "node po-converter.js",
+    "extract-pot": "node pot-extractor.js",
+    "refresh-translations-template": "npm run extract-pot -- -o translations.pot && git add ./i18n/translations.pot"
   },
   "repository": {
     "type": "git",
@@ -16,6 +18,9 @@
   },
   "keywords": [
     "DHIS2"
+  ],
+  "pre-commit": [
+    "refresh-translations-template"
   ],
   "author": "Abyot Asalefew Gizaw",
   "license": "BSD-3-Clause",

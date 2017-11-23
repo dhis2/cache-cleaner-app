@@ -3,7 +3,7 @@ import './directives.js';
 import './controllers.js';
 import './filters.js';
 import '../styles/style.css';
-import i18nextResources from './i18nextResources';
+import i18nextResources from '../i18n/resources';
 
 i18next.init({
   returnEmptyString: false,
