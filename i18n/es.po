@@ -1,114 +1,90 @@
-#. extracted from i18n_app.properties, i18n_app_es.properties
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-14 12:03+0200\n"
+"POT-Creation-Date: 2017-11-14T09:57:02.915Z\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Translate Toolkit 1.13.0\n"
 
-#: home
-msgid "Home"
-msgstr "Casa"
-
-#: dhis2
-msgid "DHIS 2"
-msgstr "DHIS 2"
-
-#: dhis2_home
-msgid "DHIS 2 Home"
-msgstr "Inicio DHIS 2"
-
-#: profile
-msgid "Profile"
-msgstr "Perfil"
-
-#: applications
-msgid "Apps"
-msgstr "Apps"
-
-#: more_applications
-msgid "More apps"
-msgstr "Más apps"
-
-#: search_apps
-msgid "Search apps"
-msgstr "Buscar apps"
-
-#: settings
-msgid "Settings"
-msgstr "Configuración"
-
-#: account
-msgid "Account"
-msgstr "Cuenta"
-
-#: log_out
-msgid "Log out"
-msgstr "Salir"
-
-#: about_dhis2
-msgid "About DHIS 2"
-msgstr "Sobre DHIS 2"
-
-#: session_storage
-msgid "Session storage"
-msgstr "Almacenamiento de la sesión"
-
-#: local_storage
-msgid "Local storage"
-msgstr "Almacenamiento local"
-
-#: indexed_db
-msgid "IndexedDB"
-msgstr "BD indexada"
-
-#: clearing_dhis2_browser_cache
 msgid "DHIS 2 browser cache cleaner"
 msgstr "DHIS 2 limpiador de la caché del navegador"
 
-#: clears_local_cache
-msgid "This clears the selected items from your browser cache"
-msgstr "Esto borra los elementos seleccionados de la caché de tu navegador"
+msgid "Session storage"
+msgstr "Almacenamiento de la sesión"
 
-#: proceed_cleaning
-msgid "Are you sure you want to proceed with the cleaning?"
-msgstr "¿Estás seguro de que quieres proseguir con el borrado?"
+msgid "Local storage"
+msgstr "Almacenamiento local"
 
-#: cache_cleared
-msgid "Browser cache is cleared."
-msgstr "La caché del navegador está libre"
+#, fuzzy
+msgid "indexedDB"
+msgstr "BD indexada"
 
-#: nothing_to_clear
-msgid "Browser cache is empty. Nothing to clear."
-msgstr "La caché del navegador está vacía. Nada que borrar"
+msgid "Clear"
+msgstr "Limpiar"
 
-#: clearing_cache
 msgid "Clearing cache"
 msgstr "Borrando caché"
 
-#: proceed
-msgid "Proceed"
-msgstr "Proceder"
+msgid "Are you sure you want to proceed with the cleaning?"
+msgstr "¿Estás seguro de que quieres proseguir con el borrado?"
 
-#: select_all
-msgid "Select all"
-msgstr "Seleccionar todo"
-
-#: unselect_all
-msgid "Unselect all"
-msgstr "Deseleccionar todo"
-
-#: cancel
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: clear
-msgid "Clear"
-msgstr "Limpiar"
+msgid "Proceed"
+msgstr "Proceder"
+
+#~ msgid "Home"
+#~ msgstr "Casa"
+
+#~ msgid "DHIS 2"
+#~ msgstr "DHIS 2"
+
+#~ msgid "DHIS 2 Home"
+#~ msgstr "Inicio DHIS 2"
+
+#~ msgid "Profile"
+#~ msgstr "Perfil"
+
+#~ msgid "Apps"
+#~ msgstr "Apps"
+
+#~ msgid "More apps"
+#~ msgstr "Más apps"
+
+#~ msgid "Search apps"
+#~ msgstr "Buscar apps"
+
+#~ msgid "Settings"
+#~ msgstr "Configuración"
+
+#~ msgid "Account"
+#~ msgstr "Cuenta"
+
+#~ msgid "Log out"
+#~ msgstr "Salir"
+
+#~ msgid "About DHIS 2"
+#~ msgstr "Sobre DHIS 2"
+
+#~ msgid "This clears the selected items from your browser cache"
+#~ msgstr "Esto borra los elementos seleccionados de la caché de tu navegador"
+
+#~ msgid "Browser cache is cleared."
+#~ msgstr "La caché del navegador está libre"
+
+#~ msgid "Browser cache is empty. Nothing to clear."
+#~ msgstr "La caché del navegador está vacía. Nada que borrar"
+
+#~ msgid "Select all"
+#~ msgstr "Seleccionar todo"
+
+#~ msgid "Unselect all"
+#~ msgstr "Deseleccionar todo"
