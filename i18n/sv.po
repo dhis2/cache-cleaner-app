@@ -20,7 +20,7 @@ msgstr "Hem"
 
 #: dhis2
 msgid "DHIS 2"
-msgstr ""
+msgstr "DHIS2"
 
 #: dhis2_home
 msgid "DHIS 2 Home"
@@ -72,7 +72,7 @@ msgstr "IndexedDB"
 
 #: clearing_dhis2_browser_cache
 msgid "DHIS 2 browser cache cleaner"
-msgstr ""
+msgstr "DHIS2 webbläsare cache rengörare"
 
 #: clears_local_cache
 msgid "This clears selected items from your browser cache"
