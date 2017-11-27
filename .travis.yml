@@ -8,16 +8,16 @@ cache:
 script:
 - npm run build
 after_success:
-- if ( [ "$TRAVIS_BRANCH" == "master" ] || [ ! -z "$TRAVIS_TAG" ] ) && [ "$TRAVIS_REPO_SLUG" == "dhis2/cache-cleaner-app" ]  &&  [ "$TRAVIS_PULL_REQUEST" == "false" ] ; then
-        mvn clean deploy --settings deploy/settings.xml && exit 0;
-  fi
-env:
-  global:
-  - secure: WjwaDRWXcTCK4/OoQyGBM2A+zd1bh1sdqgJh3JHnXewSiUceYnObCtMCEQUERpIT2y8iya65grQMvVJqSGDn4JaeieD3QXqgZF3Nf0Rr2qKKAu1momU7BMmTN2OypEmI9+BRXH6FZ6YUl3p+C8oSU7aXtX+swjVNSwmNICYPqv7J0kJWUfxN2016ILH9BdOeKoLlj/Y56MJuJjQEJibgcKrc2fec1/N+qbPzuLJasvdFPcK/oo6rvtp5cLXG8IUcojeVOXWi8uwNlUk2Q4jLcGlsXXhVNpg7OrQz0nNXjfM2CFTgpIXsRhu3BhddqKpmHffYsxszaCIUEvW5+2csDWGXkqEQJVEGqsZwRdGwwMRT3WIj9u0gzBtIKYPJggjgqF9WMSZoHP3KFf/DEVNHGiKkcE50QvlZW2UOVElG9NSUAKEWN3vAKSiuu1Bt8pEwETvKBYBWORhqWeYhlg7SkjVDKWHBwCEZt3MXlGaNcqvgxX0JkWgkMGq4kLKyuJVc9VeZt4jNqtxe6nW6FwXcFaqH57PEtRpCJc331YGRyt7xnPVfCoEiMi9N6lOCyqTbVqpPYU7sZEipQyrtj5FXCioTL4WMJyhrw+0ww/KLwt3iS9oBf0Yshh7ibsjJDpHIppuHH9rmc3QsgtVd5MTvOU8V7raULJQ7PYPkHJOu8zw=
-  - secure: UnFItYCdT1plm6lSSxURnRrH2RDu8EpowNCNLSCb5h6rGijv6EFTT38gv5V5YZXBq0eKfbY4zqGyLqVQPfE+ij0TF/Q5dBrNbO7dkr34LW8kgUUnWcLGxJe647HpMON1jq+326Bpoy8jDvbnm2otcW7jhi6DVt5JaCeGUnN3L+yktuY9XHgt+W9nOEpMHqgtxQvRM39SUcDmlgGpmCIeAfzagjviy9BjooeI0mwurUL9G6GWrPhPHb5oRuCU/gSdFMChwolJOfCWzu91zFsYtdoZiqOTSiFfsi2l4jrgVhFLuRDAAJRnvSiBTaxvwYC85i+Ktc22xhS/Ea03IzxplWRP7foW4AVMeZSZSYR6ycf1rL+8RNQYsIi3dN0b2oRNMyr40d7lpI1e4AhRW73AWYSCRqxvsc87+XGwcqEtKpepkGGgOzC8uV4jg3HQPii8zxdVHsgV1aM7Iawi3BEgu41YXAk27EHRyDblwqM68yWO16S88IrRe9BhICsvhorZ6MubTw8kIPDjZTQf77YlyEA/QCpI3NcJW7X3vkcyJZ4FK7qQaVQGtkuJp9AlZzSNRU8v5clJIkeI2tfOgIoP9XQzQESMRy7dN45vLsJI1+d1mgsnKLV6jTkzeFHY6Kjali94+Y7EP+JLESISCEYPi04T5ljxYc1J88L7EQdpxrU=
+- if ( [ "$TRAVIS_BRANCH" == "master" ] || [ ! -z "$TRAVIS_TAG" ] ) && [ "$TRAVIS_REPO_SLUG"
+  == "dhis2/cache-cleaner-app" ]  &&  [ "$TRAVIS_PULL_REQUEST" == "false" ] ; then
+  mvn clean deploy --settings deploy/settings.xml && exit 0; fi
 notifications:
   slack:
     rooms:
       secure: d+7pJli9UyPyOKBdQoQtgLG0giP1oNjaIu5IE1cM+QL1iUzELDbHJnDD3p7u/vaCNZkej/ahjgeX5xCtV5Cyba4ZiNAuPmx6bWPBtQY9+ixvIFGC9roZ1W1gbh4fclV68JMSuSoVghj8jsjAxVh7JjTEgNQFKd+RVFVePNJHe/Fr0V/uzEw8BhjdREGsnViQxRrl3h3dQAKFdzpgTcahnb1xt6ViobsW39yM5g/Y772GQPRTSNhWLw7gdWUQlA9lXY5F530s8g2uT+sT25o1jFMSE5aWe6fca4jNr3zTgPxRnx8tdQn4epDIl+OA8VFshxR82pxFHwDYvSkszhWJbwveE0q9wWHCB7eplhspEytBF6V/rxzz5CR+P2JeblLCiz+aWlXDEGsc4us+a3v6czTgqjMUosXR5YQuaRszbfuww7vShSffEnV9B/CksJv4Oq71MKcwkZZwbiGBbaJ5UnVAnkSQ8808TSQz2VYCi6MT+FFaI95wZ/bCDMYQNpLc7RiLDirkt0fI8+oAx6VRdI1QuQPDbspMeeORoZ2IkflrcPD54qtOYPLklIdTmcLY4hsHqBfAshzPYKplHmu9b1B2IdSC+8e+EMfFmW6qM9LHFQNvZvePekQ99THwyqspXxirQVcWeXLow+e5xBkVlmnXW/ywm8Il+K8+qJGGuW8=
     on_success: change
-    on_failure: always 
+    on_failure: always
+env:
+  global:
+  - secure: bam0D2DGZWNIvbYcVX3zYNfv6wYBMhxZKaM6meDV3nvLQ/FqHVYe5WJdp21ThSqkYd776wKbIJVFaHZ+wteuOriXGCb0RY3b7rowHRYEvzDgBP1mxRClXAhMOhQvw23SHGd1U9YTmMM05fRksPC4Jw+A8ILe3IQG0CJWtaNkwrCkqQ0CHEvsM5cHSe/N/3rO6+9LMHF9noraTLsy9i1IcoTCj1k/tvHFHWkZyJjeniFkF1BYU9Wu2nyXApbCllZAN+AS6o+7jvmdBCd2mAuR9BzI+VLyW88CahaRo+22ptqWWTdSKjgLTAjoC5rOsaGHLEgr89mN6wjV/EXWUtsskByO7X/y6OnLtOM79Esu6HooMhyycf5/dFJTyhh0qvBmq8alQDV1zcTOJKswT4JK+RtgllFatk17TvE/PIDdsgneze9W5vTukx/+/QQ0thNPzkxMqgKNPCW7yJkVwU7DdJ4c6QOl9ymE7C8k+hwKAnNo/ou4ZOZVTeHa2fmb2vA0bcGJFnVEhVq5B8PksbAUuvBIgq/XyyTvLLczOg5ZNsaF1NXB8cYc2n0MPtT/TNHh0y1XZDvjFgFMlTwtSbyrNKtNZChi+svG8xvTvevZsh3hmaeLfz2lvdXLrdxw8LWLvporcTc0BrkmHlmZ7bG1xiXC8eMqrHg4GGoTOnzaB8Q=
+  - secure: d815TyFg9QO0gKnT7efkX2Y+beBgb1dqQGs0EXk7EHsHSFR4/mvTNtCapKfbZtXQBPtj1yoMXIpZguHqhqJsJmaAB+b9jvIx0SFEM8jXTrPeIjwEMvfnhKhew9p/cl+/fPA2t/JXbeS01DoLOpEQ2EJhuklCpiBO5YqNjqb5ZppSDXtXTJkQzr/8FQpozL7ZT1OEqc6hHHTjiPUKojlg49+hPURivzZlsnrZaMCdtVXi0blxdhyTcQ9rqEuJOgB2Wdlp18t3lMQdDJbuwm4xBVsMwGf9NF7IN0qerehGnzn2rCrcKUSmL3zptRH/Ir0Ttgdy2cAuz8HIIlKSN7uNyBlBrfVyK8PRhESK9R9CpspI2SJaHEyS+CXz6BPKNRRHi2H6SOaonrspx+/LxE7W+NCxxctyy0b5NKwEafhninlQcROHlGwdQ5i7uNBGpzBvvsFIqgJSiBS2j+apXe++1lIyEKicGcDOEy1iMPw4AG/SLAAJs7jtBz5XKmagUgBNmuTqhv5m7oma6LIpPXtquXbNguqKXUSKzvmTscmCZpW0P5Zje9FBUlZ+wEqs0rG6kViOw/ns1a1kKlkIPaIBCWQv5SbMGF2DuNqfChf/t4cJTs6n83Y3mMLrpTmNMpuJtwXxEP6Augn1UydNOHarkO8bQoTFQr/5+RsACyAiS/c=
