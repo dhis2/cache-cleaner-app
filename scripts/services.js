@@ -166,19 +166,21 @@ cacheCleanerServices.service('idbStorageService', function ($window, $q) {
         }
     };
 })
-.factory('i18nLoader', function ($http, SessionStorageService, DHIS2URL) {
+.factory('i18nLoader', function ($http, $q, SessionStorageService, DHIS2URL) {
     return function () {
-            var userProfile = SessionStorageService.get('USER_PROFILE');
-            if (userProfile && userProfile.settings && userProfile.settings.keyUiLocale) {
-               i18next.changeLanguage(userProfile.settings.keyUiLocale);
-            }
-            else {
-              $http.get( DHIS2URL + '/me/profile.json').then(function (response) {
-                SessionStorageService.set('USER_PROFILE', response.data);
-                if (response.data && response.data.settings && response.data.settings.keyUiLocale) {
-                  i18next.changeLanguage(response.data.settings.keyUiLocale);
+        var promise;
+        var userSettings = SessionStorageService.get('USER_SETTING');
+        if (userSettings && userSettings.keyUiLocale) {
+            i18next.changeLanguage(userSettings.keyUiLocale);
+            promise = $q.when([]);
+        }
+        else {
+            promise = $http.get( DHIS2URL + '/userSettings').then(function (response) {
+                if(response && response.data && response.data.keyUiLocale){
+                    i18next.changeLanguage(response.data.keyUiLocale);
                 }
-              });
-            }
-        };
-    });
+            });
+        }
+        return promise;
+    };
+});
