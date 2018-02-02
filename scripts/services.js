@@ -167,20 +167,64 @@ cacheCleanerServices.service('idbStorageService', function ($window, $q) {
     };
 })
 .factory('i18nLoader', function ($http, $q, SessionStorageService, DHIS2URL) {
-    return function () {
-        var promise;
-        var userSettings = SessionStorageService.get('USER_SETTING');
-        if (userSettings && userSettings.keyUiLocale) {
-            i18next.changeLanguage(userSettings.keyUiLocale);
-            promise = $q.when([]);
+    var getTranslationStrings = function (locale) {
+        var defaultUrl = 'i18n/i18n_app.properties';
+        var url = '';
+        if (locale === 'en' || !locale) {
+            url = defaultUrl;
         }
         else {
-            promise = $http.get( DHIS2URL + '/userSettings').then(function (response) {
-                if(response && response.data && response.data.keyUiLocale){
-                    i18next.changeLanguage(response.data.keyUiLocale);
-                }
-            });
+            url = 'i18n/i18n_app_' + locale + '.properties';
         }
+
+        var tx = {locale: locale};
+
+        var promise = $http.get(url).then(function (response) {
+            tx = {locale: locale, keys: dhis2.util.parseJavaProperties(response.data)};
+            return tx;
+        }, function () {
+
+            var p = $http.get(defaultUrl).then(function (response) {
+                tx = {locale: locale, keys: dhis2.util.parseJavaProperties(response.data)};
+                return tx;
+            });
+            return p;
+        });
         return promise;
+    };
+
+    var getLocale = function () {
+        var locale = 'en';
+
+        var promise = $http.get( DHIS2URL + '/userSettings.json').then(function (response) {
+            if (response.data && response.data.keyUiLocale) {
+                locale = response.data.settings.keyUiLocale;
+            }
+            return locale;
+        }, function () {
+            return locale;
+        });
+
+        return promise;
+    };
+    return function () {
+        var deferred = $q.defer(), translations;
+        var userSettings = SessionStorageService.get('USER_SETTING');
+        if (userSettings && userSettings.keyUiLocale) {
+            getTranslationStrings(userSettings.keyUiLocale).then(function (response) {
+                translations = response.keys;
+                deferred.resolve(translations);
+            });
+            return deferred.promise;
+        }
+        else {
+            getLocale().then(function (locale) {
+                getTranslationStrings(locale).then(function (response) {
+                    translations = response.keys;
+                    deferred.resolve(translations);
+                });
+            });
+            return deferred.promise;
+        }
     };
 });
