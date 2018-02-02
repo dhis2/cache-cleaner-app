@@ -197,10 +197,9 @@ cacheCleanerServices.service('idbStorageService', function ($window, $q) {
         var getLocale = function () {
             var locale = 'en';
 
-            var promise = $http.get( DHIS2URL + '/me/profile.json').then(function (response) {
-                SessionStorageService.set('USER_PROFILE', response.data);
-                if (response.data && response.data.settings && response.data.settings.keyUiLocale) {
-                    locale = response.data.settings.keyUiLocale;
+            var promise = $http.get( DHIS2URL + '/userSettings.json').then(function (response) {
+                if (response.data && response.data.keyUiLocale) {
+                    locale = response.data.keyUiLocale;
                 }
                 return locale;
             }, function () {
@@ -211,9 +210,9 @@ cacheCleanerServices.service('idbStorageService', function ($window, $q) {
         };
         return function () {
             var deferred = $q.defer(), translations;
-            var userProfile = SessionStorageService.get('USER_PROFILE');
-            if (userProfile && userProfile.settings && userProfile.settings.keyUiLocale) {
-                getTranslationStrings(userProfile.settings.keyUiLocale).then(function (response) {
+            var userSettings = SessionStorageService.get('USER_SETTING');
+            if (userSettings && userSettings.keyUiLocale) {
+                getTranslationStrings(userSettings.keyUiLocale).then(function (response) {
                     translations = response.keys;
                     deferred.resolve(translations);
                 });
