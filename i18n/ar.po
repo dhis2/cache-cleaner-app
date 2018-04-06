@@ -1,44 +1,46 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-14T09:57:02.915Z\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2018-03-30 21:23+0000\n"
+"Last-Translator: Abdulrahman <abd@localhost>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.13.0\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Pootle 2.8\n"
+"X-POOTLE-MTIME: 1522445024.639753\n"
 
 msgid "DHIS 2 browser cache cleaner"
-msgstr ""
+msgstr "منظف ذاكرة التخزين المؤقت لمتصفح DHIS2"
 
 msgid "Session storage"
-msgstr ""
+msgstr "تخزين الجلسة"
 
 msgid "Local storage"
-msgstr ""
+msgstr "التخزين المحلي"
 
 msgid "indexedDB"
-msgstr ""
+msgstr "indexedDB"
 
 msgid "Clear"
-msgstr ""
+msgstr "مسح"
 
 msgid "Clearing cache"
-msgstr ""
+msgstr "جار تنظيف ذاكرة التخزين المؤقت"
 
 msgid "Are you sure you want to proceed with the cleaning?"
-msgstr ""
+msgstr "هل تريد بالتأكيد المتابعة في التنظيف؟"
 
 msgid "Cancel"
-msgstr ""
+msgstr "إلغاء"
 
 msgid "Proceed"
-msgstr ""
+msgstr "متابعة"
 
 #~ msgid "Home"
 #~ msgstr "الصفحة الرئيسية"
