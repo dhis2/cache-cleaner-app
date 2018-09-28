@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "(rm -r build && mkdir build) || mkdir build",
-    "build": "npm run convert-po && webpack && cp -r i18n build/i18n && cp -r views build/views && cp -r styles build/styles && cp index.html build/",
+    "build": "npm run convert-po && webpack && cp -r ./i18n ./build/i18n && cp -r ./views ./build/views && cp -r ./styles ./build/styles && cp ./index.html ./build/index.html",
     "start": "npm run convert-po && webpack-dev-server",
     "convert-po": "node po-converter.js",
     "extract-pot": "node pot-extractor.js",
