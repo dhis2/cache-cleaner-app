@@ -1,6 +1,6 @@
 {
   "name": "cache-cleaner-app",
-  "version": "28.0.1",
+  "version": "28.0.2",
   "description": "Cache Cleaner app for DHIS2",
   "main": "index.js",
   "scripts": {
