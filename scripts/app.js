@@ -25,4 +25,4 @@ const cacheCleaner = angular.module('cacheCleaner', [
     'angularLocalStorage',
     'jm.i18next'
   ])
-  .value('DHIS2URL', '../api');
+  .value('DHIS2URL', BASEAPIURL);

@@ -1,12 +1,12 @@
 {
-    "version": "0.1",
-    "name": "Cache Cleaner,
-    "description": "DHIS2 Cache Cleaner App",
+    "version": "0.2",
+    "name": "E-Registry Cache Cleaner",
+    "description": "DHIS2 E-Registry Cache Cleaner App",
     "launch_path": "index.html",
     "icons": {
-        "16": "/img/icons/mortar-16.png",
-        "48": "/img/icons/mortar-48.png",
-        "128": "/img/icons/mortar-128.png"
+        "16": "img/dhis-web-cache-cleaner.png",
+        "48": "img/dhis-web-cache-cleaner.png",
+        "128": "img/dhis-web-cache-cleaner.png"
     },
     "developer": {
         "name": "HISP",
