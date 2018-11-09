@@ -15,11 +15,6 @@ deploy:
   skip_cleanup: true
   on:
     all_branches: true
-- provider: script
-  script: publish-build
-  skip_cleanup: true
-  on:
-    tags: true
 notifications:
   slack:
     rooms:
