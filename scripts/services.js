@@ -6,6 +6,55 @@
 
 var cacheCleanerServices = angular.module('cacheCleanerServices', ['ngResource']);
 
+
+cacheCleanerServices.service('captureAppIdbCleanerService', function($window, $q) {
+    var userCachesStoreName = 'userCaches';
+    var getUserCacheStores = function(db){
+        var deferred = $q.defer();
+        var request = db.transaction(userCachesStoreName)
+            .objectStore(userCachesStoreName)
+            .get('accessHistory');
+        
+        request.onsuccess = function(event){
+            var result = event.target.result;
+            var dbnames = result && result.values ? result.values : []; 
+            deferred.resolve(dbnames);
+        }
+
+        request.onerror = function() {
+            deferred.reject();
+        }
+        
+        return deferred.promise;
+    }
+
+    var open = function(){
+        var deferred = $q.defer();
+        var request = indexedDB.open('dhis2ca');
+        request.onsuccess = function (e) {
+            var db = e.target.result;
+            deferred.resolve(db);
+        };
+        request.onerror = function () {
+            deferred.reject();
+        };
+        return deferred.promise;
+    }
+
+
+    var getDatabaseNames = function() {
+        return open().then(function(db){
+            if(db.objectStoreNames.contains('userCaches')) {
+                return getUserCacheStores(db);
+            }
+            return [];
+        });
+    }
+    return {
+        getDatabaseNames: getDatabaseNames, 
+    }
+});
+
 cacheCleanerServices.service('idbStorageService', function ($window, $q) {
 
     var indexedDB = $window.indexedDB;
@@ -19,7 +68,7 @@ cacheCleanerServices.service('idbStorageService', function ($window, $q) {
 
         request.onsuccess = function (e) {
             db = e.target.result;
-            deferred.resolve();
+            deferred.resolve(db);
         };
 
         request.onerror = function () {

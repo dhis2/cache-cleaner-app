@@ -6,7 +6,7 @@
 var cacheCleanerControllers = angular.module('cacheCleanerControllers', [])
 
 //Controller for settings page
-.controller('MainController', function($scope, storage, $window, idbStorageService, ModalService, i18nLoader) {
+.controller('MainController', function($scope, storage, $window, idbStorageService, ModalService, i18nLoader, $q, captureAppIdbCleanerService) {
 
     $scope.afterClearing = false;
 
@@ -37,14 +37,27 @@ var cacheCleanerControllers = angular.module('cacheCleanerControllers', [])
         }
 
         var idxDBs = ['dhis2ou', 'dhis2', 'dhis2tc', 'dhis2ec', 'dhis2de','dhis2er', 'dhis2ca'];
+        const promises = [];
         angular.forEach(idxDBs, function(db){
-            idbStorageService.dbExists(db).then(function(res){
+            promises.push(idbStorageService.dbExists(db).then(function(res){
                 if( res ) {
                     $scope.dbKeys.push({id: db, remove: false});
                     $scope.idCacheExists = true;
                 }
-            });
+            }));
         });
+
+        $q.all(promises).then(function(){
+            if($scope.dbKeys.some(function(item) { return item.id === 'dhis2ca'; })) {
+                captureAppIdbCleanerService.getDatabaseNames().then(function(dbnames) {
+                    dbnames.forEach(function(dbname){
+                        $scope.dbKeys.push({ id: dbname, remove: false });
+                    });
+                });
+
+            }
+        });
+
     };
 
     i18nLoader().then(function(){

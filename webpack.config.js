@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 
-var proxyTarget = 'http://localhost:8085';
+var proxyTarget = 'http://localhost:8080/dhis';
 
 module.exports = {
     context: __dirname,
@@ -31,15 +31,15 @@ module.exports = {
         contentBase: '.',
         progress: true,
         colors: true,
-        port: 8082,
+        port: 3000,
         inline: true,
         proxy: [
             {
-                context: ['/api/**', '/dhis-web-commons/**', '/dhis-web-core-resource/**', '/icons/**'],
+                context: ['/api/**', '/dhis-web-commons/**', '/dhis-web-core-resource/**', '/icons/**', '/dhis-web-capture/**'],
                 target: proxyTarget,
                 secure: false,
                 bypass: function(req) {
-                    req.headers.Authorization = 'Basic YWRtaW46ZGlzdHJpY3Q=';
+                    req.headers.Authorization = 'Basic c3lzdGVtOlN5c3RlbTEyMw==';
                 },
             },
         ],
