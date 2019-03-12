@@ -1,3 +1,7 @@
+body {
+    font-family: Roboto, sans-serif;
+}
+
 .top-bar {
     font-size: 16pt;
     font-weight: normal;
@@ -20,7 +24,7 @@ table
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 td:nth-child(2) {

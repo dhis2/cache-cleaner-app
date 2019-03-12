@@ -7,7 +7,7 @@
 var cacheCleanerServices = angular.module('cacheCleanerServices', ['ngResource']);
 
 
-cacheCleanerServices.service('captureAppIdbCleanerService', function($window, $q) {
+cacheCleanerServices.service('captureAppIdbCleanerService', ['$window', '$q', function($window, $q) {
     var userCachesStoreName = 'userCaches';
     var getUserCacheStores = function(db){
         var deferred = $q.defer();
@@ -53,9 +53,9 @@ cacheCleanerServices.service('captureAppIdbCleanerService', function($window, $q
     return {
         getDatabaseNames: getDatabaseNames, 
     }
-});
+}]);
 
-cacheCleanerServices.service('idbStorageService', function ($window, $q) {
+cacheCleanerServices.service('idbStorageService', ['$window', '$q', function ($window, $q) {
 
     var indexedDB = $window.indexedDB;
 
@@ -147,7 +147,7 @@ cacheCleanerServices.service('idbStorageService', function ($window, $q) {
         dbExists: dbExists,
         getObjectStores: getObjectStores
     };
-})
+}])
 /* Modal service for user interaction */
 .service('ModalService', ['$modal', function ($modal) {
 
@@ -200,7 +200,7 @@ cacheCleanerServices.service('idbStorageService', function ($window, $q) {
 
     }])
 /* service for wrapping sessionStorage '*/
-.service('SessionStorageService', function ($window) {
+.service('SessionStorageService', ['$window', function ($window) {
     return {
         get: function (key) {
             return JSON.parse($window.sessionStorage.getItem(key));
@@ -214,8 +214,8 @@ cacheCleanerServices.service('idbStorageService', function ($window, $q) {
             }
         }
     };
-})
-.factory('i18nLoader', function ($http, $q, SessionStorageService, DHIS2URL) {
+}])
+.factory('i18nLoader', ['$http', '$q', 'SessionStorageService', 'DHIS2URL', function ($http, $q, SessionStorageService, DHIS2URL) {
     return function () {
         var promise;
         var userSettings = SessionStorageService.get('USER_SETTING');
@@ -232,4 +232,4 @@ cacheCleanerServices.service('idbStorageService', function ($window, $q) {
         }
         return promise;
     };
-});
+}]);
