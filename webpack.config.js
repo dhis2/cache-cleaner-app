@@ -19,9 +19,21 @@ module.exports = {
                 test: /\.css$/,
                 loader: 'style-loader!css-loader',
             },
-            { 
+            {
                 test: require.resolve("i18next"),
-                loader: "expose?i18next" 
+                loader: "expose?i18next"
+            },
+            {
+                test: require.resolve("jquery"),
+                loader: "expose?jQuery"
+            },
+            {
+                test: require.resolve("jquery"),
+                loader: "expose?window.jQuery"
+            },
+            {
+                test: require.resolve("jquery"),
+                loader: "expose?$"
             },
             {
                 test: /\.(jpe|jpg|woff|woff2|eot|ttf|svg)(\?.*$|$)/,
@@ -30,6 +42,7 @@ module.exports = {
         ],
     },
     plugins: [
+        new webpack.EnvironmentPlugin(['REACT_APP_DHIS2_BASE_URL']),
         new webpack.optimize.DedupePlugin(),
     ],
     devtool: ['sourcemap'],
