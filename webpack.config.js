@@ -42,7 +42,7 @@ module.exports = {
         ],
     },
     plugins: [
-        new webpack.EnvironmentPlugin(['REACT_APP_DHIS2_BASE_URL']),
+        new webpack.EnvironmentPlugin(['REACT_APP_DHIS2_BASE_URL', 'NODE_ENV']),
         new webpack.optimize.DedupePlugin(),
     ],
     devtool: ['sourcemap'],
