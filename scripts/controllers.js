@@ -6,7 +6,13 @@
 var cacheCleanerControllers = angular.module('cacheCleanerControllers', [])
 
 //Controller for settings page
-.controller('MainController', function($scope, storage, $window, idbStorageService, ModalService, i18nLoader, $q, captureAppIdbCleanerService) {
+.controller('MainController', [
+    '$scope', 'storage', '$window',
+    'idbStorageService', 'ModalService',
+    'i18nLoader', '$q', 'captureAppIdbCleanerService',
+    function($scope, storage, $window,
+    idbStorageService, ModalService,
+    i18nLoader, $q, captureAppIdbCleanerService) {
 
     $scope.afterClearing = false;
 
@@ -112,4 +118,4 @@ var cacheCleanerControllers = angular.module('cacheCleanerControllers', [])
             dbKey.remove = !dbKey.remove;
         });
     };
-});
+}]);
