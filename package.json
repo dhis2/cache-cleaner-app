@@ -34,11 +34,31 @@
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.23.1",
+    "expose-loader": "0.7.0",
+    "file-loader": "1.1.11",
     "i18next-conv": "^5.0.0",
     "i18next-parser": "^0.12.0",
     "recursive-readdir": "^2.2.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "angular": "1.3.15",
+    "angular-animate": "1.3.15",
+    "angular-cookies": "1.3.15",
+    "angular-resource": "1.3.15",
+    "angular-route": "1.3.15",
+    "angular-sanitize": "1.3.15",
+    "angular-ui-bootstrap": "0.13.3",
+    "angularLocalStorage": "https://github.com/agrublev/angularLocalStorage.git",
+    "bootstrap": "3",
+    "fontawesome": "^5.6.3",
+    "i18next": "10.0.7",
+    "i18next-client": "^1.10.0",
+    "jquery": "^3.3.1",
+    "jquery-ui": "^1.12.1",
+    "ng-i18next": "^0.5.2",
+    "typeface-roboto": "^0.0.54"
   }
 }

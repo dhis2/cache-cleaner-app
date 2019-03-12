@@ -1,3 +1,7 @@
+body {
+    font-family: Roboto, sans-serif;
+}
+
 .top-bar {
     font-size: 16pt;
     font-weight: normal;

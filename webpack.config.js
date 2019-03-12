@@ -1,8 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
 
-var proxyTarget = 'http://localhost:8080/dhis';
-
 module.exports = {
     context: __dirname,
     entry: './scripts/index.js',
@@ -20,7 +18,15 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader: 'style-loader!css-loader',
-            }
+            },
+            { 
+                test: require.resolve("i18next"),
+                loader: "expose?i18next" 
+            },
+            {
+                test: /\.(jpe|jpg|woff|woff2|eot|ttf|svg)(\?.*$|$)/,
+                loader: 'file-loader'
+            },
         ],
     },
     plugins: [
@@ -33,15 +39,5 @@ module.exports = {
         colors: true,
         port: 3000,
         inline: true,
-        proxy: [
-            {
-                context: ['/api/**', '/dhis-web-commons/**', '/dhis-web-core-resource/**', '/icons/**', '/dhis-web-capture/**'],
-                target: proxyTarget,
-                secure: false,
-                bypass: function(req) {
-                    req.headers.Authorization = 'Basic c3lzdGVtOlN5c3RlbTEyMw==';
-                },
-            },
-        ],
     },
 };
