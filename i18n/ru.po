@@ -1,0 +1,42 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-01 04:53+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 2.2.5\n"
+"X-Pootle-Path: /ru/cache-cleaner-app/ru.po\n"
+"X-Pootle-Revision: 53764\n"
+
+msgid "DHIS 2 browser cache cleaner"
+msgstr "Очистить кэш браузера DHIS 2"
+
+msgid "Session storage"
+msgstr "Хранение сессии"
+
+msgid "Local storage"
+msgstr "Локальное хранение"
+
+msgid "indexedDB"
+msgstr "индексированнаяБД"
+
+msgid "Clear"
+msgstr "Очистить"
+
+msgid "Clearing cache"
+msgstr "Очистка кеша"
+
+msgid "Are you sure you want to proceed with the cleaning?"
+msgstr "Вы уверены, что хотите сделать уборку?"
+
+msgid "Cancel"
+msgstr "Отменить"
+
+msgid "Proceed"
+msgstr "Продолжать"
