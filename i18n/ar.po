@@ -1,19 +1,18 @@
+# Translators:
+# Viktor Varland <viktor@dhis2.org>, 2019
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2017-11-14T09:57:02.915Z\n"
-"PO-Revision-Date: 2018-03-30 21:23+0000\n"
-"Last-Translator: Abdulrahman <abd@localhost>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: ar\n"
+"PO-Revision-Date: 2019-08-05 12:03+0000\n"
+"Last-Translator: Viktor Varland <viktor@dhis2.org>, 2019\n"
+"Language-Team: Arabic (https://www.transifex.com/hisp-uio/teams/100509/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Pootle 2.8\n"
-"X-POOTLE-MTIME: 1522445024.639753\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 msgid "DHIS 2 browser cache cleaner"
 msgstr "منظف ذاكرة التخزين المؤقت لمتصفح DHIS2"
@@ -41,36 +40,3 @@ msgstr "إلغاء"
 
 msgid "Proceed"
 msgstr "متابعة"
-
-#~ msgid "Home"
-#~ msgstr "الصفحة الرئيسية"
-
-#~ msgid "DHIS 2"
-#~ msgstr "DHIS2"
-
-#~ msgid "DHIS 2 Home"
-#~ msgstr "DHIS2 الصفحة الرئيسية لـ"
-
-#~ msgid "Profile"
-#~ msgstr "الملف الشخصي"
-
-#~ msgid "Apps"
-#~ msgstr "تطبيقات"
-
-#~ msgid "More apps"
-#~ msgstr "تطبيقات اكثر"
-
-#~ msgid "Search apps"
-#~ msgstr "ابحث عن تطبيقات"
-
-#~ msgid "Settings"
-#~ msgstr "الضبط"
-
-#~ msgid "Account"
-#~ msgstr "حساب"
-
-#~ msgid "Log out"
-#~ msgstr "تسجيل خروج"
-
-#~ msgid "About DHIS 2"
-#~ msgstr "حول DHIS 2"
