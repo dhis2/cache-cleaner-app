@@ -1,17 +1,18 @@
-#, fuzzy
+# Translators:
+# Viktor Varland <viktor@dhis2.org>, 2019
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2017-11-14T09:57:02.915Z\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2019-08-05 12:03+0000\n"
+"Last-Translator: Viktor Varland <viktor@dhis2.org>, 2019\n"
+"Language-Team: Central Kurdish (https://www.transifex.com/hisp-uio/teams/100509/ckb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.13.0\n"
+"Language: ckb\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "DHIS 2 browser cache cleaner"
 msgstr "باكردنةوةي زيادةي براوسيري دي اج اي اس 2"
@@ -22,9 +23,8 @@ msgstr "كوكردنةوي كويوونةوة"
 msgid "Local storage"
 msgstr "كؤكردنةوةي ناوخؤيي"
 
-#, fuzzy
 msgid "indexedDB"
-msgstr "ثيوانة"
+msgstr ""
 
 msgid "Clear"
 msgstr "باك"
@@ -40,51 +40,3 @@ msgstr "لابردن"
 
 msgid "Proceed"
 msgstr "ئةنجام دان"
-
-#~ msgid "Home"
-#~ msgstr "ماڵةوة"
-
-#~ msgid "DHIS 2"
-#~ msgstr "دي ئيج اي اس 2"
-
-#~ msgid "DHIS 2 Home"
-#~ msgstr "مالةوة دي اج اي اس"
-
-#~ msgid "Profile"
-#~ msgstr "بروفايل"
-
-#~ msgid "Apps"
-#~ msgstr "بةرنامةكان"
-
-#~ msgid "More apps"
-#~ msgstr "بةؤنامةي زياتر"
-
-#~ msgid "Search apps"
-#~ msgstr "كةران بةدواي بةرنامةكان"
-
-#~ msgid "Settings"
-#~ msgstr "ريكخستن"
-
-#~ msgid "Account"
-#~ msgstr "حساب"
-
-#~ msgid "Log out"
-#~ msgstr "جونةدةرةوة"
-
-#~ msgid "About DHIS 2"
-#~ msgstr "دةربارةي دي اج اي اس 2 "
-
-#~ msgid "This clears the selected items from your browser cache"
-#~ msgstr "ئةم خاوينكردنةوانة هةلبزيردراون لة زيادةكاني براوسةرةكةت"
-
-#~ msgid "Browser cache is cleared."
-#~ msgstr "براوسير باك كرايةوة لة زيادةكان"
-
-#~ msgid "Browser cache is empty. Nothing to clear."
-#~ msgstr "براوسةرةكةت باكة هيج نية بؤ باك ردنةوة"
-
-#~ msgid "Select all"
-#~ msgstr "هةلبزاردني هةموان"
-
-#~ msgid "Unselect all"
-#~ msgstr "هةلنةبزاردني هةموان"
