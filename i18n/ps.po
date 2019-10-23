@@ -1,17 +1,18 @@
-#, fuzzy
+# Translators:
+# Viktor Varland <viktor@dhis2.org>, 2019
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2017-11-14T09:57:02.915Z\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2019-08-05 12:03+0000\n"
+"Last-Translator: Viktor Varland <viktor@dhis2.org>, 2019\n"
+"Language-Team: Pushto (https://www.transifex.com/hisp-uio/teams/100509/ps/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.13.0\n"
+"Language: ps\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "DHIS 2 browser cache cleaner"
 msgstr "د DHIS 2 په لټوونکي کې د ثبت پاکوونکی "
@@ -22,9 +23,8 @@ msgstr "د ناستې د جریان زېرمه کول"
 msgid "Local storage"
 msgstr "ځایي زېرمه کول"
 
-#, fuzzy
 msgid "indexedDB"
-msgstr "په انټرنیټي جدول کې درجول (IndexedDB)"
+msgstr ""
 
 msgid "Clear"
 msgstr "پاک یې کړئ"
@@ -40,51 +40,3 @@ msgstr "پاک یې کړئ"
 
 msgid "Proceed"
 msgstr "دوام ورکول"
-
-#~ msgid "Home"
-#~ msgstr "کورپاڼه"
-
-#~ msgid "DHIS 2"
-#~ msgstr "DHIS 2"
-
-#~ msgid "DHIS 2 Home"
-#~ msgstr "د DHIS 2 کور پاڼه"
-
-#~ msgid "Profile"
-#~ msgstr "ځانګړتیا"
-
-#~ msgid "Apps"
-#~ msgstr "اپلیکېشنونه"
-
-#~ msgid "More apps"
-#~ msgstr "نور اپلیکېشنونه"
-
-#~ msgid "Search apps"
-#~ msgstr "اپلیکېشنونه ولټوئ"
-
-#~ msgid "Settings"
-#~ msgstr "تنظیمات"
-
-#~ msgid "Account"
-#~ msgstr "د حساب (اکاونټ) جوړول"
-
-#~ msgid "Log out"
-#~ msgstr "له اکاونټ څخه وتل"
-
-#~ msgid "About DHIS 2"
-#~ msgstr "د DHIS 2 په هکله"
-
-#~ msgid "This clears the selected items from your browser cache"
-#~ msgstr "دا ستاسو د لټوونکي له ساتنځي څخه ټاکل شوي توکي پاکوي "
-
-#~ msgid "Browser cache is cleared."
-#~ msgstr "د لټوونکي ساتنځای پاک شو."
-
-#~ msgid "Browser cache is empty. Nothing to clear."
-#~ msgstr "د لټوونکي ساتنځای خالي دی. د پاکولو لپاره هېڅ شی هم نه لري."
-
-#~ msgid "Select all"
-#~ msgstr "ټول انتخاب کړئ"
-
-#~ msgid "Unselect all"
-#~ msgstr "ټول له انتاب څخه وباسئ"
