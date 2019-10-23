@@ -1,115 +1,42 @@
+# Translators:
+# Viktor Varland <viktor@dhis2.org>, 2019
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-03 10:38+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: vi\n"
+"Project-Id-Version: i18next-conv\n"
+"POT-Creation-Date: 2017-11-14T09:57:02.915Z\n"
+"PO-Revision-Date: 2019-08-05 12:03+0000\n"
+"Last-Translator: Viktor Varland <viktor@dhis2.org>, 2019\n"
+"Language-Team: Vietnamese (https://www.transifex.com/hisp-uio/teams/100509/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 2.2.5\n"
-"X-Pootle-Path: /vi/cache-cleaner-app/vi.po\n"
-"X-Pootle-Revision: 28675\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
-#: home
-msgid "Home"
-msgstr "Trang chủ"
-
-#: dhis2
-msgid "DHIS 2"
-msgstr "DHIS 2"
-
-#: dhis2_home
-msgid "DHIS 2 Home"
-msgstr "Trang chủ DHIS 2"
-
-#: profile
-msgid "Profile"
-msgstr "Hồ sơ"
-
-#: applications
-msgid "Apps"
-msgstr "Ứng dụng"
-
-#: more_applications
-msgid "More apps"
-msgstr "Thêm ứng dụng"
-
-#: search_apps
-msgid "Search apps"
-msgstr "Tìm ứng dụng"
-
-#: settings
-msgid "Settings"
-msgstr "Cài đặt"
-
-#: account
-msgid "Account"
-msgstr "Tài khoản"
-
-#: log_out
-msgid "Log out"
-msgstr "Đăng xuất"
-
-#: about_dhis2
-msgid "About DHIS 2"
-msgstr "Giới thiệu về DHIS2"
-
-#: session_storage
-msgid "Session storage"
-msgstr "Lưu trữ phiên"
-
-#: local_storage
-msgid "Local storage"
-msgstr "Lưu trữ cục bộ"
-
-#: indexed_db
-msgid "IndexedDB"
-msgstr "Chỉ mục cơ sở dữ liệu"
-
-#: clearing_dhis2_browser_cache
 msgid "DHIS 2 browser cache cleaner"
 msgstr "Trình xóa dữ liệu cục bộ trong DHIS 2"
 
-#: clears_local_cache
-msgid "This clears the selected items from your browser cache"
-msgstr "Xóa dữ liệu trong các mục đã chọn"
+msgid "Session storage"
+msgstr "Lưu trữ phiên"
 
-#: proceed_cleaning
-msgid "Are you sure you want to proceed with the cleaning?"
-msgstr "Bạn có chắc chắn muốn thực thi việc xóa dữ liệu cục bộ?"
+msgid "Local storage"
+msgstr "Lưu trữ cục bộ"
 
-#: cache_cleared
-msgid "Browser cache is cleared."
-msgstr "Dữ liệu cục bộ đã được xóa"
+msgid "indexedDB"
+msgstr ""
 
-#: nothing_to_clear
-msgid "Browser cache is empty. Nothing to clear."
-msgstr "Trình duyệt không có dữ liệu cục bộ. Không có gì để xóa."
+msgid "Clear"
+msgstr "Xóa"
 
-#: clearing_cache
 msgid "Clearing cache"
 msgstr "Đang xóa..."
 
-#: proceed
-msgid "Proceed"
-msgstr "Thực hiện"
+msgid "Are you sure you want to proceed with the cleaning?"
+msgstr "Bạn có chắc chắn muốn thực thi việc xóa dữ liệu cục bộ?"
 
-#: select_all
-msgid "Select all"
-msgstr "Chọn tất cả"
-
-#: unselect_all
-msgid "Unselect all"
-msgstr "Bỏ chọn tất cả"
-
-#: cancel
 msgid "Cancel"
 msgstr "Hủy"
 
-#: clear
-msgid "Clear"
-msgstr "Xóa"
+msgid "Proceed"
+msgstr "Thực hiện"
