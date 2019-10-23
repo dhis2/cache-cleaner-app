@@ -1,114 +1,42 @@
-#. extracted from i18n_app.properties, i18n_app_lo.properties
-#, fuzzy
+# Translators:
+# Viktor Varland <viktor@dhis2.org>, 2019
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-14 12:07+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: i18next-conv\n"
+"POT-Creation-Date: 2017-11-14T09:57:02.915Z\n"
+"PO-Revision-Date: 2019-08-05 12:03+0000\n"
+"Last-Translator: Viktor Varland <viktor@dhis2.org>, 2019\n"
+"Language-Team: Lao (https://www.transifex.com/hisp-uio/teams/100509/lo/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.13.0\n"
+"Language: lo\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
-#: home
-msgid "Home"
-msgstr "ໜ້າຫຼັກ"
-
-#: dhis2
-msgid "DHIS 2"
-msgstr ""
-
-#: dhis2_home
-msgid "DHIS 2 Home"
-msgstr ""
-
-#: profile
-msgid "Profile"
-msgstr "ໂປຟາຍ"
-
-#: applications
-msgid "Apps"
-msgstr "ແອບ"
-
-#: more_applications
-msgid "More apps"
-msgstr "ແອບເພີ້ມເຕີມ"
-
-#: search_apps
-msgid "Search apps"
-msgstr "ຊອກຫາ"
-
-#: settings
-msgid "Settings"
-msgstr "ການຕັ້ງຄ່າ"
-
-#: account
-msgid "Account"
-msgstr "ບັນຊີ"
-
-#: log_out
-msgid "Log out"
-msgstr "ອອກຈາກລະບົບ"
-
-#: about_dhis2
-msgid "About DHIS 2"
-msgstr "ກ່ຽວກັບ DHIS 2"
-
-#: session_storage
-msgid "Session storage"
-msgstr ""
-
-#: local_storage
-msgid "Local storage"
-msgstr ""
-
-#: indexed_db
-msgid "IndexedDB"
-msgstr ""
-
-#: clearing_dhis2_browser_cache
 msgid "DHIS 2 browser cache cleaner"
 msgstr "ລ້າງຂໍ້ມູນຂອງ DHIS 2 ໃນເຄດລອງບາວເຊີ້"
 
-#: clears_local_cache
-msgid "This clears the selected items from your browser cache"
-msgstr "ມັນຂະລ້າງຂໍ້ມູນໃນບາວເຊີ້ທັງໝົດ"
+msgid "Session storage"
+msgstr ""
 
-#: proceed_cleaning
-msgid "Are you sure you want to proceed with the cleaning?"
-msgstr "ເຈົ້າຕ້ອງການລ້າງຂໍ້ມູນນີ້ອອກຈາກບາວເຊີ້ແທ້ບໍ?"
+msgid "Local storage"
+msgstr ""
 
-#: cache_cleared
-msgid "Browser cache is cleared."
-msgstr "ຂໍ້ມູນໃນບາວເຊີ້ຖືກລ້າງແລ້ວ"
+msgid "indexedDB"
+msgstr ""
 
-#: nothing_to_clear
-msgid "Browser cache is empty. Nothing to clear."
-msgstr "ບໍ່ມີຂໍ້ມູນໃນຄວາມຈຳຂອງບາວເຊີ້"
+msgid "Clear"
+msgstr "ລ້າງ"
 
-#: clearing_cache
 msgid "Clearing cache"
 msgstr "ລ້າງຂໍ້ມູນ"
 
-#: proceed
-msgid "Proceed"
-msgstr "ດຳເນີນ"
+msgid "Are you sure you want to proceed with the cleaning?"
+msgstr "ເຈົ້າຕ້ອງການລ້າງຂໍ້ມູນນີ້ອອກຈາກບາວເຊີ້ແທ້ບໍ?"
 
-#: select_all
-msgid "Select all"
-msgstr "ເລືອກທັງໝົດ"
-
-#: unselect_all
-msgid "Unselect all"
-msgstr "ບໍ່ເລືອກທັງໝົດ"
-
-#: cancel
 msgid "Cancel"
 msgstr "ຍົກເລີກ"
 
-#: clear
-msgid "Clear"
-msgstr "ລ້າງ"
+msgid "Proceed"
+msgstr "ດຳເນີນ"
