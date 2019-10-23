@@ -1,115 +1,43 @@
-# Jason Pickering <jason.p.pickering@gmail.com>, 2017.
+# Translators:
+# phil_dhis2, 2019
+# Viktor Varland <viktor@dhis2.org>, 2019
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-20 15:44+0200\n"
-"PO-Revision-Date: 2017-11-14 12:17+0100\n"
-"Last-Translator: Jason Pickering <jason.p.pickering@gmail.com>\n"
-"Language-Team: DHIS2\n"
-"Language: sv\n"
+"Project-Id-Version: i18next-conv\n"
+"POT-Creation-Date: 2017-11-14T09:57:02.915Z\n"
+"PO-Revision-Date: 2019-09-01 18:40+0000\n"
+"Last-Translator: Viktor Varland <viktor@dhis2.org>, 2019\n"
+"Language-Team: Swedish (https://www.transifex.com/hisp-uio/teams/100509/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.7.1\n"
 
-#: home
-msgid "Home"
-msgstr "Hem"
-
-#: dhis2
-msgid "DHIS 2"
-msgstr "DHIS2"
-
-#: dhis2_home
-msgid "DHIS 2 Home"
-msgstr "DHIS 2 Hem"
-
-#: profile
-msgid "Profile"
-msgstr "Profil"
-
-#: applications
-msgid "Apps"
-msgstr "Appar"
-
-#: more_applications
-msgid "More apps"
-msgstr "Mer appar"
-
-#: search_apps
-msgid "Search apps"
-msgstr "Sök appar"
-
-#: settings
-msgid "Settings"
-msgstr "Inst"
-
-#: account
-msgid "Account"
-msgstr "Konto"
-
-#: log_out
-msgid "Log out"
-msgstr "Logga ut"
-
-#: about_dhis2
-msgid "About DHIS 2"
-msgstr "Om DHIS 2"
-
-#: session_storage
-msgid "Session Storage"
-msgstr "Session lagring"
-
-#: local_storage
-msgid "Local Storage"
-msgstr "Lokal lagring"
-
-#: indexed_db
-msgid "IndexedDB"
-msgstr "IndexedDB"
-
-#: clearing_dhis2_browser_cache
 msgid "DHIS 2 browser cache cleaner"
 msgstr "DHIS2 webbläsare cache rengörare"
 
-#: clears_local_cache
-msgid "This clears selected items from your browser cache"
-msgstr "Detta rensar valda objekt från din webbläsarens cache"
+msgid "Session storage"
+msgstr ""
 
-#: proceed_cleaning
-msgid "Are your sure you want to proceed with the cleaning?"
-msgstr "Är du säkert du vil forstätta med rensning?"
+msgid "Local storage"
+msgstr ""
 
-#: cache_cleared
-msgid "Browser cache is cleared."
-msgstr "Webbläsarens cache har rensats."
+msgid "indexedDB"
+msgstr ""
 
-#: nothing_to_clear
-msgid "Browser cache is empty. Nothing to clear."
-msgstr "Webbläsarens cache är tomt. Inget att rensa."
+msgid "Clear"
+msgstr "Klar"
 
-#: clearing_cache
 msgid "Clearing cache"
 msgstr "Rensa cacheminnet"
 
-#: proceed
+msgid "Are you sure you want to proceed with the cleaning?"
+msgstr ""
+
+msgid "Cancel"
+msgstr "Annullera"
+
 msgid "Proceed"
 msgstr "Fortsätta"
-
-#: select_all
-msgid "Select all"
-msgstr "Välj alla"
-
-#: unselect_all
-msgid "Unselect all"
-msgstr "Ta bort alla"
-
-#: cancel
-msgid "Cancel"
-msgstr "Annulera"
-
-#: clear
-msgid "Clear"
-msgstr "Ta bort"
