@@ -1,17 +1,19 @@
-#, fuzzy
+# Translators:
+# phil_dhis2, 2019
+# Viktor Varland <viktor@dhis2.org>, 2019
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2017-11-14T09:57:02.915Z\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2019-09-01 18:42+0000\n"
+"Last-Translator: Viktor Varland <viktor@dhis2.org>, 2019\n"
+"Language-Team: Vietnamese (https://www.transifex.com/hisp-uio/teams/100509/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.13.0\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "DHIS 2 browser cache cleaner"
 msgstr "Trình xóa dữ liệu cục bộ trong DHIS 2"
@@ -22,9 +24,8 @@ msgstr "Lưu trữ phiên"
 msgid "Local storage"
 msgstr "Lưu trữ cục bộ"
 
-#, fuzzy
 msgid "indexedDB"
-msgstr "Chỉ mục cơ sở dữ liệu"
+msgstr ""
 
 msgid "Clear"
 msgstr "Xóa"
@@ -39,52 +40,4 @@ msgid "Cancel"
 msgstr "Hủy"
 
 msgid "Proceed"
-msgstr "Thực hiện"
-
-#~ msgid "Home"
-#~ msgstr "Trang chủ"
-
-#~ msgid "DHIS 2"
-#~ msgstr "DHIS 2"
-
-#~ msgid "DHIS 2 Home"
-#~ msgstr "Trang chủ DHIS 2"
-
-#~ msgid "Profile"
-#~ msgstr "Hồ sơ"
-
-#~ msgid "Apps"
-#~ msgstr "Ứng dụng"
-
-#~ msgid "More apps"
-#~ msgstr "Thêm ứng dụng"
-
-#~ msgid "Search apps"
-#~ msgstr "Tìm ứng dụng"
-
-#~ msgid "Settings"
-#~ msgstr "Cài đặt"
-
-#~ msgid "Account"
-#~ msgstr "Tài khoản"
-
-#~ msgid "Log out"
-#~ msgstr "Đăng xuất"
-
-#~ msgid "About DHIS 2"
-#~ msgstr "Giới thiệu về DHIS2"
-
-#~ msgid "This clears the selected items from your browser cache"
-#~ msgstr "Xóa dữ liệu trong các mục đã chọn"
-
-#~ msgid "Browser cache is cleared."
-#~ msgstr "Dữ liệu cục bộ đã được xóa"
-
-#~ msgid "Browser cache is empty. Nothing to clear."
-#~ msgstr "Trình duyệt không có dữ liệu cục bộ. Không có gì để xóa."
-
-#~ msgid "Select all"
-#~ msgstr "Chọn tất cả"
-
-#~ msgid "Unselect all"
-#~ msgstr "Bỏ chọn tất cả"
+msgstr "Tiếp tục"
