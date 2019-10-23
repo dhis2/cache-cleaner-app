@@ -1,90 +1,42 @@
-#, fuzzy
+# Translators:
+# phil_dhis2, 2019
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2017-11-14T09:57:02.915Z\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2019-09-01 18:40+0000\n"
+"Last-Translator: phil_dhis2, 2019\n"
+"Language-Team: Persian (Afghanistan) (https://www.transifex.com/hisp-uio/teams/100509/fa_AF/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.13.0\n"
+"Language: fa_AF\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 msgid "DHIS 2 browser cache cleaner"
-msgstr "پاک کننده حافظه بروزر DHIS 2"
+msgstr ""
 
 msgid "Session storage"
-msgstr "ذخیر کردن سیشن"
+msgstr ""
 
 msgid "Local storage"
-msgstr "ذخیره سازی داخلی"
+msgstr ""
 
-#, fuzzy
 msgid "indexedDB"
-msgstr "IndexedDB"
+msgstr ""
 
 msgid "Clear"
 msgstr "پاک کردن"
 
 msgid "Clearing cache"
-msgstr "پاک سازی حافظه بروزر"
+msgstr ""
 
 msgid "Are you sure you want to proceed with the cleaning?"
-msgstr "آیا شما مطمین هستید با انجام پاک سازی؟"
+msgstr ""
 
 msgid "Cancel"
 msgstr "انصراف"
 
 msgid "Proceed"
-msgstr "اقدام کردن"
-
-#~ msgid "Home"
-#~ msgstr "صفحه اصلی"
-
-#~ msgid "DHIS 2"
-#~ msgstr "دی اچ ای اس 2"
-
-#~ msgid "DHIS 2 Home"
-#~ msgstr "صفحه اصلی DHIS 2"
-
-#~ msgid "Profile"
-#~ msgstr "مشخصات"
-
-#~ msgid "Apps"
-#~ msgstr "برنامه ها"
-
-#~ msgid "More apps"
-#~ msgstr "برنامه های بیشتر"
-
-#~ msgid "Search apps"
-#~ msgstr "جستجوی برنامه"
-
-#~ msgid "Settings"
-#~ msgstr "تنظیمات"
-
-#~ msgid "Account"
-#~ msgstr "حساب"
-
-#~ msgid "Log out"
-#~ msgstr "خروج از سیستم"
-
-#~ msgid "About DHIS 2"
-#~ msgstr "در باره دی اچ ای اس 2"
-
-#~ msgid "This clears the selected items from your browser cache"
-#~ msgstr "این کار باعث پاک کردن موارد انتخابی از حافظه بروزر شما میشود"
-
-#~ msgid "Browser cache is cleared."
-#~ msgstr "حافظه بروزر تان پاک شده."
-
-#~ msgid "Browser cache is empty. Nothing to clear."
-#~ msgstr "حافظه بروزر تان خالی است. هیچ چیزی برای پاک کردن نیست."
-
-#~ msgid "Select all"
-#~ msgstr "انتخاب همه"
-
-#~ msgid "Unselect all"
-#~ msgstr "لغو انتخاب همه"
+msgstr ""
