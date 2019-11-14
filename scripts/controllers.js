@@ -20,7 +20,17 @@ var cacheCleanerControllers = angular.module('cacheCleanerControllers', [])
         $scope.dbKeys = [];
         $scope.ssKeys = [];
 
-        var reservedStorageKeys = ['key', 'getItem', 'setItem', 'removeItem', 'clear', 'length'];
+        var reservedStorageKeys = [
+            'key',
+            'getItem',
+            'setItem',
+            'removeItem',
+            'clear',
+            'length',
+            'dhis2.menu.ui.headerBar.title',
+            'dhis2.menu.ui.headerBar.link',
+            'dhis2.menu.ui.headerBar.userStyle',
+        ];
 
         for(var key in $window.sessionStorage){
             if (reservedStorageKeys.indexOf(key) === -1) {
