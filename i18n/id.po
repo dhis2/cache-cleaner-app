@@ -15,7 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "DHIS 2 browser cache cleaner"
-msgstr "DHIS 2 browser cache cleaner"
+msgstr ""
 
 msgid "Session storage"
 msgstr "Session Storage"
