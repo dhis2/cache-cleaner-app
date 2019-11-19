@@ -39,4 +39,4 @@ msgid "Cancel"
 msgstr "لغو کردن"
 
 msgid "Proceed"
-msgstr ""
+msgstr "ادامه دادن"
