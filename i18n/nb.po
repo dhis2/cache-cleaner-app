@@ -15,28 +15,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "DHIS 2 browser cache cleaner"
-msgstr ""
+msgstr "DHIS2 nettleserbufferrens"
 
 msgid "Session storage"
-msgstr ""
+msgstr "Øktlagring"
 
 msgid "Local storage"
-msgstr ""
+msgstr "Lokal lagring"
 
 msgid "indexedDB"
-msgstr ""
+msgstr "indeksertDB"
 
 msgid "Clear"
 msgstr "Fjern"
 
 msgid "Clearing cache"
-msgstr ""
+msgstr "Tømmer buffer"
 
 msgid "Are you sure you want to proceed with the cleaning?"
-msgstr ""
+msgstr "Er du sikker på at du vil fortsette med rensingen?"
 
 msgid "Cancel"
 msgstr "Avbryt"
 
 msgid "Proceed"
-msgstr ""
+msgstr "Fortsett"
