@@ -6,22 +6,28 @@
     "private": true,
     "scripts": {
         "build": "d2-app-scripts build",
-        "start": "d2-app-scripts start",
-        "test": "d2-app-scripts test",
-        "lint": "yarn lint:js && yarn lint:text",
-        "lint:js": "d2-style js check",
-        "lint:text": "d2-style text check",
+        "extract-pot": "d2-i18n-extract -p src/ -o i18n/",
         "format": "yarn format:js && yarn format:text",
         "format:staged": "yarn format:js --staged && yarn format:text --staged",
         "format:js": "d2-style js apply",
-        "format:text": "d2-style text apply"
+        "format:text": "d2-style text apply",
+        "lint": "yarn lint:js && yarn lint:text",
+        "lint:js": "d2-style js check",
+        "lint:text": "d2-style text check",
+        "localize": "yarn extract-pot && d2-i18n-generate -n NAMESPACE -p ./i18n/ -o ./src/locales/",
+        "prestart": "yarn localize",
+        "start": "d2-app-scripts start",
+        "test": "d2-app-scripts test"
     },
     "devDependencies": {
         "@dhis2/cli-app-scripts": "^4.0.0",
-        "@dhis2/cli-style": "^7.0.0"
+        "@dhis2/cli-style": "^7.0.0",
+        "@dhis2/d2-i18n-extract": "^1.0.8",
+        "@dhis2/d2-i18n-generate": "^1.1.1"
     },
     "dependencies": {
         "@dhis2/app-runtime": "^2.1.1",
+        "@dhis2/d2-i18n": "^1.0.6",
         "@dhis2/prop-types": "^1.6.4",
         "@dhis2/ui-core": "^4.17.1",
         "@dhis2/ui-forms": "^1.0.1",

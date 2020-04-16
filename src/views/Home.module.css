@@ -1,0 +1,11 @@
+.container {
+    width: 1024px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: var(--spacers-dp16);
+}
+
+.headline {
+    font-size: 24px;
+    margin: 0 0 var(--spacers-dp16);
+}

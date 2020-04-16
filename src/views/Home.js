@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
+import i18n from '@dhis2/d2-i18n'
 
 import { ClearForm } from '../modules/clearForm/ClearForm'
-import { ConfirmationModal } from '../modules/confirmationModal/ConfirmationModal'
 import { deleteDb } from '../modules/indexedDb/deleteDb'
 import { useClearableDatabaseKeys } from '../modules/indexedDb/useClearableDatabaseKeys'
 import { useClearableStorageKeys } from '../modules/storage/useClearableStorageKeys'
+import styles from './Home.module.css'
 
 const deleteValues = values => {
-    console.log('delete', values)
     values.localStorageKeys.forEach(key => localStorage.removeItem(key))
     values.sessionStorageKeys.forEach(key => sessionStorage.removeItem(key))
     values.indexedDatabaseKeys.forEach(key => deleteDb(key))
@@ -18,10 +18,12 @@ export const Home = () => {
         keys: localStorageKeys,
         refetch: refetchLocalStorageKeys,
     } = useClearableStorageKeys(window.localStorage)
+
     const {
         keys: sessionStorageKeys,
         refetch: refetchSessionStorageKeys,
     } = useClearableStorageKeys(window.sessionStorage)
+
     const {
         loading,
         error,
@@ -29,44 +31,34 @@ export const Home = () => {
         refetch: refetchIndexedDatabaseKeys,
     } = useClearableDatabaseKeys()
 
-    const [show, setShow] = useState(false)
-    const [valuesToDelete, setValuesToDelete] = useState(undefined)
-
-    if (loading) {
-        return <div>Loading clearable data...</div>
-    }
-
-    if (error) {
-        return <div>{`Something went wrong: ${error.message}`}</div>
+    const showContent = !loading && !error
+    const onSubmit = async values => {
+        deleteValues(values)
+        refetchLocalStorageKeys()
+        refetchSessionStorageKeys()
+        await refetchIndexedDatabaseKeys()
     }
 
     return (
-        <div>
-            {show && (
-                <ConfirmationModal
-                    proceed={() => {
-                        deleteValues(valuesToDelete)
-                        refetchLocalStorageKeys()
-                        refetchSessionStorageKeys()
-                        refetchIndexedDatabaseKeys()
-                        setValuesToDelete(undefined)
-                        setShow(false)
-                    }}
-                    abort={() => setShow(false)}
-                    values={valuesToDelete}
-                />
-            )}
+        <div className={styles.container}>
+            {loading && i18n.t('Loading clearable data...')}
+            {error && i18n.t(`Something went wrong: ${error.message}`)}
+            {showContent && (
+                <>
+                    <h1 className={styles.headline}>
+                        {i18n.t('DHIS 2 browser cache cleaner')}
+                    </h1>
 
-            <ClearForm
-                localStorageKeys={localStorageKeys}
-                sessionStorageKeys={sessionStorageKeys}
-                indexedDatabaseKeys={indexedDatabaseKeys}
-                onSubmit={values => {
-                    setValuesToDelete(values)
-                    setShow(true)
-                }}
-                initialValues={valuesToDelete}
-            />
+                    <ClearForm
+                        // keep these so the previously selected values
+                        // are kept for rejection in the confirmation step
+                        localStorageKeys={localStorageKeys}
+                        sessionStorageKeys={sessionStorageKeys}
+                        indexedDatabaseKeys={indexedDatabaseKeys}
+                        onSubmit={onSubmit}
+                    />
+                </>
+            )}
         </div>
     )
 }

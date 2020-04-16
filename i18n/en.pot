@@ -5,11 +5,59 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2020-04-15T07:38:02.187Z\n"
-"PO-Revision-Date: 2020-04-15T07:38:02.187Z\n"
+"POT-Creation-Date: 2020-04-16T12:59:23.976Z\n"
+"PO-Revision-Date: 2020-04-16T12:59:23.976Z\n"
 
-msgid "Hello {{name}}"
+msgid "No data selected"
 msgstr ""
 
-msgid "Welcome to DHIS2!"
+msgid "Select all"
+msgstr ""
+
+msgid "Deselect all"
+msgstr ""
+
+msgid "Clear all selected items"
+msgstr ""
+
+msgid "Local storage empty"
+msgstr ""
+
+msgid "Select all local storage items"
+msgstr ""
+
+msgid "Deselect all local storage items"
+msgstr ""
+
+msgid "Local storage"
+msgstr ""
+
+msgid "Session storage empty"
+msgstr ""
+
+msgid "Select all session storage items"
+msgstr ""
+
+msgid "Deselect all session storage items"
+msgstr ""
+
+msgid "Session storage"
+msgstr ""
+
+msgid "No indexed databases"
+msgstr ""
+
+msgid "Select all databases"
+msgstr ""
+
+msgid "Deselect all databases"
+msgstr ""
+
+msgid "Indexed database"
+msgstr ""
+
+msgid "Loading clearable data..."
+msgstr ""
+
+msgid "DHIS 2 browser cache cleaner"
 msgstr ""
