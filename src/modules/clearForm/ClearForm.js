@@ -1,4 +1,4 @@
-import { Help } from '@dhis2/ui-core'
+import { Button, Help } from '@dhis2/ui-core'
 import { FORM_ERROR } from 'final-form'
 import i18n from '@dhis2/d2-i18n'
 import propTypes from '@dhis2/prop-types'
@@ -7,7 +7,6 @@ import { Form } from '@dhis2/ui-forms'
 import React from 'react'
 
 import { Actions } from '../actions/Actions'
-import { Action } from '../actions/Action'
 import { FormSection } from './FormSection'
 import styles from './ClearForm.module.css'
 
@@ -61,22 +60,28 @@ export const ClearForm = ({
             {({ handleSubmit, errors, submitFailed, form }) => (
                 <form onSubmit={handleSubmit}>
                     <Actions>
-                        <Action onClick={() => selectAll(form)}>
+                        <Button
+                            onClick={() => selectAll(form)}
+                            dataTest="dhis2-cachecleaner-selectall"
+                        >
                             {i18n.t('Select all')}
-                        </Action>
+                        </Button>
 
-                        <Action onClick={() => deselectAll(form)}>
+                        <Button
+                            onClick={() => deselectAll(form)}
+                            dataTest="dhis2-cachecleaner-deselectall"
+                        >
                             {i18n.t('Deselect all')}
-                        </Action>
+                        </Button>
 
-                        <Action
+                        <Button
                             disabled={!!errors[FORM_ERROR]}
                             destructive
-                            primary
                             type="submit"
+                            dataTest="dhis2-cachecleaner-clear-top"
                         >
                             {i18n.t('Clear all selected items')}
-                        </Action>
+                        </Button>
                     </Actions>
 
                     <FormSection
@@ -124,14 +129,14 @@ export const ClearForm = ({
                     </div>
 
                     <Actions>
-                        <Action
+                        <Button
                             disabled={!!errors[FORM_ERROR]}
                             destructive
-                            primary
                             type="submit"
+                            dataTest="dhis2-cachecleaner-clear-bottom"
                         >
                             {i18n.t('Clear all selected items')}
-                        </Action>
+                        </Button>
                     </Actions>
                 </form>
             )}

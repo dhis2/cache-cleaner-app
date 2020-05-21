@@ -45,7 +45,10 @@ export const Home = () => {
             {error && i18n.t(`Something went wrong: ${error.message}`)}
             {showContent && (
                 <>
-                    <h1 className={styles.headline}>
+                    <h1
+                        className={styles.headline}
+                        data-test="dhis2-cachecleaner-homeheadline"
+                    >
                         {i18n.t('DHIS 2 browser cache cleaner')}
                     </h1>
 

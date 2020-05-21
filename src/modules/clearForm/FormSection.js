@@ -1,9 +1,9 @@
+import { Button } from '@dhis2/ui-core'
 import { Field, CheckboxGroup } from '@dhis2/ui-forms'
 import React from 'react'
 import propTypes from '@dhis2/prop-types'
 
 import { Actions } from '../actions/Actions'
-import { Action } from '../actions/Action'
 import styles from './FormSection.module.css'
 
 const formatKeyToOption = key => ({
@@ -19,31 +19,48 @@ export const FormSection = ({
     selectButtonLabel,
     storageKeys,
     storageName,
-}) => (
-    <div className={styles.container}>
-        <h2 className={styles.groupHeadline}>{headline}</h2>
+}) => {
+    const storageDataTestName = storageName.toLowerCase()
 
-        {!storageKeys.length && <p>{emptyMessage}</p>}
+    return (
+        <div
+            className={styles.container}
+            data-test={`dhis2-cachecleaner-${storageDataTestName}`}
+        >
+            <h2 className={styles.groupHeadline}>{headline}</h2>
 
-        {!!storageKeys.length && (
-            <Actions>
-                <Action onClick={() => form.change(storageName, storageKeys)}>
-                    {selectButtonLabel}
-                </Action>
+            {!storageKeys.length && (
+                <p data-test="dhis2-cachecleaner-emptystoragemessage">
+                    {emptyMessage}
+                </p>
+            )}
 
-                <Action onClick={() => form.change(storageName, [])}>
-                    {deselectButtonLabel}
-                </Action>
-            </Actions>
-        )}
+            {!!storageKeys.length && (
+                <Actions>
+                    <Button
+                        onClick={() => form.change(storageName, storageKeys)}
+                        dataTest={`dhis2-cachecleaner-formsection-selectall`}
+                    >
+                        {selectButtonLabel}
+                    </Button>
 
-        <Field
-            name={storageName}
-            options={storageKeys.map(formatKeyToOption)}
-            component={CheckboxGroup}
-        />
-    </div>
-)
+                    <Button
+                        onClick={() => form.change(storageName, [])}
+                        dataTest={`dhis2-cachecleaner-formsection-deselectall`}
+                    >
+                        {deselectButtonLabel}
+                    </Button>
+                </Actions>
+            )}
+
+            <Field
+                name={storageName}
+                options={storageKeys.map(formatKeyToOption)}
+                component={CheckboxGroup}
+            />
+        </div>
+    )
+}
 
 FormSection.propTypes = {
     deselectButtonLabel: propTypes.string.isRequired,
