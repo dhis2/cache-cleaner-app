@@ -18,29 +18,34 @@ const loginBasicAuth = () => {
     })
 }
 
-const loginDev = () => {
+const loginThroughForm = () => {
+    const prefix = 'dhis2-adapter'
+    const getOptions = { prefix, log: false }
+    const formGet = selector => cy.get(selector, getOptions)
     const loginUrl = Cypress.env('dhis2_base_url')
     const username = Cypress.env('dhis2_username')
     const password = Cypress.env('dhis2_password')
 
-    loginBasicAuth()
     cy.visit('/')
-    cy.get('#server').type(loginUrl)
-    cy.get('#j_username').type(username)
-    cy.get('#j_password').type(password)
-    cy.get('{button}', { prefix: 'dhis2-uicore' }).click()
+    formGet('{loginserver} input').type(loginUrl)
+    formGet('{loginname} input').type(username)
+    formGet('{loginpassword} input').type(password)
+    formGet('{loginsubmit}').click()
     cy.get('{homeheadline}', { log: false })
 
     return cy
 }
 
-/**
- * This is done through cy.request(...)
- * because Cypress doesn't allow multiple domains per test:
- * https://docs.cypress.io/guides/guides/web-security.html#One-Superdomain-per-Test
- */
 const login = () => {
-    return loginDev()
+    /**
+     * This is done through cy.request(...)
+     * because Cypress doesn't allow multiple domains per test:
+     * https://docs.cypress.io/guides/guides/web-security.html#One-Superdomain-per-Test
+     */
+    loginBasicAuth()
+    loginThroughForm()
+
+    return cy
 }
 
 Cypress.Commands.add('login', login)
