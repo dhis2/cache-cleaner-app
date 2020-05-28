@@ -1464,12 +1464,12 @@
     debug "^3.1.0"
     lodash.once "^4.1.1"
 
-"@dhis2/app-adapter@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@dhis2/app-adapter/-/app-adapter-4.0.0.tgz#738e726698f1eb7f6c56d4e51a657a8e549b5e34"
-  integrity sha512-NSU1LSZ4rc1v/czKT/IJRVptUOJz6QUbIKYjvadhF8JQCHfAIobOTQmnc9wJba2HAQDtgBMUftzfI6tvLT3TOQ==
+"@dhis2/app-adapter@4.0.7":
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/@dhis2/app-adapter/-/app-adapter-4.0.7.tgz#91da01be6941e93f3c9cadd94e54ec81739ff7a3"
+  integrity sha512-5fAH46tBczfW+1FK3v8MERDF25cjNmOgze4Kl03wkvUmNVv68tvPPcXQXdbcAwKjZdUC4bbuphucpm4tv5VTQQ==
   dependencies:
-    "@dhis2/ui-widgets" "^2.0.4"
+    "@dhis2/ui-widgets" "^2.1.1"
     moment "^2.24.0"
 
 "@dhis2/app-runtime@^2.0.4", "@dhis2/app-runtime@^2.1.1":
@@ -1477,12 +1477,12 @@
   resolved "https://registry.yarnpkg.com/@dhis2/app-runtime/-/app-runtime-2.1.1.tgz#442946bd52f1d4a968cf1ba05e68440f11f78996"
   integrity sha512-jYf3YNiPE9RrAPD9C980s/3dhSh8JEq1s3B82O9T7gf+Vx2/covDIPnyU+64HmEjER+6gR5wHWbp7jOzBYSgLA==
 
-"@dhis2/app-shell@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@dhis2/app-shell/-/app-shell-4.0.0.tgz#b628b87dc9b8216a6395eb83abedb8d8828fb907"
-  integrity sha512-Yd5Z6jFjaYqPKpcG07FQn6TcCHgCeCKXzHII0w1gPWN3KnDcQOY3CSgaOT9LpmPREjqwMMYKOu63xKQF+z7q4w==
+"@dhis2/app-shell@4.0.7":
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/@dhis2/app-shell/-/app-shell-4.0.7.tgz#cbbe010fc4cf015ba4a09aceaeedeb566eda38da"
+  integrity sha512-JW1umtLWUpYwDLtN4Jk2bzW52o+hC6WV5dIUyFmXncWE+RJbp7h7/YxV/TkdXBKtvUXtHjx5z+mbaFtcmf2t3w==
   dependencies:
-    "@dhis2/app-adapter" "4.0.0"
+    "@dhis2/app-adapter" "4.0.7"
     "@dhis2/app-runtime" "^2.0.4"
     "@dhis2/d2-i18n" "^1.0.5"
     "@dhis2/ui-core" "^4.6.1"
@@ -1497,10 +1497,10 @@
     typeface-roboto "^0.0.75"
     typescript "^3.6.3"
 
-"@dhis2/cli-app-scripts@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@dhis2/cli-app-scripts/-/cli-app-scripts-4.0.0.tgz#3de0d8259bebb50b8b7d75bb79f31e546513b953"
-  integrity sha512-5JVgn00oU+BRoghM2KXP0aA/NCCIs2tU0iIM4O9FvqzWGMvCsUlbXGzkCw1o0Q2+DGuEkm6/O0fZYvnbP9F9eA==
+"@dhis2/cli-app-scripts@^4.0.7":
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/@dhis2/cli-app-scripts/-/cli-app-scripts-4.0.7.tgz#df8eb37d4d84c684f02af4e3736a2a00a40b0d51"
+  integrity sha512-S3YqnTq1hj6HmLVxk4sPYrR1GD1H8OSz0wMdVdqsX4dzOULsFE+cJ8Y6Clb5q2pQ+ZW2rGOWmhgQ0roWVgJRZA==
   dependencies:
     "@babel/core" "^7.6.2"
     "@babel/plugin-proposal-class-properties" "^7.8.3"
@@ -1513,7 +1513,7 @@
     "@babel/preset-env" "^7.6.2"
     "@babel/preset-react" "^7.0.0"
     "@babel/preset-typescript" "^7.6.0"
-    "@dhis2/app-shell" "4.0.0"
+    "@dhis2/app-shell" "4.0.7"
     "@dhis2/cli-helpers-engine" "^1.5.0"
     archiver "^3.1.1"
     babel-jest "^24.9.0"
@@ -1617,7 +1617,7 @@
     i18next "^10.3"
     moment "^2.24.0"
 
-"@dhis2/prop-types@^1.5", "@dhis2/prop-types@^1.6.4":
+"@dhis2/prop-types@^1.5", "@dhis2/prop-types@^1.6", "@dhis2/prop-types@^1.6.4":
   version "1.6.4"
   resolved "https://registry.yarnpkg.com/@dhis2/prop-types/-/prop-types-1.6.4.tgz#ec4d256c9440d4d00071524422a727c61ddaa6f6"
   integrity sha512-qkVj8OuyjDmSxzYDlCWZllvC9hIbrIImMp79/U5CVsIRbjUF0zA/tfbv4rWnsWALmwEHOQFbzl5GnO5D8RNneA==
@@ -1652,12 +1652,12 @@
     final-form "^4.18.5"
     react-final-form "^6.3.0"
 
-"@dhis2/ui-widgets@^2.0.4":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@dhis2/ui-widgets/-/ui-widgets-2.1.0.tgz#2accfdfea4c9564d7d35f8748ff7e113cac14032"
-  integrity sha512-S/vs7UrJxKcFO0TQhXx0jkKP9MqRGA48vkuBMVston+aZneIpVjLUtPvwP4P87uyK97DvHPkZm4gzniN6Beazg==
+"@dhis2/ui-widgets@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@dhis2/ui-widgets/-/ui-widgets-2.1.1.tgz#23b1887c0190e83bb7a41e6b570dfd41ba99d838"
+  integrity sha512-tLLXgQ2x0IDVcCg2AdK4J8B0Zj6DHOimI/5xTtp/xoaLDYDwJN3VDIJU0TSh5YIEZPzUmh2nqmdmNHDUXereFw==
   dependencies:
-    "@dhis2/prop-types" "^1.5"
+    "@dhis2/prop-types" "^1.6"
     classnames "^2.2.6"
 
 "@hapi/address@2.x.x":
