@@ -3,6 +3,7 @@ import i18n from '@dhis2/d2-i18n'
 
 import { ClearForm } from '../modules/clearForm/ClearForm'
 import { deleteDb } from '../modules/indexedDb/deleteDb'
+import { useCaptureAppUserDatabaseKeys } from '../modules/indexedDb/useCaptureAppUserDatabaseKeys'
 import { useClearableDatabaseKeys } from '../modules/indexedDb/useClearableDatabaseKeys'
 import { useClearableStorageKeys } from '../modules/storage/useClearableStorageKeys'
 import styles from './Home.module.css'
@@ -25,17 +26,40 @@ export const Home = () => {
     } = useClearableStorageKeys(window.sessionStorage)
 
     const {
-        loading,
-        error,
+        loading: loadingDatabaseKeys,
+        error: errorDatabaseKeys,
         data: indexedDatabaseKeys,
         refetch: refetchIndexedDatabaseKeys,
     } = useClearableDatabaseKeys()
 
-    const showContent = !loading && !error
+    const {
+        loading: loadingCaptureAppUserDataBaseKeys,
+        error: errorCaptureAppUserDataBaseKeys,
+        data: captureAppUserDatabaseKeys,
+        refetch: refetchCaptureAppUserDatabaseKeys,
+    } = useCaptureAppUserDatabaseKeys()
+
+    const loading = loadingDatabaseKeys || loadingCaptureAppUserDataBaseKeys
+    const error = errorDatabaseKeys || errorCaptureAppUserDataBaseKeys
+    const showContent =
+        !loadingDatabaseKeys &&
+        !errorDatabaseKeys &&
+        !loadingCaptureAppUserDataBaseKeys &&
+        !errorCaptureAppUserDataBaseKeys
+
     const onSubmit = async values => {
-        deleteValues(values)
+        const valuesToDelete =
+            values.dhis2ca && captureAppUserDatabaseKeys.length
+                ? captureAppUserDatabaseKeys.reduce(
+                      (accValues, curKey) => [...accValues, curKey],
+                      values
+                  )
+                : values
+
+        deleteValues(valuesToDelete)
         refetchLocalStorageKeys()
         refetchSessionStorageKeys()
+        refetchCaptureAppUserDatabaseKeys()
         await refetchIndexedDatabaseKeys()
     }
 

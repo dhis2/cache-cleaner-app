@@ -1,5 +1,6 @@
 {
     "baseUrl": "http://localhost:3000",
     "testFiles": "**/*.feature",
-    "video": false
+    "video": false,
+    "defaultCommandTimeout": 20000
 }

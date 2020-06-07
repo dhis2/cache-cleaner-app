@@ -11,3 +11,10 @@ import './getAllItems'
 import './getItem'
 import './setItems'
 import './storage'
+
+// indexedDB
+import './addDataToObjectStore'
+import './createObjectStore'
+import './deleteIndexedDB'
+import './openIndexedDB'
+import './readDataFromObjectStore'
