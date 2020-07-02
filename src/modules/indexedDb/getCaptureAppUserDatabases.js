@@ -23,8 +23,7 @@ export const getCaptureAppUserDatabases = () =>
                     dbNames = data.values.map(name => `dhis2ca${name}`)
                 }
             } catch (e) {
-                console.log('$$$$ ERROR!!!!', e)
-                return []
+                dbNames = []
             }
         }
 

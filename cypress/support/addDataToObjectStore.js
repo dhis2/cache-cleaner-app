@@ -1,18 +1,12 @@
 const addDataToObjectStore = (db, objectStoreName, data) =>
     new Promise((resolve, reject) => {
-        console.log('db', db)
-        console.log('objectStoreName', objectStoreName)
-        console.log('data', data)
         const transaction = db.transaction([objectStoreName], 'readwrite')
 
         transaction.oncomplete = () => {
             resolve(db)
         }
 
-        transaction.onerror = e => {
-            console.log('addData error', e)
-            reject(e)
-        }
+        transaction.onerror = reject
 
         const newObjectStore = transaction.objectStore(objectStoreName)
 

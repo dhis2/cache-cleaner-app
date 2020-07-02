@@ -29,7 +29,6 @@ Given(/the (.*) has items/, section => {
 
     if (section === 'local' || section === 'session') {
         const storageItems = items.map(name => ({ name, value: name }))
-        cy.storage(section).then(storage => console.log('storage', storage))
         cy.storage(section).setItems(storageItems)
     }
 
@@ -39,10 +38,7 @@ Given(/the (.*) has items/, section => {
                 items.map(name => {
                     return new Promise(resolve => {
                         const request = win.indexedDB.open(name)
-                        request.onsuccess = () => {
-                            console.log('created indexedDb:', name)
-                            resolve()
-                        }
+                        request.onsuccess = resolve
                     })
                 })
             )

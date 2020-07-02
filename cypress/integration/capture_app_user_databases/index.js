@@ -11,10 +11,7 @@ const deleteDb = (win, name) =>
             resolve()
         }
 
-        request.onerror = error => {
-            console.error(error)
-            reject(error)
-        }
+        request.onerror = reject
     })
 
 const recreateObjectStore = (db, name) => {
@@ -25,10 +22,7 @@ const openDb = (win, name, objectStoreName) =>
     new Promise((resolve, reject) => {
         const request = win.indexedDB.open(name)
 
-        request.onerror = error => {
-            console.error(error)
-            reject()
-        }
+        request.onerror = reject
 
         objectStoreName &&
             (request.onupgradeneeded = event => {

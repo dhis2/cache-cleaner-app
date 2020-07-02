@@ -13,10 +13,7 @@ const readDataFromObjectStore = (db, objectStoreName, key) =>
             resolve(dbnames)
         }
 
-        useridsReq.onerror = e => {
-            console.log('get access history failed', e)
-            reject(e)
-        }
+        useridsReq.onerror = reject
     })
 
 Cypress.Commands.add(

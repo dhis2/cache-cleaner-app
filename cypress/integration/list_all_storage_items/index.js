@@ -59,6 +59,15 @@ Given(/some items are stored in the (.*) storage/, type => {
 
 Given(/no items are stored in the (.*) storage/, type => {
     cy.wrap(type).as('storageType')
+    cy.clearStorage(type)
+    cy.reload()
+
+    // wait for loading to finish
+    // Otherwise we'll try to access a database
+    // that the app already has an open connection with
+    cy.get('{homeheadline}').should('exist')
+
+    cy.storageShouldHaveItems(type)
 })
 
 Then('all items should be listed as clearable', () => {

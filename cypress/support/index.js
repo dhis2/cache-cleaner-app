@@ -18,3 +18,6 @@ import './createObjectStore'
 import './deleteIndexedDB'
 import './openIndexedDB'
 import './readDataFromObjectStore'
+
+// storage + indexedDB
+import './storageShouldHaveItems'

@@ -6,14 +6,8 @@ export const getKeyFromObjectStore = (db, storeName, key) =>
                 .objectStore(storeName)
                 .get(key)
 
-            request.onsuccess = event => {
-                resolve(event.target.result)
-            }
-
-            request.onerror = e => {
-                console.log('Error in getKeyFromObjectStore with', storeName)
-                reject(e)
-            }
+            request.onsuccess = event => resolve(event.target.result)
+            request.onerror = reject
         } catch (e) {
             resolve(null)
         }

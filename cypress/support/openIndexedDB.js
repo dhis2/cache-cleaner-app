@@ -2,13 +2,9 @@ const openIndexedDB = (name, onUpgradeNeeded) =>
     cy.window().then(
         win =>
             new Promise((resolve, reject) => {
-                console.log('openDb start')
                 const request = win.indexedDB.open(name)
 
-                request.onerror = error => {
-                    console.log('Cound not open db')
-                    reject(error)
-                }
+                request.onerror = reject
 
                 if (onUpgradeNeeded) {
                     request.onupgradeneeded = event => {
