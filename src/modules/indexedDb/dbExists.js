@@ -6,20 +6,19 @@ import { deleteDb } from './deleteDb'
  */
 export const dbExists = name =>
     new Promise((resolve, reject) => {
-        const request = window.indexedDB.open(name)
         let alreadyExists = true
+        const request = window.indexedDB.open(name)
 
         request.onsuccess = () => {
             request.result.close()
 
             if (!alreadyExists) {
-                deleteDb(name)
+                deleteDb(name).then(() => resolve(false))
+            } else {
+                resolve(true)
             }
-
-            resolve(alreadyExists)
         }
 
         request.onerror = error => reject(error)
-
         request.onupgradeneeded = () => (alreadyExists = false)
     })

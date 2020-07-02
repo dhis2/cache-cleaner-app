@@ -3,7 +3,6 @@ import i18n from '@dhis2/d2-i18n'
 
 import { ClearForm } from '../modules/clearForm/ClearForm'
 import { deleteDb } from '../modules/indexedDb/deleteDb'
-import { useCaptureAppUserDatabaseKeys } from '../modules/indexedDb/useCaptureAppUserDatabaseKeys'
 import { useClearableDatabaseKeys } from '../modules/indexedDb/useClearableDatabaseKeys'
 import { useClearableStorageKeys } from '../modules/storage/useClearableStorageKeys'
 import styles from './Home.module.css'
@@ -26,40 +25,24 @@ export const Home = () => {
     } = useClearableStorageKeys(window.sessionStorage)
 
     const {
-        loading: loadingDatabaseKeys,
-        error: errorDatabaseKeys,
+        loading,
+        error,
         data: indexedDatabaseKeys,
         refetch: refetchIndexedDatabaseKeys,
     } = useClearableDatabaseKeys()
+    const { staticDatabases, userDatabases } = indexedDatabaseKeys
 
-    const {
-        loading: loadingCaptureAppUserDataBaseKeys,
-        error: errorCaptureAppUserDataBaseKeys,
-        data: captureAppUserDatabaseKeys,
-        refetch: refetchCaptureAppUserDatabaseKeys,
-    } = useCaptureAppUserDatabaseKeys()
-
-    const loading = loadingDatabaseKeys || loadingCaptureAppUserDataBaseKeys
-    const error = errorDatabaseKeys || errorCaptureAppUserDataBaseKeys
-    const showContent =
-        !loadingDatabaseKeys &&
-        !errorDatabaseKeys &&
-        !loadingCaptureAppUserDataBaseKeys &&
-        !errorCaptureAppUserDataBaseKeys
+    const showContent = !loading && !error
 
     const onSubmit = async values => {
         const valuesToDelete =
-            values.dhis2ca && captureAppUserDatabaseKeys.length
-                ? captureAppUserDatabaseKeys.reduce(
-                      (accValues, curKey) => [...accValues, curKey],
-                      values
-                  )
+            values.dhis2ca && userDatabases.length
+                ? [...values, ...userDatabases]
                 : values
 
         deleteValues(valuesToDelete)
         refetchLocalStorageKeys()
         refetchSessionStorageKeys()
-        refetchCaptureAppUserDatabaseKeys()
         await refetchIndexedDatabaseKeys()
     }
 
@@ -81,7 +64,7 @@ export const Home = () => {
                         // are kept for rejection in the confirmation step
                         localStorageKeys={localStorageKeys}
                         sessionStorageKeys={sessionStorageKeys}
-                        indexedDatabaseKeys={indexedDatabaseKeys}
+                        indexedDatabaseKeys={staticDatabases}
                         onSubmit={onSubmit}
                     />
                 </>

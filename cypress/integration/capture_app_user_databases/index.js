@@ -5,8 +5,16 @@ const userCaches = ['foo', 'bar']
 const deleteDb = (win, name) =>
     new Promise((resolve, reject) => {
         const request = win.indexedDB.deleteDatabase(name)
-        request.onsuccess = resolve
-        request.onerror = reject
+
+        request.onsuccess = () => {
+            expect(request.result).to.equal(undefined)
+            resolve()
+        }
+
+        request.onerror = error => {
+            console.error(error)
+            reject(error)
+        }
     })
 
 const recreateObjectStore = (db, name) => {
@@ -17,12 +25,16 @@ const openDb = (win, name, objectStoreName) =>
     new Promise((resolve, reject) => {
         const request = win.indexedDB.open(name)
 
-        request.onerror = reject
-
-        request.onupgradeneeded = event => {
-            const db = event.target.result
-            recreateObjectStore(db, objectStoreName)
+        request.onerror = error => {
+            console.error(error)
+            reject()
         }
+
+        objectStoreName &&
+            (request.onupgradeneeded = event => {
+                const db = event.target.result
+                recreateObjectStore(db, objectStoreName)
+            })
 
         request.onsuccess = event => {
             const db = event.target.result
@@ -33,7 +45,7 @@ const openDb = (win, name, objectStoreName) =>
 const addData = (db, objectStoreName) =>
     new Promise((resolve, reject) => {
         const transaction = db.transaction([objectStoreName], 'readwrite')
-        transaction.oncomplete = () => resolve(db)
+        transaction.oncomplete = resolve
         transaction.onerror = reject
 
         // add user ids with custom indexedDBs
@@ -41,75 +53,78 @@ const addData = (db, objectStoreName) =>
         newObjectStore.put({ values: userCaches }, 'accessHistory')
     })
 
+const createDb = (win, name) =>
+    new Promise((resolve, reject) => {
+        const request = win.indexedDB.open(name)
+
+        request.onsuccess = () => {
+            request.result.close()
+            resolve()
+        }
+
+        request.onerror = reject
+    })
+
 Given('some user databases exist', () => {
     const objectStoreName = 'userCaches'
 
-    // delete possibly existing DBs
-    cy.window().then(win => {
-        deleteDb(win, 'dhis2ca')
-        return win
+    // make sure the page has finished loading
+    // so all connections to databases have been closed
+    cy.get('h1', { log: false })
+
+    // use only "cy.window" once per page life time
+    // otherwise it'll cause massive delays and unpredictable
+    // timeouts
+    cy.window().then(async win => {
+        await deleteDb(win, 'dhis2ca')
+
+        // create user dbs
+        await Promise.all(
+            userCaches.map(userCache => createDb(win, `dhis2ca${userCache}`))
+        )
+
+        // create and open dhis2ca db
+        const db = await openDb(win, 'dhis2ca', objectStoreName)
+
+        // add names of user dbs to dhis2ca db
+        await addData(db, objectStoreName)
+
+        db.close()
     })
 
-    userCaches.forEach(userCache => {
-        cy.window().then(win => {
-            deleteDb(win, `dhis2ca${userCache}`)
-        })
-    })
-
-    // create user dbs
-    userCaches.forEach(userCache => {
-        cy.window().then(win => {
-            win.indexedDB.open(`dhis2ca${userCache}`)
-        })
-    })
-
-    // set user dbs
-    cy.window()
-
-        // for some reason this needs an absurdly high timeout
-        .then({ timeout: 10000000000 }, win => {
-            return openDb(win, 'dhis2ca', objectStoreName)
-        })
-
-        .then(db => addData(db, objectStoreName))
-
-    // confirm dbs have been set
+    // Reload to ensure that DBs are being persisted
     cy.reload()
-    cy.window()
-        .then({ timeout: 10000000000 }, win => {
-            const objectStoreName = 'userCaches'
 
-            return new Promise(resolve => {
-                // open db
-                const request = win.indexedDB.open('dhis2ca')
-                request.onerror = () => resolve([])
+    // Again, use one "cy.window" for the entire lifetime
+    // of the page / until this step has finished
+    cy.window().then(async win => {
+        // create and open dhis2ca db
+        const db = await openDb(win, 'dhis2ca', objectStoreName)
 
-                // db successfully opened
-                request.onsuccess = event => {
-                    const db = event.target.result
+        await new Promise((resolve, reject) => {
+            // access store
+            const objectStore = db
+                .transaction(objectStoreName, 'readwrite')
+                .objectStore(objectStoreName)
 
-                    // access store
-                    const objectStore = db
-                        .transaction(objectStoreName, 'readwrite')
-                        .objectStore(objectStoreName)
+            // access value of an entry whos "keyPath" equals "accessHistory"
+            const useridsReq = objectStore.get('accessHistory')
 
-                    // access value of an entry whos "keyPath" equals "accessHistory"
-                    const useridsReq = objectStore.get('accessHistory')
+            useridsReq.onsuccess = event => {
+                const result = event.target.result
+                const dbnames = result.values
 
-                    useridsReq.onsuccess = event => {
-                        var result = event.target.result
-                        var dbnames =
-                            result && result.values ? result.values : []
-                        resolve(dbnames)
-                    }
+                expect(dbnames).to.eql(userCaches)
+                resolve()
+            }
 
-                    useridsReq.onerror = () => resolve([])
-                }
-            })
+            useridsReq.onerror = reject
         })
-        .should(dbnames => {
-            expect(dbnames).to.eql(userCaches)
-        })
+
+        db.close()
+    })
+
+    cy.get('input[value="dhis2ca"]').should('exist')
 })
 
 When('the user deletes the dhis2ca database', () => {
@@ -120,39 +135,14 @@ When('the user deletes the dhis2ca database', () => {
 
 Then('the user databases should be deleted as well', () => {
     cy.get('[value="dhis2ca"]').should('not.exist')
-    cy.window()
-        .then({ timeout: 10000000000 }, win => {
-            const objectStoreName = 'userCaches'
-
-            return new Promise(resolve => {
-                // open db
-                const request = win.indexedDB.open('dhis2ca')
-                request.onerror = () => resolve([])
-
-                // db successfully opened
-                request.onsuccess = event => {
-                    const db = event.target.result
-
-                    // access store
-                    const objectStore = db
-                        .transaction(objectStoreName, 'readwrite')
-                        .objectStore(objectStoreName)
-
-                    // access value of an entry whos "keyPath" equals "accessHistory"
-                    const useridsReq = objectStore.get('accessHistory')
-
-                    useridsReq.onsuccess = event => {
-                        var result = event.target.result
-                        var dbnames =
-                            result && result.values ? result.values : []
-                        resolve(dbnames)
-                    }
-
-                    useridsReq.onerror = () => resolve([])
-                }
+    cy.window().then(win => {
+        return ['dhis2ca', ...userCaches].forEach(dbName => {
+            // use a cy command to ensure sequential execution
+            cy.wrap(dbName).then(async name => {
+                const db = await openDb(win, name)
+                expect(db.target).to.equal(undefined)
+                db.close()
             })
         })
-        .should(dbnames => {
-            expect(dbnames).to.eql([])
-        })
+    })
 })
