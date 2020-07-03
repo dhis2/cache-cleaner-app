@@ -11,8 +11,6 @@ export const useClearableStorageKeys = storage => {
 
     useEffect(() => {
         onStorageChange()
-        window.addEventListener('storage', onStorageChange)
-        return () => window.removeEventListener('storage', onStorageChange)
     }, [onStorageChange])
 
     return {

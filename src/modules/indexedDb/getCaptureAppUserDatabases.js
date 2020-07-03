@@ -8,6 +8,7 @@ export const getCaptureAppUserDatabases = () =>
     dbExists('dhis2ca').then(async captureDbExists => {
         let dbNames = []
 
+        console.log('captureDbExists', captureDbExists)
         if (captureDbExists) {
             try {
                 const db = await openDb('dhis2ca')

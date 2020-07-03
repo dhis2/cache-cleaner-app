@@ -1,7 +1,15 @@
-export const deleteDb = name =>
-    new Promise((resolve, reject) => {
-        const request = window.indexedDB.deleteDatabase(name)
+import { dbExists } from './dbExists'
 
-        request.onsuccess = resolve
-        request.onerror = reject
+export const deleteDb = name =>
+    dbExists(name).then(exists => {
+        if (exists) {
+            return new Promise((resolve, reject) => {
+                const request = window.indexedDB.deleteDatabase(name)
+
+                request.onsuccess = resolve
+                request.onerror = reject
+            })
+        }
+
+        return Promise.reject()
     })
