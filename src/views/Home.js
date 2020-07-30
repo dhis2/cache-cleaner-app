@@ -7,10 +7,13 @@ import { useClearableDatabaseKeys } from '../modules/indexedDb/useClearableDatab
 import { useClearableStorageKeys } from '../modules/storage/useClearableStorageKeys'
 import styles from './Home.module.css'
 
-const deleteValues = values => {
-    values.localStorageKeys.forEach(key => localStorage.removeItem(key))
-    values.sessionStorageKeys.forEach(key => sessionStorage.removeItem(key))
-    values.indexedDatabaseKeys.forEach(key => deleteDb(key))
+const deleteValues = async values => {
+    values.localStorageKeys?.forEach(key => localStorage.removeItem(key))
+    values.sessionStorageKeys?.forEach(key => sessionStorage.removeItem(key))
+
+    if (values.indexedDB.length) {
+        await Promise.all(values.indexedDB.map(deleteDb))
+    }
 }
 
 export const Home = () => {
@@ -35,12 +38,18 @@ export const Home = () => {
     const showContent = !loading && !error
 
     const onSubmit = async values => {
-        const valuesToDelete =
-            values.dhis2ca && userDatabases.length
-                ? [...values, ...userDatabases]
-                : values
+        const hasUserDatabases =
+            values.indexedDatabaseKeys.includes('dhis2ca') &&
+            userDatabases.length
 
-        deleteValues(valuesToDelete)
+        const valuesToDelete = hasUserDatabases
+            ? {
+                  ...values,
+                  indexedDB: [...values.indexedDatabaseKeys, ...userDatabases],
+              }
+            : { ...values, indexedDB: values.indexedDatabaseKeys }
+
+        await deleteValues(valuesToDelete)
         refetchLocalStorageKeys()
         refetchSessionStorageKeys()
         await refetchIndexedDatabaseKeys()
@@ -48,7 +57,11 @@ export const Home = () => {
 
     return (
         <div className={styles.container}>
-            {loading && i18n.t('Loading clearable data...')}
+            {loading && (
+                <p data-test="dhis2-cachecleaner-loading">
+                    {i18n.t('Loading clearable data...')}
+                </p>
+            )}
             {error && i18n.t(`Something went wrong: ${error.message}`)}
             {showContent && (
                 <>

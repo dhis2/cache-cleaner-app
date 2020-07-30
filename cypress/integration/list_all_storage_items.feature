@@ -1,5 +1,6 @@
 Feature: List all clearable local storage items
 
+    @focus
     Scenario Outline: There are some clearable items in the storage
         Given some items are stored in the <type> storage
         Then all items should be listed as clearable
@@ -7,8 +8,8 @@ Feature: List all clearable local storage items
         Examples:
             | type      |
             | local     |
-            | session   |
-            | indexedDb |
+            #| session   |
+            #| indexedDb |
 
     Scenario Outline: There are no items in the storage
         Given no items are stored in the <type> storage

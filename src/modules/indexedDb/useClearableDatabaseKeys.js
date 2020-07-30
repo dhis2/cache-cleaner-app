@@ -28,6 +28,7 @@ export const useClearableDatabaseKeys = () => {
             const userDatabases = await getCaptureAppUserDatabases().catch(
                 () => []
             )
+
             const allDatabases = {
                 staticDatabases,
                 userDatabases,

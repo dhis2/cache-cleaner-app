@@ -1,7 +1,6 @@
+import '@dhis2/cli-utils-cypress/support'
 import './all'
-import './find'
-import './get'
-import './login'
+import { loginAndPersistSession } from './network/loginAndPersistSession'
 
 // storage
 import './clearStorage'
@@ -21,3 +20,5 @@ import './readDataFromObjectStore'
 
 // storage + indexedDB
 import './storageShouldHaveItems'
+
+loginAndPersistSession()

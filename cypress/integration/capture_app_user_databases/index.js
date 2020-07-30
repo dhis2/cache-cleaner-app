@@ -66,9 +66,6 @@ Given('some user databases exist', () => {
     // so all connections to databases have been closed
     cy.get('h1', { log: false })
 
-    // use only "cy.window" once per page life time
-    // otherwise it'll cause massive delays and unpredictable
-    // timeouts
     cy.window().then(async win => {
         await deleteDb(win, 'dhis2ca')
 
@@ -89,8 +86,6 @@ Given('some user databases exist', () => {
     // Reload to ensure that DBs are being persisted
     cy.reload()
 
-    // Again, use one "cy.window" for the entire lifetime
-    // of the page / until this step has finished
     cy.window().then(async win => {
         // create and open dhis2ca db
         const db = await openDb(win, 'dhis2ca', objectStoreName)
@@ -124,6 +119,7 @@ Given('some user databases exist', () => {
 When('the user deletes the dhis2ca database', () => {
     cy.get('{selectall}').click()
     cy.get('{clear-top}').click()
+    cy.get('{loading}')
     cy.get('h1')
 })
 
