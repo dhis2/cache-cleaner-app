@@ -1,20 +1,12 @@
 import React from 'react'
 import i18n from '@dhis2/d2-i18n'
 
-import { ClearForm } from '../modules/clearForm/ClearForm'
-import { deleteDb } from '../modules/indexedDb/deleteDb'
-import { useClearableDatabaseKeys } from '../modules/indexedDb/useClearableDatabaseKeys'
-import { useClearableStorageKeys } from '../modules/storage/useClearableStorageKeys'
+import { ClearForm } from '../clearForm'
+import { deleteValues } from './Home/deleteValues'
+import { formatDeleteValues } from './Home/formatDeleteValues'
+import { useClearableDatabaseKeys } from '../indexedDb'
+import { useClearableStorageKeys } from '../storage'
 import styles from './Home.module.css'
-
-const deleteValues = async values => {
-    values.localStorageKeys?.forEach(key => localStorage.removeItem(key))
-    values.sessionStorageKeys?.forEach(key => sessionStorage.removeItem(key))
-
-    if (values.indexedDB.length) {
-        await Promise.all(values.indexedDB.map(deleteDb))
-    }
-}
 
 export const Home = () => {
     const {
@@ -35,25 +27,19 @@ export const Home = () => {
     } = useClearableDatabaseKeys()
     const { staticDatabases, userDatabases } = indexedDatabaseKeys
 
-    const showContent = !loading && !error
-
-    const onSubmit = async values => {
-        const hasUserDatabases =
-            values.indexedDatabaseKeys.includes('dhis2ca') &&
-            userDatabases.length
-
-        const valuesToDelete = hasUserDatabases
-            ? {
-                  ...values,
-                  indexedDB: [...values.indexedDatabaseKeys, ...userDatabases],
-              }
-            : { ...values, indexedDB: values.indexedDatabaseKeys }
-
-        await deleteValues(valuesToDelete)
+    const refetch = async () => {
         refetchLocalStorageKeys()
         refetchSessionStorageKeys()
         await refetchIndexedDatabaseKeys()
     }
+
+    const onSubmit = async values => {
+        const formattedValues = formatDeleteValues(values, userDatabases)
+        await deleteValues(formattedValues)
+        await refetch()
+    }
+
+    const showContent = !loading && !error
 
     return (
         <div className={styles.container}>
