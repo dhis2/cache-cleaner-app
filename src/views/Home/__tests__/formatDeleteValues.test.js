@@ -1,11 +1,11 @@
 import { formatDeleteValues } from '../formatDeleteValues'
 
 describe('Home - formatDeleteValues', () => {
-    it('should combine the static indexed dbs and the user indexed dbs', () => {
-        const values = { indexedDatabaseKeys: ['foo'] }
-        const actual = formatDeleteValues(values, ['bar'])
+    it.only('should combine the static indexed dbs and the user indexed dbs', () => {
+        const values = { indexedDatabaseKeys: ['dhis2ca'] }
+        const actual = formatDeleteValues(values, ['foo', 'bar'])
         const expected = expect.objectContaining({
-            indexedDB: ['foo', 'bar'],
+            indexedDB: ['dhis2ca', 'foo', 'bar'],
         })
 
         expect(actual).toEqual(expected)
