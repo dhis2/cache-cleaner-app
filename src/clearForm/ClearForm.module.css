@@ -1,0 +1,13 @@
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: var(--spacers-dp16);
+}
+
+.action {
+    margin-right: var(--spacers-dp8);
+}
+
+.groupHeadline {
+    margin: 0 0 var(--spacers-dp16);
+}

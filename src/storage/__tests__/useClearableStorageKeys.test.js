@@ -1,0 +1,32 @@
+import { act, renderHook } from '@testing-library/react-hooks'
+import { useClearableStorageKeys } from '../useClearableStorageKeys'
+
+describe('storage - useClearableStorageKeys', () => {
+    const storage = window.localStorage
+
+    afterEach(() => {
+        storage.removeItem('foo')
+    })
+
+    it('should return an all storage items initially', () => {
+        storage.setItem('foo', 'bar')
+        const { result } = renderHook(() => useClearableStorageKeys(storage))
+        expect(result.current.keys).toEqual(['foo'])
+    })
+
+    it('should update the keys when the refetch function has been called', async () => {
+        const { result, waitForNextUpdate } = renderHook(() =>
+            useClearableStorageKeys(storage)
+        )
+
+        expect(result.current.keys).toEqual([])
+
+        await act(async () => {
+            storage.setItem('foo', 'foo')
+            result.current.refetch()
+            await waitForNextUpdate()
+        })
+
+        expect(result.current.keys).toEqual(['foo'])
+    })
+})

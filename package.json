@@ -1,70 +1,43 @@
 {
-  "name": "cache-cleaner-app",
-  "version": "31.0.1",
-  "description": "Cache Cleaner app for DHIS2",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "(rm -r build && mkdir build) || mkdir build",
-    "build": "npm run convert-po && cross-env NODE_ENV=production webpack -p && cp -r ./i18n ./build/i18n && cp -r ./views ./build/views && cp -r ./styles ./build/styles && cp ./index.html ./build/index.html && cp ./package.json ./build/package.json",
-    "start": "npm run convert-po && webpack-dev-server",
-    "convert-po": "node po-converter.js",
-    "extract-pot": "node pot-extractor.js",
-    "refresh-translations-template": "npm run extract-pot -- -o translations.pot && git add ./i18n/translations.pot"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dhis2/cache-cleaner-app.git"
-  },
-  "keywords": [
-    "DHIS2"
-  ],
-  "pre-commit": [
-    "refresh-translations-template"
-  ],
-  "author": "Abyot Asalefew Gizaw",
-  "license": "BSD-3-Clause",
-  "bugs": {
-    "url": "https://github.com/dhis2/cache-cleaner-app/issues"
-  },
-  "homepage": "https://github.com/dhis2/cache-cleaner-app#readme",
-  "devDependencies": {
-    "babel-core": "^6.8.0",
-    "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.6.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.5.0",
-    "cross-env": "^5.2.0",
-    "css-loader": "^0.23.1",
-    "expose-loader": "0.7.0",
-    "file-loader": "1.1.11",
-    "i18next-conv": "^5.0.0",
-    "i18next-parser": "^0.12.0",
-    "recursive-readdir": "^2.2.1",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.13.0",
-    "webpack-dev-server": "^1.14.1"
-  },
-  "dependencies": {
-    "@dhis2/ui": "^1.0.0-beta.14",
-    "angular": "1.3.15",
-    "angular-animate": "1.3.15",
-    "angular-cookies": "1.3.15",
-    "angular-resource": "1.3.15",
-    "angular-route": "1.3.15",
-    "angular-sanitize": "1.3.15",
-    "angular-ui-bootstrap": "0.13.3",
-    "angularLocalStorage": "https://github.com/agrublev/angularLocalStorage.git",
-    "bootstrap": "3",
-    "fontawesome": "^5.6.3",
-    "i18next": "10.0.7",
-    "i18next-client": "^1.10.0",
-    "jquery": "^3.3.1",
-    "jquery-ui": "^1.12.1",
-    "ng-i18next": "^0.5.2",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "typeface-roboto": "^0.0.54"
-  }
+    "name": "cache-cleaner-app",
+    "version": "1.0.0",
+    "description": "",
+    "license": "BSD-3-Clause",
+    "private": true,
+    "scripts": {
+        "build": "d2-app-scripts build",
+        "extract-pot": "d2-i18n-extract -p src/ -o i18n/",
+        "format": "yarn format:js && yarn format:text",
+        "format:staged": "yarn format:js --staged && yarn format:text --staged",
+        "format:js": "d2-style js apply",
+        "format:text": "d2-style text apply",
+        "lint": "yarn lint:js && yarn lint:text",
+        "lint:js": "d2-style js check",
+        "lint:text": "d2-style text check",
+        "localize": "yarn extract-pot && d2-i18n-generate -n NAMESPACE -p ./i18n/ -o ./src/locales/",
+        "prestart": "yarn localize",
+        "start": "d2-app-scripts start",
+        "test": "d2-app-scripts test",
+        "cy:start": "BROWSER=none yarn start",
+        "cy:open": "d2-utils-cypress open --appStart 'yarn cy:start'",
+        "cy:run": "d2-utils-cypress run --appStart 'yarn cy:start'"
+    },
+    "devDependencies": {
+        "@dhis2/cli-app-scripts": "^4.0.7",
+        "@dhis2/cli-style": "^7.0.0",
+        "@dhis2/cli-utils-cypress": "^2.2.1",
+        "@dhis2/d2-i18n-extract": "^1.0.8",
+        "@dhis2/d2-i18n-generate": "^1.1.1",
+        "@testing-library/react-hooks": "^3.4.1",
+        "fake-indexeddb": "^3.0.2",
+        "react-test-renderer": "^16.13.1"
+    },
+    "dependencies": {
+        "@dhis2/app-runtime": "^2.1.1",
+        "@dhis2/d2-i18n": "^1.0.6",
+        "@dhis2/prop-types": "^1.6.4",
+        "@dhis2/ui-core": "^4.17.1",
+        "@dhis2/ui-forms": "^1.0.1",
+        "final-form": "^4.19.1"
+    }
 }

@@ -1,17 +1,7 @@
-# Jetbrains files
-.idea
-*.iml
-
-# Project folders/dependencies
+# DHIS2 Platform
 node_modules
+.d2
+src/locales
 build
-target
-coverage
-manifest.webapp
 
-# Misc files
-npm-debug.log
-.DS_Store
-
-# Do not include JS translation resources regenrated by po-converter.js
-i18n/resources.js
+cypress.env.json
