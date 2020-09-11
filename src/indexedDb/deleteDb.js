@@ -1,6 +1,6 @@
 import { dbExists } from './dbExists'
 
-export const deleteDb = name =>
+export const deleteDb = (name, succeedWhenNonExistant = false) =>
     dbExists(name).then(exists => {
         if (exists) {
             return new Promise((resolve, reject) => {
@@ -11,5 +11,5 @@ export const deleteDb = name =>
             })
         }
 
-        return Promise.reject()
+        return succeedWhenNonExistant ? Promise.resolve() : Promise.reject()
     })
