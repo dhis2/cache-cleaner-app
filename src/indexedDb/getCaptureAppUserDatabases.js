@@ -19,7 +19,7 @@ export const getCaptureAppUserDatabases = () =>
                 )
 
                 if (data && data.values) {
-                    dbNames = data.values.map(name => `dhis2ca${name}`)
+                    dbNames = data.values
                 }
             } catch (e) {
                 dbNames = []

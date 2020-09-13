@@ -1,6 +1,6 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 
-const userCaches = ['foo', 'bar']
+const userCaches = ['dhis2caFoo', 'dhis2caBar']
 
 const deleteDb = (win, name) =>
     new Promise((resolve, reject) => {
@@ -70,9 +70,7 @@ Given('some user databases exist', () => {
         await deleteDb(win, 'dhis2ca')
 
         // create user dbs
-        await Promise.all(
-            userCaches.map(userCache => createDb(win, `dhis2ca${userCache}`))
-        )
+        await Promise.all(userCaches.map(userCache => createDb(win, userCache)))
 
         // create and open dhis2ca db
         const db = await openDb(win, 'dhis2ca', objectStoreName)
