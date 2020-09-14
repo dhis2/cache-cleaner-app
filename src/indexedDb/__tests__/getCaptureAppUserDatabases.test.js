@@ -90,7 +90,7 @@ describe('indexedDB - getCaptureAppUserDatabases', () => {
             }
 
             const newObjectStore = transaction.objectStore('userCaches')
-            newObjectStore.put({ values: userIds }, 'accessHistory')
+            newObjectStore.put({ values: userDatabases }, 'accessHistory')
         })
 
         return expect(getCaptureAppUserDatabases()).resolves.toEqual(
