@@ -16,25 +16,25 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "DHIS 2 browser cache cleaner"
-msgstr ""
+msgstr "DHIS2 браузер кешини тозалаш воситаси"
 
 msgid "Session storage"
-msgstr ""
+msgstr "Захира сессиялари"
 
 msgid "Local storage"
-msgstr ""
+msgstr "Маҳаллий захира"
 
 msgid "indexedDB"
-msgstr ""
+msgstr "DB индексирланган"
 
 msgid "Clear"
 msgstr "Аниқ"
 
 msgid "Clearing cache"
-msgstr ""
+msgstr "Кешни тозалаш"
 
 msgid "Are you sure you want to proceed with the cleaning?"
-msgstr ""
+msgstr "Ҳақиқатдан ҳам ушбу тозалашни давом этмоқчимисиз?"
 
 msgid "Cancel"
 msgstr "Бекор қилиш"
