@@ -33,7 +33,7 @@
         "react-test-renderer": "^16.13.1"
     },
     "dependencies": {
-        "@dhis2/app-runtime": "^2.4.0",
+        "@dhis2/app-runtime": "^2.5.0",
         "@dhis2/d2-i18n": "^1.0.6",
         "@dhis2/prop-types": "^1.6.4",
         "@dhis2/ui-core": "^4.17.1",
