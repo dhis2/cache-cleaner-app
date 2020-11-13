@@ -28,7 +28,7 @@ msgid "indexedDB"
 msgstr "DB индексирланган"
 
 msgid "Clear"
-msgstr "Аниқ"
+msgstr "Тозалаш"
 
 msgid "Clearing cache"
 msgstr "Кешни тозалаш"
