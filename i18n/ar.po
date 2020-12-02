@@ -26,46 +26,46 @@ msgid "Deselect all"
 msgstr "إلغاء تحديد الكل"
 
 msgid "Clear all selected items"
-msgstr ""
+msgstr "إلغاء تحديد كافة العناصر المحددة"
 
 msgid "Local storage empty"
-msgstr ""
+msgstr "التخزين المحلي فارغ"
 
 msgid "Select all local storage items"
-msgstr ""
+msgstr "تحديد كافة عناصر التخزين المحلية"
 
 msgid "Deselect all local storage items"
-msgstr ""
+msgstr "إلغاء تحديد كافة عناصر التخزين المحلية"
 
 msgid "Local storage"
 msgstr "التخزين المحلي"
 
 msgid "Session storage empty"
-msgstr ""
+msgstr "تخزين الجلسة فارغ"
 
 msgid "Select all session storage items"
-msgstr ""
+msgstr "تحدد كافة عناصر تخزين الجلسة"
 
 msgid "Deselect all session storage items"
-msgstr ""
+msgstr "إلغاء تحديد كافة عناصر تخزين الجلسة"
 
 msgid "Session storage"
 msgstr "تخزين الجلسة"
 
 msgid "No indexed databases"
-msgstr ""
+msgstr "لا توجد قواعد بيانات مفهرسة"
 
 msgid "Select all databases"
-msgstr ""
+msgstr "تحديد جميع قواعد البيانات"
 
 msgid "Deselect all databases"
-msgstr ""
+msgstr "إلغاء تحديد جميع قواعد البيانات"
 
 msgid "Indexed database"
-msgstr ""
+msgstr "قاعدة بيانات مفهرسة"
 
 msgid "Loading clearable data..."
-msgstr ""
+msgstr "تحميل البيانات القابلة للمسح ..."
 
 msgid "DHIS 2 browser cache cleaner"
 msgstr "منظف ذاكرة التخزين المؤقت لمتصفح DHIS2"
