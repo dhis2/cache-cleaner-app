@@ -1,0 +1,70 @@
+# 
+# Translators:
+# phil_dhis2, 2020
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: i18next-conv\n"
+"POT-Creation-Date: 2020-04-16T12:59:23.976Z\n"
+"PO-Revision-Date: 2020-12-02 13:50+0000\n"
+"Last-Translator: phil_dhis2, 2020\n"
+"Language-Team: Ukrainian (https://www.transifex.com/hisp-uio/teams/100509/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid "No data selected"
+msgstr ""
+
+msgid "Select all"
+msgstr "Вибрати усе"
+
+msgid "Deselect all"
+msgstr ""
+
+msgid "Clear all selected items"
+msgstr ""
+
+msgid "Local storage empty"
+msgstr ""
+
+msgid "Select all local storage items"
+msgstr ""
+
+msgid "Deselect all local storage items"
+msgstr ""
+
+msgid "Local storage"
+msgstr ""
+
+msgid "Session storage empty"
+msgstr ""
+
+msgid "Select all session storage items"
+msgstr ""
+
+msgid "Deselect all session storage items"
+msgstr ""
+
+msgid "Session storage"
+msgstr ""
+
+msgid "No indexed databases"
+msgstr ""
+
+msgid "Select all databases"
+msgstr ""
+
+msgid "Deselect all databases"
+msgstr ""
+
+msgid "Indexed database"
+msgstr ""
+
+msgid "Loading clearable data..."
+msgstr ""
+
+msgid "DHIS 2 browser cache cleaner"
+msgstr ""
