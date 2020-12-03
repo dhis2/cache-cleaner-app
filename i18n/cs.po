@@ -25,46 +25,46 @@ msgid "Deselect all"
 msgstr "Odznačit vše"
 
 msgid "Clear all selected items"
-msgstr ""
+msgstr "Vymazat všechny vybrané položky"
 
 msgid "Local storage empty"
-msgstr ""
+msgstr "Místní úložiště prázdné"
 
 msgid "Select all local storage items"
-msgstr ""
+msgstr "Vyberte všechny položky místního úložiště"
 
 msgid "Deselect all local storage items"
-msgstr ""
+msgstr "Zrušte výběr všech položek místního úložiště"
 
 msgid "Local storage"
 msgstr "Místní úložiště"
 
 msgid "Session storage empty"
-msgstr ""
+msgstr "Úložiště relace prázdné"
 
 msgid "Select all session storage items"
-msgstr ""
+msgstr "Vyberte všechny položky úložiště relace"
 
 msgid "Deselect all session storage items"
-msgstr ""
+msgstr "Zrušte výběr všech položek úložiště relace"
 
 msgid "Session storage"
 msgstr "Úložiště relace"
 
 msgid "No indexed databases"
-msgstr ""
+msgstr "Žádné indexované databáze"
 
 msgid "Select all databases"
-msgstr ""
+msgstr "Vyberte všechny databáze"
 
 msgid "Deselect all databases"
-msgstr ""
+msgstr "Zrušte výběr všech databází"
 
 msgid "Indexed database"
-msgstr ""
+msgstr "Indexovaná databáze"
 
 msgid "Loading clearable data..."
-msgstr ""
+msgstr "Načítání vymazatelných dat ..."
 
 msgid "DHIS 2 browser cache cleaner"
 msgstr "Čistič mezipaměti prohlížeče DHIS 2"
