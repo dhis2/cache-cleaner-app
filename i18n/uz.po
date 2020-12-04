@@ -25,46 +25,46 @@ msgid "Deselect all"
 msgstr "Барча танланганни бекор қилиш"
 
 msgid "Clear all selected items"
-msgstr ""
+msgstr "барча танланган элементлар бўйича тозалаш"
 
 msgid "Local storage empty"
-msgstr ""
+msgstr "Локал хотира бўш"
 
 msgid "Select all local storage items"
-msgstr ""
+msgstr "Барча локал хотира элементларини танлаш"
 
 msgid "Deselect all local storage items"
-msgstr ""
+msgstr "Барча локал хотира элементлари танловини рад этиш"
 
 msgid "Local storage"
 msgstr "Маҳаллий захира"
 
 msgid "Session storage empty"
-msgstr ""
+msgstr "Сессия хотираси бўш"
 
 msgid "Select all session storage items"
-msgstr ""
+msgstr "Сессия хотираси элементларини барчасини танлаш"
 
 msgid "Deselect all session storage items"
-msgstr ""
+msgstr "Сессия хотираси элементларини барчасини танловини рад этиш"
 
 msgid "Session storage"
 msgstr "Захира сессиялари"
 
 msgid "No indexed databases"
-msgstr ""
+msgstr "Маълумотлар индексация қилинмаган"
 
 msgid "Select all databases"
-msgstr ""
+msgstr "Барча маълумотларни танлаш"
 
 msgid "Deselect all databases"
-msgstr ""
+msgstr "Барча маълумотлар танловини рад этиш"
 
 msgid "Indexed database"
-msgstr ""
+msgstr "Индексация қилинган маълумотлар"
 
 msgid "Loading clearable data..."
-msgstr ""
+msgstr "Тозаланадиган маълумотлар юкланмоқда..."
 
 msgid "DHIS 2 browser cache cleaner"
 msgstr "DHIS2 браузер кешини тозалаш воситаси"
