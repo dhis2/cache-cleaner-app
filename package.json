@@ -28,7 +28,7 @@
         "@dhis2/cli-utils-cypress": "^2.2.2",
         "@dhis2/d2-i18n-extract": "^1.0.8",
         "@dhis2/d2-i18n-generate": "^1.2.0",
-        "@testing-library/react-hooks": "^3.4.1",
+        "@testing-library/react-hooks": "^3.6.0",
         "fake-indexeddb": "^3.0.2",
         "react-test-renderer": "^16.13.1"
     },
