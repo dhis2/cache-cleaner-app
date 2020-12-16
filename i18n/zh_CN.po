@@ -17,13 +17,13 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "DHIS 2 browser cache cleaner"
-msgstr ""
+msgstr "DHIS 2浏览器缓存清除器"
 
 msgid "Session storage"
-msgstr ""
+msgstr "会话存储"
 
 msgid "Local storage"
-msgstr ""
+msgstr "本地存储"
 
 msgid "indexedDB"
 msgstr ""
