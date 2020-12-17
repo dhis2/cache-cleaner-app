@@ -1,14 +1,14 @@
 # 
 # Translators:
-# easylin <lin_xd@126.com>, 2020
 # 晓东 林 <13981924470@126.com>, 2020
+# easylin <lin_xd@126.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2020-04-16T12:59:23.976Z\n"
 "PO-Revision-Date: 2020-12-02 13:50+0000\n"
-"Last-Translator: 晓东 林 <13981924470@126.com>, 2020\n"
+"Last-Translator: easylin <lin_xd@126.com>, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/hisp-uio/teams/100509/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,46 +26,46 @@ msgid "Deselect all"
 msgstr "去全选"
 
 msgid "Clear all selected items"
-msgstr ""
+msgstr "清除所有选中的项目"
 
 msgid "Local storage empty"
-msgstr ""
+msgstr "本地存储空间为空"
 
 msgid "Select all local storage items"
-msgstr ""
+msgstr "选择所有本地存储项目"
 
 msgid "Deselect all local storage items"
-msgstr ""
+msgstr "取消选择所有本地存储项目"
 
 msgid "Local storage"
-msgstr ""
+msgstr "本地存储"
 
 msgid "Session storage empty"
-msgstr ""
+msgstr "会话存储为空"
 
 msgid "Select all session storage items"
-msgstr ""
+msgstr "选择所有会话存储项"
 
 msgid "Deselect all session storage items"
-msgstr ""
+msgstr "取消选择所有会话存储项"
 
 msgid "Session storage"
-msgstr ""
+msgstr "会话存储"
 
 msgid "No indexed databases"
-msgstr ""
+msgstr "没有索引数据库"
 
 msgid "Select all databases"
-msgstr ""
+msgstr "选择所有数据库"
 
 msgid "Deselect all databases"
-msgstr ""
+msgstr "取消选择所有数据库"
 
 msgid "Indexed database"
-msgstr ""
+msgstr "索引数据库"
 
 msgid "Loading clearable data..."
-msgstr ""
+msgstr "正在加载可清除的数据..."
 
 msgid "DHIS 2 browser cache cleaner"
-msgstr ""
+msgstr "DHIS 2浏览器缓存清除器"
