@@ -27,46 +27,46 @@ msgid "Deselect all"
 msgstr "Bỏ chọn tất cả"
 
 msgid "Clear all selected items"
-msgstr ""
+msgstr "Xóa tất cả các mục đã chọn"
 
 msgid "Local storage empty"
-msgstr ""
+msgstr "Bộ nhớ cục bộ trống"
 
 msgid "Select all local storage items"
-msgstr ""
+msgstr "Chọn tất cả các mục lưu trữ cục bộ"
 
 msgid "Deselect all local storage items"
-msgstr ""
+msgstr "Bỏ chọn tất cả các mục lưu trữ cục bộ"
 
 msgid "Local storage"
 msgstr "Lưu trữ cục bộ"
 
 msgid "Session storage empty"
-msgstr ""
+msgstr "Bộ nhớ phiên trống"
 
 msgid "Select all session storage items"
-msgstr ""
+msgstr "Chọn tất cả các mục lưu trữ phiên"
 
 msgid "Deselect all session storage items"
-msgstr ""
+msgstr "Bỏ chọn tất cả các mục lưu trữ phiên"
 
 msgid "Session storage"
 msgstr "Lưu trữ phiên"
 
 msgid "No indexed databases"
-msgstr ""
+msgstr "Không có cơ sở dữ liệu được lập chỉ mục"
 
 msgid "Select all databases"
-msgstr ""
+msgstr "Chọn tất cả cơ sở dữ liệu"
 
 msgid "Deselect all databases"
-msgstr ""
+msgstr "Bỏ chọn tất cả cơ sở dữ liệu"
 
 msgid "Indexed database"
-msgstr ""
+msgstr "Cơ sở dữ liệu được lập chỉ mục"
 
 msgid "Loading clearable data..."
-msgstr ""
+msgstr "Đang tải dữ liệu  ..."
 
 msgid "DHIS 2 browser cache cleaner"
 msgstr "Trình xóa dữ liệu cục bộ trong DHIS 2"
