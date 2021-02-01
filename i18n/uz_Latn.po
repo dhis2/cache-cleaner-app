@@ -1,0 +1,43 @@
+# 
+# Translators:
+# Yury Rogachev <yury@dhis2.org>, 2021
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: i18next-conv\n"
+"POT-Creation-Date: 2017-11-14T09:57:02.915Z\n"
+"PO-Revision-Date: 2019-09-01 18:40+0000\n"
+"Last-Translator: Yury Rogachev <yury@dhis2.org>, 2021\n"
+"Language-Team: Uzbek (Latin) (https://www.transifex.com/hisp-uio/teams/100509/uz@Latn/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uz@Latn\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "DHIS 2 browser cache cleaner"
+msgstr "DHIS2 brauzer keshini tozalash vositasi"
+
+msgid "Session storage"
+msgstr "Zaxira sessiyalari"
+
+msgid "Local storage"
+msgstr "Mahalliy zaxira"
+
+msgid "indexedDB"
+msgstr ""
+
+msgid "Clear"
+msgstr "Tozalash"
+
+msgid "Clearing cache"
+msgstr ""
+
+msgid "Are you sure you want to proceed with the cleaning?"
+msgstr ""
+
+msgid "Cancel"
+msgstr "Bekor qilish"
+
+msgid "Proceed"
+msgstr ""
