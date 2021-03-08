@@ -7,5 +7,5 @@ module.exports = {
         before: 'readonly',
         after: 'readonly',
         cy: 'readonly',
-    }
+    },
 }

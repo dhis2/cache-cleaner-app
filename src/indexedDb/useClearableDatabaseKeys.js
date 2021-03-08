@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
-
-import { getClearableDatabases } from './getClearableDatabases'
 import { getCaptureAppUserDatabases } from './getCaptureAppUserDatabases'
+import { getClearableDatabases } from './getClearableDatabases'
 
 export const useClearableDatabaseKeys = () => {
     const [refetchCounter, setRefetchCounter] = useState(0)

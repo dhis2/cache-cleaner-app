@@ -1,5 +1,5 @@
-import { clearStoragesByKey } from '../../storage'
 import { clearDatabasesByKey } from '../../indexedDb'
+import { clearStoragesByKey } from '../../storage'
 
 const clearLocalStorageByKeys = keys =>
     clearStoragesByKey(window.localStorage, keys)

@@ -20,13 +20,9 @@ Given('some items exist', () => {
 })
 
 Given('some storage items have been selected', () => {
-    cy.get('[type="checkbox"]')
-        .first()
-        .as('selectedCheckbox')
+    cy.get('[type="checkbox"]').first().as('selectedCheckbox')
 
-    cy.get('@selectedCheckbox')
-        .parent()
-        .click()
+    cy.get('@selectedCheckbox').parent().click()
 
     cy.get('@selectedCheckbox').then($checkbox => {
         const name = $checkbox.attr('name')

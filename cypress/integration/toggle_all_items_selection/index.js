@@ -37,17 +37,13 @@ Given('every section has items', () => {
 })
 
 Given('all items are selected', () => {
-    cy.get('[type="checkbox"]')
-        .parent()
-        .click({ multiple: true })
+    cy.get('[type="checkbox"]').parent().click({ multiple: true })
 
     setInitialState()
 })
 
 Given('no item is selected', () => {
-    cy.get('[type="checkbox"]')
-        .filter(':checked')
-        .should('not.exist')
+    cy.get('[type="checkbox"]').filter(':checked').should('not.exist')
 
     setInitialState()
 })
@@ -86,7 +82,5 @@ Then('no selected state should change', () => {
 })
 
 Then('all checkbox in all sections should not be selected', () => {
-    cy.get('[type="checkbox"]')
-        .filter(':checked')
-        .should('not.exist')
+    cy.get('[type="checkbox"]').filter(':checked').should('not.exist')
 })
