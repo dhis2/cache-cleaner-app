@@ -1,5 +1,5 @@
-import { clearStoragesByKey } from '../../../storage'
 import { clearDatabasesByKey } from '../../../indexedDb'
+import { clearStoragesByKey } from '../../../storage'
 import { deleteValues } from '../deleteValues'
 
 jest.mock('../../../storage/clearStoragesByKey', () => ({

@@ -1,6 +1,6 @@
 import 'fake-indexeddb/auto'
-import { deleteDb } from '../deleteDb'
 import { dbExists } from '../dbExists'
+import { deleteDb } from '../deleteDb'
 
 jest.mock('../dbExists', () => ({
     dbExists: jest.fn(),

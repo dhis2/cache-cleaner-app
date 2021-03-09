@@ -26,7 +26,5 @@ Then(/the (.*) should be in the (.*) list/, (key, type) => {
     const storageSelector =
         type === 'local' ? '{localstoragekeys}' : '{sessionstoragekeys}'
 
-    cy.get(storageSelector)
-        .find(`[value="${key}"]`)
-        .should('exist')
+    cy.get(storageSelector).find(`[value="${key}"]`).should('exist')
 })

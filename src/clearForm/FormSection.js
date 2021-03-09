@@ -1,8 +1,7 @@
+import propTypes from '@dhis2/prop-types'
 import { Button } from '@dhis2/ui-core'
 import { Field, CheckboxGroup } from '@dhis2/ui-forms'
 import React from 'react'
-import propTypes from '@dhis2/prop-types'
-
 import { Actions } from '../actions/Actions'
 import styles from './FormSection.module.css'
 

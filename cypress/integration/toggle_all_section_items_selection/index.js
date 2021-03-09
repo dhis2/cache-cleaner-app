@@ -50,9 +50,7 @@ Given(/the (.*) has items/, section => {
 })
 
 Given('no item is selected', () => {
-    cy.get('@section')
-        .find(':checked')
-        .should('not.exist')
+    cy.get('@section').find(':checked').should('not.exist')
 
     setInitialState()
 })
@@ -68,27 +66,19 @@ Given('all item are selected', () => {
 })
 
 When('the user clicks the select-all button of that section', () => {
-    cy.get('@section')
-        .find('{formsection-selectall}')
-        .click()
+    cy.get('@section').find('{formsection-selectall}').click()
 })
 
 When('the user clicks the deselect-all button of that section', () => {
-    cy.get('@section')
-        .find('{formsection-deselectall}')
-        .click()
+    cy.get('@section').find('{formsection-deselectall}').click()
 })
 
 Then('all checkbox in the section should be selected', () => {
-    cy.get('@section')
-        .find('[type="checkbox"]')
-        .should('be.checked')
+    cy.get('@section').find('[type="checkbox"]').should('be.checked')
 })
 
 Then('no checkbox in the section should be selected', () => {
-    cy.get('@section')
-        .find(':checked')
-        .should('not.exist')
+    cy.get('@section').find(':checked').should('not.exist')
 })
 
 Then('no selected state should change', () => {
