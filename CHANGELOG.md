@@ -1,3 +1,11 @@
+## [31.1.9](https://github.com/dhis2/cache-cleaner-app/compare/v31.1.8...v31.1.9) (2021-03-09)
+
+
+### Bug Fixes
+
+* ensure locales are generated before linting ([580e923](https://github.com/dhis2/cache-cleaner-app/commit/580e923ea610f0e236bfb5d9550111ff955878a6))
+* **i18n:** import from `./locales/index.js` and update scripts ([ea5217d](https://github.com/dhis2/cache-cleaner-app/commit/ea5217d8933ecb636468309086e8d5aa6386a41d))
+
 ## [31.1.8](https://github.com/dhis2/cache-cleaner-app/compare/v31.1.7...v31.1.8) (2021-03-09)
 
 
