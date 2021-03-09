@@ -6,7 +6,6 @@
     "private": true,
     "scripts": {
         "build": "d2-app-scripts build",
-        "extract-pot": "d2-i18n-extract -p src/ -o i18n/",
         "format": "yarn format:js && yarn format:text",
         "format:staged": "yarn format:js --staged && yarn format:text --staged",
         "format:js": "d2-style js apply",
@@ -14,8 +13,6 @@
         "lint": "yarn lint:js && yarn lint:text",
         "lint:js": "d2-style js check",
         "lint:text": "d2-style text check",
-        "localize": "yarn extract-pot && d2-i18n-generate -n NAMESPACE -p ./i18n/ -o ./src/locales/",
-        "prestart": "yarn localize",
         "start": "d2-app-scripts start",
         "test": "d2-app-scripts test",
         "cy:start": "BROWSER=none yarn start",
@@ -26,8 +23,6 @@
         "@dhis2/cli-app-scripts": "^4.0.7",
         "@dhis2/cli-style": "^7.0.0",
         "@dhis2/cli-utils-cypress": "^2.2.2",
-        "@dhis2/d2-i18n-extract": "^1.0.8",
-        "@dhis2/d2-i18n-generate": "^1.2.0",
         "@testing-library/react-hooks": "^3.4.1",
         "fake-indexeddb": "^3.0.2",
         "react-test-renderer": "^16.13.1"
