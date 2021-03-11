@@ -1,3 +1,10 @@
+## [31.1.10](https://github.com/dhis2/cache-cleaner-app/compare/v31.1.9...v31.1.10) (2021-03-11)
+
+
+### Bug Fixes
+
+* upgrade to @dhis2/cli-app-scripts@6 (DHIS2-9893) ([#437](https://github.com/dhis2/cache-cleaner-app/issues/437)) ([094968d](https://github.com/dhis2/cache-cleaner-app/commit/094968d1be13de5a8a18dfabb7acee164558748e))
+
 ## [31.1.9](https://github.com/dhis2/cache-cleaner-app/compare/v31.1.8...v31.1.9) (2021-03-09)
 
 
