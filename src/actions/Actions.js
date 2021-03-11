@@ -1,5 +1,5 @@
 import propTypes from '@dhis2/prop-types'
-import { ButtonStrip } from '@dhis2/ui-core'
+import { ButtonStrip } from '@dhis2/ui'
 import React from 'react'
 import styles from './Actions.module.css'
 

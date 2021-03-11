@@ -1,12 +1,13 @@
 import i18n from '@dhis2/d2-i18n'
 import propTypes from '@dhis2/prop-types'
-import { Button, Help } from '@dhis2/ui-core'
-import { Form } from '@dhis2/ui-forms'
+import { Button, Help, ReactFinalForm } from '@dhis2/ui'
 import { FORM_ERROR } from 'final-form'
 import React from 'react'
 import { Actions } from '../actions/Actions'
 import styles from './ClearForm.module.css'
 import { FormSection } from './FormSection'
+
+const { Form } = ReactFinalForm
 
 const validate = values => {
     const errors = {}
