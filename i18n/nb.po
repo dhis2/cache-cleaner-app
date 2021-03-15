@@ -1,14 +1,14 @@
 # 
 # Translators:
-# Karoline Tufte Lien <karoline@dhis2.org>, 2020
 # Caroline Hesthagen Holen <caroline@devotta.no>, 2020
+# Karoline Tufte Lien <karoline@dhis2.org>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2020-04-16T12:59:23.976Z\n"
 "PO-Revision-Date: 2020-12-02 13:50+0000\n"
-"Last-Translator: Caroline Hesthagen Holen <caroline@devotta.no>, 2020\n"
+"Last-Translator: Karoline Tufte Lien <karoline@dhis2.org>, 2021\n"
 "Language-Team: Norwegian Bokmål (https://www.transifex.com/hisp-uio/teams/100509/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,46 +26,46 @@ msgid "Deselect all"
 msgstr "Fjern valg"
 
 msgid "Clear all selected items"
-msgstr ""
+msgstr "Fjern alle valgte elementer"
 
 msgid "Local storage empty"
-msgstr ""
+msgstr "Lokal lagringsplass er tom"
 
 msgid "Select all local storage items"
-msgstr ""
+msgstr "Velg alle lokale lagringselementer"
 
 msgid "Deselect all local storage items"
-msgstr ""
+msgstr "Fjern valg for alle lokale lagringselementer"
 
 msgid "Local storage"
 msgstr "Lokal lagring"
 
 msgid "Session storage empty"
-msgstr ""
+msgstr "Øktlagringsplass er tom"
 
 msgid "Select all session storage items"
-msgstr ""
+msgstr "Velg alle øktlagringselementer"
 
 msgid "Deselect all session storage items"
-msgstr ""
+msgstr "Fjern valg for alle øktlagringselementer"
 
 msgid "Session storage"
 msgstr "Øktlagring"
 
 msgid "No indexed databases"
-msgstr ""
+msgstr "Ingen indekserte databaser"
 
 msgid "Select all databases"
-msgstr ""
+msgstr "Velg alle databaser"
 
 msgid "Deselect all databases"
-msgstr ""
+msgstr "Fjern valg for alle databaser"
 
 msgid "Indexed database"
-msgstr ""
+msgstr "Indeksert database"
 
 msgid "Loading clearable data..."
-msgstr ""
+msgstr "Laster fjernbare data ..."
 
 msgid "DHIS 2 browser cache cleaner"
 msgstr "DHIS2 nettleserbufferrens"
