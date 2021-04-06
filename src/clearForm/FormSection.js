@@ -1,13 +1,15 @@
 import propTypes from '@dhis2/prop-types'
-import { Button, FieldGroup, Checkbox } from '@dhis2/ui'
+import {
+    Button,
+    FieldGroupFF,
+    ReactFinalForm,
+    CheckboxFieldFF,
+} from '@dhis2/ui'
 import React from 'react'
 import { Actions } from '../actions/Actions'
 import styles from './FormSection.module.css'
 
-const formatKeyToOption = key => ({
-    label: key,
-    value: key,
-})
+const { Field } = ReactFinalForm
 
 export const FormSection = ({
     deselectButtonLabel,
@@ -50,12 +52,20 @@ export const FormSection = ({
                     </Button>
                 </Actions>
             )}
-
-            <FieldGroup>
-                {storageKeys.map(formatKeyToOption).map(option => (
-                    <Checkbox key={option.value} {...option} />
-                ))}
-            </FieldGroup>
+            <FieldGroupFF>
+                {storageKeys.map(key => {
+                    return (
+                        <Field
+                            type="checkbox"
+                            component={CheckboxFieldFF}
+                            name={storageName}
+                            label={key}
+                            key={key}
+                            value={key}
+                        />
+                    )
+                })}
+            </FieldGroupFF>
         </div>
     )
 }
