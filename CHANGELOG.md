@@ -1,3 +1,10 @@
+## [31.1.11](https://github.com/dhis2/cache-cleaner-app/compare/v31.1.10...v31.1.11) (2021-04-06)
+
+
+### Bug Fixes
+
+* correct checkbox field group to fix selections [DHIS2-10791] ([#447](https://github.com/dhis2/cache-cleaner-app/issues/447)) ([1900414](https://github.com/dhis2/cache-cleaner-app/commit/1900414409ce9c5c2300d07c3cbd1513b6f4d0ff))
+
 ## [31.1.10](https://github.com/dhis2/cache-cleaner-app/compare/v31.1.9...v31.1.10) (2021-03-11)
 
 
