@@ -4,13 +4,14 @@
 # Viktor Varland <viktor@dhis2.org>, 2020
 # Karoline Tufte Lien <karoline@dhis2.org>, 2020
 # Gabriela Rodriguez <grodriguezcoronado@gmail.com>, 2020
+# Yayra Gomado <ygomado@hispwca.org>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2020-04-16T12:59:23.976Z\n"
 "PO-Revision-Date: 2020-12-02 13:50+0000\n"
-"Last-Translator: Gabriela Rodriguez <grodriguezcoronado@gmail.com>, 2020\n"
+"Last-Translator: Yayra Gomado <ygomado@hispwca.org>, 2021\n"
 "Language-Team: French (https://www.transifex.com/hisp-uio/teams/100509/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,13 +29,13 @@ msgid "Deselect all"
 msgstr "Desélectionner tout"
 
 msgid "Clear all selected items"
-msgstr ""
+msgstr "Effacer tous les éléments sélectionnés"
 
 msgid "Local storage empty"
-msgstr ""
+msgstr "Stockage local vide"
 
 msgid "Select all local storage items"
-msgstr ""
+msgstr "Sélectionnez tous les éléments de stockage local"
 
 msgid "Deselect all local storage items"
 msgstr ""
