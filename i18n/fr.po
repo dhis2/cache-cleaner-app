@@ -38,37 +38,37 @@ msgid "Select all local storage items"
 msgstr "Sélectionnez tous les éléments de stockage local"
 
 msgid "Deselect all local storage items"
-msgstr ""
+msgstr "Désélectionnez tous les éléments de stockage local"
 
 msgid "Local storage"
 msgstr "Stockage local"
 
 msgid "Session storage empty"
-msgstr ""
+msgstr "Le stockage de la session vide"
 
 msgid "Select all session storage items"
-msgstr ""
+msgstr "Sélectionnez tous les éléments de stockage de session"
 
 msgid "Deselect all session storage items"
-msgstr ""
+msgstr "Désélectionnez tous les éléments de stockage de session"
 
 msgid "Session storage"
 msgstr "Stockate de session"
 
 msgid "No indexed databases"
-msgstr ""
+msgstr "Aucune base de données indexée"
 
 msgid "Select all databases"
-msgstr ""
+msgstr "Sélectionnez toutes les bases de données"
 
 msgid "Deselect all databases"
-msgstr ""
+msgstr "Désélectionnez toutes les bases de données"
 
 msgid "Indexed database"
-msgstr ""
+msgstr "Base de données indexée"
 
 msgid "Loading clearable data..."
-msgstr ""
+msgstr "Chargement des données effaçables ..."
 
 msgid "DHIS 2 browser cache cleaner"
 msgstr "Videur du cache navigateur DHIS2"
