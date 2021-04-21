@@ -5,6 +5,7 @@
     "license": "BSD-3-Clause",
     "private": true,
     "scripts": {
+        "dockerize": "d2-app-scripts dockerize",
         "build": "d2-app-scripts build",
         "format": "yarn format:js && yarn format:text",
         "format:staged": "yarn format:js --staged && yarn format:text --staged",

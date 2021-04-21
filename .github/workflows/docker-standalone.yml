@@ -1,0 +1,22 @@
+name: 'dhis2: Create docker image with standalone build'
+
+on:
+    push:
+        branches:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        if: "!contains(github.event.head_commit.message, '[skip ci]')"
+
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Log into registry
+              run: echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+              env:
+                  DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+                  DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
+            - name: Build and push
+              run: yarn dockerize
