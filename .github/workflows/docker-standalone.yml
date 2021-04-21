@@ -15,8 +15,8 @@ jobs:
             - name: Log into registry
               run: echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
               env:
-                  DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-                  DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+                  DOCKER_USERNAME: ${{ secrets.DHIS2_BOT_DOCKER_HUB_USERNAME }}
+                  DOCKER_PASSWORD: ${{ secrets.DHIS2_BOT_DOCKER_HUB_PASSWORD }}
 
             - name: Build and push
               run: yarn dockerize
