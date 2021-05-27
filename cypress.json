@@ -2,5 +2,6 @@
     "baseUrl": "http://localhost:3000",
     "testFiles": "**/*.feature",
     "video": false,
-    "defaultCommandTimeout": 20000
+    "defaultCommandTimeout": 20000,
+    "experimentalInteractiveRunEvents": true
 }

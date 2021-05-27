@@ -2548,6 +2548,18 @@
     jscodeshift "^0.11.0"
     wait-on "^4.0.2"
 
+"@dhis2/cypress-commands@^8.0.0-alpha.3":
+  version "8.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@dhis2/cypress-commands/-/cypress-commands-8.0.0-alpha.3.tgz#cfb8b2a770a0362b0db02c87c0a49706c39303dd"
+  integrity sha512-0LXQQs60DUQ0QbAqfA8rd7CgD0SjkPyjN2wGGNLmsz+iCP7EJSEpwHiYJSDdPNu+w3s8Ev8XyHGgCeN+I0UyUQ==
+  dependencies:
+    jscodeshift "^0.11.0"
+
+"@dhis2/cypress-plugins@^8.0.0-alpha.3":
+  version "8.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@dhis2/cypress-plugins/-/cypress-plugins-8.0.0-alpha.3.tgz#89802df085f05bd5c883bd5663119754299310b3"
+  integrity sha512-di2Nh2xGO1rHG+ZUfsiJJYvEoOLNa/hr4zD+oPHe8WpieMF+DgUSxs2YIP4en1wf4Y/hl0dXfDKwnmOAEEZuLQ==
+
 "@dhis2/d2-i18n@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@dhis2/d2-i18n/-/d2-i18n-1.1.0.tgz#ec777c5091f747e4c5aa4f9801c62ba4d1ef3d16"

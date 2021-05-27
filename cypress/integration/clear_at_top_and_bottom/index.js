@@ -32,25 +32,25 @@ Given('some storage items have been selected', () => {
 })
 
 Given('the clear button at the top is enabled', () => {
-    cy.get('{clear-top}')
+    cy.getWithDataTest('{clear-top}')
         .should('exist')
         .invoke('filter', ':disabled')
         .should('not.exist')
 })
 
 Given('the clear button at the bottom is enabled', () => {
-    cy.get('{clear-bottom}')
+    cy.getWithDataTest('{clear-bottom}')
         .should('exist')
         .invoke('filter', ':disabled')
         .should('not.exist')
 })
 
 When('the user clicks the clear button at the top', () => {
-    cy.get('{clear-top}').click()
+    cy.getWithDataTest('{clear-top}').click()
 })
 
 When('the user clicks the clear button at the bottom', () => {
-    cy.get('{clear-bottom}').click()
+    cy.getWithDataTest('{clear-bottom}').click()
 })
 
 Then('the selected storage items should be deleted', () => {
