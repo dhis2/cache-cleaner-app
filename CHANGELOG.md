@@ -1,3 +1,10 @@
+## [31.1.14](https://github.com/dhis2/cache-cleaner-app/compare/v31.1.13...v31.1.14) (2021-06-10)
+
+
+### Bug Fixes
+
+* **translations:** sync translations from transifex (master) ([d5495f4](https://github.com/dhis2/cache-cleaner-app/commit/d5495f452e0690e708a82d171bb78ad6f0a478fb))
+
 ## [31.1.13](https://github.com/dhis2/cache-cleaner-app/compare/v31.1.12...v31.1.13) (2021-04-13)
 
 
