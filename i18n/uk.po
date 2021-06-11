@@ -32,13 +32,13 @@ msgid "Clear"
 msgstr "Очистити"
 
 msgid "Clearing cache"
-msgstr ""
+msgstr "Очищення кешу"
 
 msgid "Are you sure you want to proceed with the cleaning?"
-msgstr ""
+msgstr "Ви впевнені, що хочете продовжити з очищенням кешу?"
 
 msgid "Cancel"
 msgstr "Скасувати"
 
 msgid "Proceed"
-msgstr ""
+msgstr "Продовжити"
