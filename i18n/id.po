@@ -1,13 +1,13 @@
 # 
 # Translators:
-# Viktor Varland <viktor@dhis2.org>, 2020
+# Untoro Dwi Raharjo <untoro.dwi.raharjo@mail.ugm.ac.id>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2020-04-16T12:59:23.976Z\n"
 "PO-Revision-Date: 2020-12-02 13:50+0000\n"
-"Last-Translator: Viktor Varland <viktor@dhis2.org>, 2020\n"
+"Last-Translator: Untoro Dwi Raharjo <untoro.dwi.raharjo@mail.ugm.ac.id>, 2021\n"
 "Language-Team: Indonesian (https://www.transifex.com/hisp-uio/teams/100509/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,55 +16,55 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "No data selected"
-msgstr ""
+msgstr "Tidak ada data yang dipilih"
 
 msgid "Select all"
-msgstr ""
+msgstr "Pilih semua"
 
 msgid "Deselect all"
-msgstr ""
+msgstr "Batal pilih semua"
 
 msgid "Clear all selected items"
-msgstr ""
+msgstr "Hapus semua item terpilih"
 
 msgid "Local storage empty"
-msgstr ""
+msgstr "Penyimpanan lokal kosong"
 
 msgid "Select all local storage items"
-msgstr ""
+msgstr "Pilih semua penyimpanan item lokal"
 
 msgid "Deselect all local storage items"
-msgstr ""
+msgstr "Batal pilih semua item penyimpanan lokal"
 
 msgid "Local storage"
-msgstr "Local Storage"
+msgstr "Penyimpanan lokal"
 
 msgid "Session storage empty"
-msgstr ""
+msgstr "Penyimpanan sesi kosong"
 
 msgid "Select all session storage items"
-msgstr ""
+msgstr "Pilih semua item penyimpanan sesi "
 
 msgid "Deselect all session storage items"
-msgstr ""
+msgstr "Batal pilih semua item penyimpanan sesi"
 
 msgid "Session storage"
-msgstr "Session Storage"
+msgstr "Penyimpanan sesi"
 
 msgid "No indexed databases"
-msgstr ""
+msgstr "Tidak ada database terindeks"
 
 msgid "Select all databases"
-msgstr ""
+msgstr "Pilih semua database"
 
 msgid "Deselect all databases"
-msgstr ""
+msgstr "Batal pilih semua database"
 
 msgid "Indexed database"
-msgstr ""
+msgstr "Database terindeks"
 
 msgid "Loading clearable data..."
-msgstr ""
+msgstr "Memuat data yang dapat dihapus..."
 
 msgid "DHIS 2 browser cache cleaner"
-msgstr "DHIS 2 browser cache cleaner"
+msgstr "Pembersih cache browser DHIS 2"
