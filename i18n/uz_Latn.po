@@ -40,4 +40,4 @@ msgid "Cancel"
 msgstr "Bekor qilish"
 
 msgid "Proceed"
-msgstr ""
+msgstr "Davom eting"
