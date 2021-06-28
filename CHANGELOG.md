@@ -1,3 +1,16 @@
+# [100.0.0](https://github.com/dhis2/cache-cleaner-app/compare/v99.9.9...v100.0.0) (2021-06-28)
+
+
+### chore
+
+* **release:** migrate to new app version scheme ([#505](https://github.com/dhis2/cache-cleaner-app/issues/505)) ([efc9d29](https://github.com/dhis2/cache-cleaner-app/commit/efc9d2955cd2a3f3ac6b25a28069f420fb92dfec)), closes [dhis2/notes#293](https://github.com/dhis2/notes/issues/293)
+
+
+### BREAKING CHANGES
+
+* **release:** App version becomes decoupled from DHIS2 versions, see
+the d2.config.js or App Hub for DHIS2 version compatibility.
+
 ## [31.1.15](https://github.com/dhis2/cache-cleaner-app/compare/v31.1.14...v31.1.15) (2021-06-22)
 
 
