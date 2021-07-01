@@ -49,11 +49,11 @@ Given('no item is selected', () => {
 })
 
 When('the user clicks the select-all button for all sections', () => {
-    cy.get('{selectall}').click()
+    cy.getWithDataTest('{selectall}').click()
 })
 
 When('the user clicks the deselect-all button for all sections', () => {
-    cy.get('{deselectall}').click()
+    cy.getWithDataTest('{deselectall}').click()
 })
 
 Then('all checkbox in all sections should be selected', () => {

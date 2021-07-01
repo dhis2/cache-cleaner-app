@@ -1,6 +1,5 @@
-import '@dhis2/cli-utils-cypress/support'
+import { enableAutoLogin, enableNetworkShim } from '@dhis2/cypress-commands'
 import './all'
-import { loginAndPersistSession } from './network/loginAndPersistSession'
 
 // storage
 import './clearStorage'
@@ -21,4 +20,5 @@ import './readDataFromObjectStore'
 // storage + indexedDB
 import './storageShouldHaveItems'
 
-loginAndPersistSession()
+enableAutoLogin()
+enableNetworkShim()

@@ -65,7 +65,7 @@ Given(/no items are stored in the (.*) storage/, type => {
     // wait for loading to finish
     // Otherwise we'll try to access a database
     // that the app already has an open connection with
-    cy.get('{homeheadline}').should('exist')
+    cy.getWithDataTest('{homeheadline}').should('exist')
 
     cy.storageShouldHaveItems(type)
 })
@@ -77,7 +77,9 @@ Then('all items should be listed as clearable', () => {
     ).then(([type, storedNames]) => {
         const storageSelector = getStorageSelector(type)
         storedNames.forEach(name =>
-            cy.get(`${storageSelector} [value="${name}"]`).should('exist')
+            cy
+                .getWithDataTest(`${storageSelector} [value="${name}"]`)
+                .should('exist')
         )
     })
 })
@@ -85,13 +87,15 @@ Then('all items should be listed as clearable', () => {
 Then('the section should not show any checkboxes', () => {
     cy.get('@storageType').then(type => {
         const storageSelector = getStorageSelector(type)
-        cy.get(`${storageSelector} input`).should('not.exist')
+        cy.getWithDataTest(`${storageSelector} input`).should('not.exist')
     })
 })
 
 Then('a text explaining that no items exist should be displayed', () => {
     cy.get('@storageType').then(type => {
         const storageSelector = getStorageSelector(type)
-        cy.get(`${storageSelector} {emptystoragemessage}`).should('exist')
+        cy.getWithDataTest(`${storageSelector} {emptystoragemessage}`).should(
+            'exist'
+        )
     })
 })

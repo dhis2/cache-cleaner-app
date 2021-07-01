@@ -23,7 +23,7 @@ const setInitialState = () => {
 
 Given(/the (.*) has items/, section => {
     const selector = getStorageSelector(section)
-    cy.get(selector).as('section')
+    cy.getWithDataTest(selector).as('section')
 
     const items = ['dhis2ou', 'dhis2', 'dhis2tc']
 
@@ -66,11 +66,11 @@ Given('all item are selected', () => {
 })
 
 When('the user clicks the select-all button of that section', () => {
-    cy.get('@section').find('{formsection-selectall}').click()
+    cy.get('@section').findWithDataTest('{formsection-selectall}').click()
 })
 
 When('the user clicks the deselect-all button of that section', () => {
-    cy.get('@section').find('{formsection-deselectall}').click()
+    cy.get('@section').findWithDataTest('{formsection-deselectall}').click()
 })
 
 Then('all checkbox in the section should be selected', () => {

@@ -1,6 +1,11 @@
 {
+    "projectId": "z3t5e2",
     "baseUrl": "http://localhost:3000",
     "testFiles": "**/*.feature",
     "video": false,
-    "defaultCommandTimeout": 20000
+    "defaultCommandTimeout": 20000,
+    "experimentalInteractiveRunEvents": true,
+    "env": {
+        "dhis2DataTestPrefix": "dhis2-cachecleaner"
+    }
 }

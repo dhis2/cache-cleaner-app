@@ -1,0 +1,16 @@
+{
+    "count": 316,
+    "totalResponseSize": 30828,
+    "duplicates": 279,
+    "nonDeterministicResponses": 42,
+    "serverMinorVersion": 37,
+    "fixtureFiles": [
+        "static_resources.json",
+        "user_specific_databases_of_the_capture_app_are_listed.json",
+        "the_user_can_clear_the_selected_storage_items_at_the_top_and_the_bottom_of_the_form.json",
+        "a_defined_set_of_storages_keys_should_be_ignored.json",
+        "list_all_clearable_local_storage_items.json",
+        "all_items_can_be_toggled_on_and_off.json",
+        "all_items_in_a_storage_section_can_be_toggled_on_and_off.json"
+    ]
+}
