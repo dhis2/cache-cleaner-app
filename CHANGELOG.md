@@ -1,3 +1,17 @@
+# [100.1.0](https://github.com/dhis2/cache-cleaner-app/compare/v100.0.0...v100.1.0) (2021-07-01)
+
+
+### Bug Fixes
+
+* add cypress data test prefix to cypress.json ([af2a6d2](https://github.com/dhis2/cache-cleaner-app/commit/af2a6d24d7b1af48c0edee915457e9e809629b67))
+* add start:nobrowser script ([26a15f6](https://github.com/dhis2/cache-cleaner-app/commit/26a15f6b3ea5d4506f2cc6c75ec6462e493fe103))
+* use getWithDataTest and findWithDataTest ([ceba1ad](https://github.com/dhis2/cache-cleaner-app/commit/ceba1adc3a42161f4cf1aad4eec76928c313c168))
+
+
+### Features
+
+* add e2e workflow step ([4b61b99](https://github.com/dhis2/cache-cleaner-app/commit/4b61b9900b2456c2eee011769417e9ebefd1241c))
+
 # [100.0.0](https://github.com/dhis2/cache-cleaner-app/compare/v99.9.9...v100.0.0) (2021-06-28)
 
 
