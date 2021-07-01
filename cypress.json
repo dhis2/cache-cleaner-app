@@ -4,5 +4,8 @@
     "testFiles": "**/*.feature",
     "video": false,
     "defaultCommandTimeout": 20000,
-    "experimentalInteractiveRunEvents": true
+    "experimentalInteractiveRunEvents": true,
+    "env": {
+        "dhis2DataTestPrefix": "dhis2-cachecleaner"
+    }
 }
