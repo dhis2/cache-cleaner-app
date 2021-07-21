@@ -35,7 +35,7 @@
         "@dhis2/app-runtime": "^2.8.0",
         "@dhis2/d2-i18n": "^1.1.0",
         "@dhis2/prop-types": "^1.6.4",
-        "@dhis2/ui": "^6.10.6",
+        "@dhis2/ui": "^6.11.0",
         "final-form": "^4.19.1"
     }
 }
