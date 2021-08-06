@@ -91,7 +91,6 @@ jobs:
                   CYPRESS_dhis2ApiVersion: 37
                   CYPRESS_networkMode: stub
 
-
     release:
         runs-on: ubuntu-latest
         needs: [build, lint, test, e2e]
