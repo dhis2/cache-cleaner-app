@@ -20,11 +20,8 @@
         "cypress:stub": "start-server-and-test 'yarn start:nobrowser' http://localhost:3000 'yarn cypress run --env dhis2ApiVersion=37,networkMode=stub'",
         "cypress:live": "start-server-and-test 'yarn start:nobrowser' http://localhost:3000 'yarn cypress open --env networkMode=live'"
     },
-    "resolutions": {
-        "@dhis2/app-runtime": "2.9.0-alpha.3"
-    },
     "devDependencies": {
-        "@dhis2/cli-app-scripts": "^7.6.2",
+        "@dhis2/cli-app-scripts": "^8.0.1",
         "@dhis2/cli-style": "^7.3.0",
         "@dhis2/cli-utils-cypress": "^8.0.1",
         "@dhis2/cypress-commands": "^8.0.1",
@@ -35,10 +32,10 @@
         "start-server-and-test": "^1.12.5"
     },
     "dependencies": {
-        "@dhis2/app-runtime": "2.9.0-alpha.3",
+        "@dhis2/app-runtime": "^3.2.0",
         "@dhis2/d2-i18n": "^1.1.0",
         "@dhis2/prop-types": "^1.6.4",
-        "@dhis2/ui": "^6.12.0",
+        "@dhis2/ui": "^7.2.0",
         "final-form": "^4.19.1"
     }
 }
