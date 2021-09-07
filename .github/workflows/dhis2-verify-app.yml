@@ -4,7 +4,6 @@ on: push
 
 concurrency:
     group: ${{ github.workflow}}-${{ github.ref }}
-    cancel-in-progress: true
 
 env:
     GIT_AUTHOR_NAME: '@dhis2-bot'
@@ -13,7 +12,6 @@ env:
     GIT_COMMITTER_EMAIL: 'apps@dhis2.org'
     GH_TOKEN: ${{secrets.DHIS2_BOT_GITHUB_TOKEN}}
     APPHUB_TOKEN: ${{secrets.DHIS2_BOT_APPHUB_TOKEN}}
-    D2_VERBOSE: true
 
 jobs:
     build:
@@ -23,10 +21,13 @@ jobs:
             - uses: actions/setup-node@v1
               with:
                   node-version: 12.x
+
             - uses: c-hive/gha-yarn-cache@v1
             - run: yarn install --frozen-lockfile
+
             - name: Build
               run: yarn build
+
             - uses: actions/upload-artifact@v2
               with:
                   name: app-build
@@ -42,10 +43,13 @@ jobs:
             - uses: actions/setup-node@v1
               with:
                   node-version: 12.x
+
             - uses: c-hive/gha-yarn-cache@v1
             - run: yarn install --frozen-lockfile
+
             - name: Generate translations
               run: yarn d2-app-scripts i18n generate
+
             - name: Lint
               run: yarn lint
 
