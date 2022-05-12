@@ -16,18 +16,18 @@ describe('indexedDB - getKeyFromObjectStore', () => {
             request.onerror = reject
 
             withStore &&
-                (request.onupgradeneeded = event => {
+                (request.onupgradeneeded = (event) => {
                     const db = event.target.result
                     db.createObjectStore(storeName)
                 })
 
-            request.onsuccess = event => {
+            request.onsuccess = (event) => {
                 const db = event.target.result
                 resolve(db)
             }
         })
 
-    const addData = db =>
+    const addData = (db) =>
         new Promise((resolve, reject) => {
             const transaction = db.transaction([storeName], 'readwrite')
             transaction.oncomplete = () => resolve(db)

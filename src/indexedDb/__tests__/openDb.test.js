@@ -49,7 +49,7 @@ describe('indexedDB - openDb', () => {
         let error
         delete window.indexedDB
 
-        await openDb('foo').catch(e => (error = e))
+        await openDb('foo').catch((e) => (error = e))
         expect(error).toBeInstanceOf(Error)
         expect(error.message).toBe("Cannot read property 'open' of undefined")
     })

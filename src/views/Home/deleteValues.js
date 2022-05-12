@@ -1,13 +1,13 @@
 import { clearDatabasesByKey } from '../../indexedDb'
 import { clearStoragesByKey } from '../../storage'
 
-const clearLocalStorageByKeys = keys =>
+const clearLocalStorageByKeys = (keys) =>
     clearStoragesByKey(window.localStorage, keys)
 
-const clearSessionStorageByKeys = keys =>
+const clearSessionStorageByKeys = (keys) =>
     clearStoragesByKey(window.sessionStorage, keys)
 
-export const deleteValues = async values => {
+export const deleteValues = async (values) => {
     if (values.localStorageKeys) {
         clearLocalStorageByKeys(values.localStorageKeys)
     }

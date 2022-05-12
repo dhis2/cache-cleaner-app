@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { getClearableKeys } from './getClearableKeys'
 
-export const useClearableStorageKeys = storage => {
+export const useClearableStorageKeys = (storage) => {
     const [existingKeys, setExistingKeys] = useState([])
 
     const onStorageChange = useCallback(() => {

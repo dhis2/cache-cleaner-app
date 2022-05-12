@@ -5,7 +5,7 @@ import { openDb } from './openDb'
 const userCachesStoreName = 'userCaches'
 
 export const getCaptureAppUserDatabases = () =>
-    dbExists('dhis2ca').then(async captureDbExists => {
+    dbExists('dhis2ca').then(async (captureDbExists) => {
         let db
         let dbNames = []
 

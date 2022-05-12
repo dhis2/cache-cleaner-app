@@ -2,7 +2,7 @@ import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 
 const setInitialState = () => {
     cy.get('[type="checkbox"]')
-        .then($checkboxes => $checkboxes.filter(':checked'))
+        .then(($checkboxes) => $checkboxes.filter(':checked'))
         .invoke('map', (index, checked) => {
             const $checked = Cypress.$(checked)
 
@@ -17,13 +17,13 @@ const setInitialState = () => {
 Given('every section has items', () => {
     const items = ['dhis2ou', 'dhis2', 'dhis2tc']
 
-    cy.storage('local').setItems(items.map(name => ({ name, value: name })))
-    cy.storage('session').setItems(items.map(name => ({ name, value: name })))
+    cy.storage('local').setItems(items.map((name) => ({ name, value: name })))
+    cy.storage('session').setItems(items.map((name) => ({ name, value: name })))
 
-    cy.window().then(async win => {
+    cy.window().then(async (win) => {
         await Promise.all(
-            items.map(name => {
-                return new Promise(resolve => {
+            items.map((name) => {
+                return new Promise((resolve) => {
                     const request = win.indexedDB.open(name)
                     request.onsuccess = resolve
                 })
@@ -64,7 +64,7 @@ Then('no selected state should change', () => {
     const getCurrentState = () =>
         cy
             .get('[type="checkbox"]')
-            .then($checkboxes => $checkboxes.filter(':checked'))
+            .then(($checkboxes) => $checkboxes.filter(':checked'))
             .invoke('map', (index, checked) => {
                 const $checked = Cypress.$(checked)
 

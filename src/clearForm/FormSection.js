@@ -53,7 +53,7 @@ export const FormSection = ({
                 </Actions>
             )}
             <FieldGroupFF>
-                {storageKeys.map(key => {
+                {storageKeys.map((key) => {
                     return (
                         <Field
                             type="checkbox"

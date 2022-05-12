@@ -25,12 +25,12 @@ const openDb = (win, name, objectStoreName) =>
         request.onerror = reject
 
         objectStoreName &&
-            (request.onupgradeneeded = event => {
+            (request.onupgradeneeded = (event) => {
                 const db = event.target.result
                 recreateObjectStore(db, objectStoreName)
             })
 
-        request.onsuccess = event => {
+        request.onsuccess = (event) => {
             const db = event.target.result
             resolve(db)
         }
@@ -66,11 +66,13 @@ Given('some user databases exist', () => {
     // so all connections to databases have been closed
     cy.get('h1', { log: false })
 
-    cy.window().then(async win => {
+    cy.window().then(async (win) => {
         await deleteDb(win, 'dhis2ca')
 
         // create user dbs
-        await Promise.all(userCaches.map(userCache => createDb(win, userCache)))
+        await Promise.all(
+            userCaches.map((userCache) => createDb(win, userCache))
+        )
 
         // create and open dhis2ca db
         const db = await openDb(win, 'dhis2ca', objectStoreName)
@@ -84,7 +86,7 @@ Given('some user databases exist', () => {
     // Reload to ensure that DBs are being persisted
     cy.reload()
 
-    cy.window().then(async win => {
+    cy.window().then(async (win) => {
         // create and open dhis2ca db
         const db = await openDb(win, 'dhis2ca', objectStoreName)
 
@@ -97,7 +99,7 @@ Given('some user databases exist', () => {
             // access value of an entry whos "keyPath" equals "accessHistory"
             const useridsReq = objectStore.get('accessHistory')
 
-            useridsReq.onsuccess = event => {
+            useridsReq.onsuccess = (event) => {
                 const result = event.target.result
                 const dbnames = result.values
 
@@ -123,10 +125,10 @@ When('the user deletes the dhis2ca database', () => {
 
 Then('the user databases should be deleted as well', () => {
     cy.get('[value="dhis2ca"]').should('not.exist')
-    cy.window().then(win => {
-        return ['dhis2ca', ...userCaches].forEach(dbName => {
+    cy.window().then((win) => {
+        return ['dhis2ca', ...userCaches].forEach((dbName) => {
             // use a cy command to ensure sequential execution
-            cy.wrap(dbName).then(async name => {
+            cy.wrap(dbName).then(async (name) => {
                 const db = await openDb(win, name)
                 expect(db.target).to.equal(undefined)
                 db.close()

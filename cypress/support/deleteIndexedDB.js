@@ -1,6 +1,6 @@
-const deleteIndexedDB = name =>
+const deleteIndexedDB = (name) =>
     cy.window().then(
-        win =>
+        (win) =>
             new Promise((resolve, reject) => {
                 const request = win.indexedDB.deleteDatabase(name)
                 request.onsuccess = resolve

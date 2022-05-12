@@ -19,10 +19,10 @@ describe('indexedDB - useClearableDatabaseKeys', () => {
     const clearableUserDatabases = ['dhis2cafoo', 'dhis2cabar']
 
     getClearableDatabases.mockImplementation(
-        () => new Promise(resolve => resolve(clearableDatabases))
+        () => new Promise((resolve) => resolve(clearableDatabases))
     )
     getCaptureAppUserDatabases.mockImplementation(
-        () => new Promise(resolve => resolve(clearableUserDatabases))
+        () => new Promise((resolve) => resolve(clearableUserDatabases))
     )
 
     afterEach(() => {
@@ -85,10 +85,10 @@ describe('indexedDB - useClearableDatabaseKeys', () => {
         expect(getCaptureAppUserDatabases).toHaveBeenCalledTimes(1)
 
         getClearableDatabases.mockImplementationOnce(
-            () => new Promise(resolve => resolve(['foo', 'bar']))
+            () => new Promise((resolve) => resolve(['foo', 'bar']))
         )
         getCaptureAppUserDatabases.mockImplementationOnce(
-            () => new Promise(resolve => resolve(['baz', 'foobar']))
+            () => new Promise((resolve) => resolve(['baz', 'foobar']))
         )
 
         await act(async () => {

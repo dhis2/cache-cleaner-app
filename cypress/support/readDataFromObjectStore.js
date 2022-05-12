@@ -7,7 +7,7 @@ const readDataFromObjectStore = (db, objectStoreName, key) =>
         // access value of an entry whos "keyPath" equals "accessHistory"
         const useridsReq = objectStore.get(key)
 
-        useridsReq.onsuccess = event => {
+        useridsReq.onsuccess = (event) => {
             var result = event.target.result
             var dbnames = result && result.values ? result.values : []
             resolve(dbnames)

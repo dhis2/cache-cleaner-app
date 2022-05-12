@@ -8,15 +8,11 @@ import { deleteValues } from './Home/deleteValues'
 import { formatDeleteValues } from './Home/formatDeleteValues'
 
 export const Home = () => {
-    const {
-        keys: localStorageKeys,
-        refetch: refetchLocalStorageKeys,
-    } = useClearableStorageKeys(window.localStorage)
+    const { keys: localStorageKeys, refetch: refetchLocalStorageKeys } =
+        useClearableStorageKeys(window.localStorage)
 
-    const {
-        keys: sessionStorageKeys,
-        refetch: refetchSessionStorageKeys,
-    } = useClearableStorageKeys(window.sessionStorage)
+    const { keys: sessionStorageKeys, refetch: refetchSessionStorageKeys } =
+        useClearableStorageKeys(window.sessionStorage)
 
     const {
         loading,
@@ -32,7 +28,7 @@ export const Home = () => {
         await refetchIndexedDatabaseKeys()
     }
 
-    const onSubmit = async values => {
+    const onSubmit = async (values) => {
         const formattedValues = formatDeleteValues(values, userDatabases)
         await deleteValues(formattedValues)
         await refetch()
