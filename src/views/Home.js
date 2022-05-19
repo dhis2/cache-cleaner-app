@@ -1,11 +1,11 @@
 import i18n from '@dhis2/d2-i18n'
 import React from 'react'
-import { ClearForm } from '../clearForm'
-import { useClearableDatabaseKeys } from '../indexedDb'
-import { useClearableStorageKeys } from '../storage'
+import { ClearForm } from '../clearForm/index.js'
+import { useClearableDatabaseKeys } from '../indexedDb/index.js'
+import { useClearableStorageKeys } from '../storage/index.js'
 import styles from './Home.module.css'
-import { deleteValues } from './Home/deleteValues'
-import { formatDeleteValues } from './Home/formatDeleteValues'
+import { deleteValues } from './Home/deleteValues.js'
+import { formatDeleteValues } from './Home/formatDeleteValues.js'
 
 export const Home = () => {
     const { keys: localStorageKeys, refetch: refetchLocalStorageKeys } =

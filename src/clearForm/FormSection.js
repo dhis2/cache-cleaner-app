@@ -6,7 +6,7 @@ import {
     CheckboxFieldFF,
 } from '@dhis2/ui'
 import React from 'react'
-import { Actions } from '../actions/Actions'
+import { Actions } from '../actions/Actions.js'
 import styles from './FormSection.module.css'
 
 const { Field } = ReactFinalForm

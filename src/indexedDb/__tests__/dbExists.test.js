@@ -1,5 +1,5 @@
-import 'fake-indexeddb/auto'
-import { dbExists } from '../dbExists'
+import 'fake-indexeddb/auto.js'
+import { dbExists } from '../dbExists.js'
 
 describe('indexedDB - dbExists', () => {
     const indexedDB = window.indexedDB

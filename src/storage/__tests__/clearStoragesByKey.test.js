@@ -1,4 +1,4 @@
-import { clearStoragesByKey } from '../clearStoragesByKey'
+import { clearStoragesByKey } from '../clearStoragesByKey.js'
 
 describe('storage - clearStoragesByKey', () => {
     const storages = [window.localStorage, window.sessionStorage]

@@ -1,5 +1,5 @@
-import 'fake-indexeddb/auto'
-import { getKeyFromObjectStore } from '../getKeyFromObjectStore'
+import 'fake-indexeddb/auto.js'
+import { getKeyFromObjectStore } from '../getKeyFromObjectStore.js'
 
 describe('indexedDB - getKeyFromObjectStore', () => {
     const dbName = 'databaseName'

@@ -1,4 +1,4 @@
-import { deleteDb } from './deleteDb'
+import { deleteDb } from './deleteDb.js'
 
 export const clearDatabasesByKey = (keys) => {
     const allDeleteProcesses = keys.map((key) => deleteDb(key, true))

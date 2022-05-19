@@ -1,4 +1,4 @@
-import { formatDeleteValues } from '../formatDeleteValues'
+import { formatDeleteValues } from '../formatDeleteValues.js'
 
 describe('Home - formatDeleteValues', () => {
     it.only('should combine the static indexed dbs and the user indexed dbs', () => {

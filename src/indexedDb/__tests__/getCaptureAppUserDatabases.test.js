@@ -1,6 +1,6 @@
-import 'fake-indexeddb/auto'
-import { dbExists } from '../dbExists'
-import { getCaptureAppUserDatabases } from '../getCaptureAppUserDatabases'
+import 'fake-indexeddb/auto.js'
+import { dbExists } from '../dbExists.js'
+import { getCaptureAppUserDatabases } from '../getCaptureAppUserDatabases.js'
 
 jest.mock('../dbExists', () => ({
     dbExists: jest.fn(),

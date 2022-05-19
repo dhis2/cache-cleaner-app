@@ -1,7 +1,7 @@
 import { CssVariables } from '@dhis2/ui'
 import React from 'react'
 import './locales/index.js'
-import { Home } from './views'
+import { Home } from './views/index.js'
 
 export default function App() {
     return (

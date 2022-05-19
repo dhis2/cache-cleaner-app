@@ -1,4 +1,4 @@
-import { reservedStorageKeys } from './reservedStorageKeys'
+import { reservedStorageKeys } from './reservedStorageKeys.js'
 
 /**
  * @param {Storage} strage

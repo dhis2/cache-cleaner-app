@@ -1,4 +1,4 @@
-import { dbExists } from './dbExists'
+import { dbExists } from './dbExists.js'
 
 export const deleteDb = (name, succeedWhenNonExistant = false) =>
     dbExists(name).then((exists) => {

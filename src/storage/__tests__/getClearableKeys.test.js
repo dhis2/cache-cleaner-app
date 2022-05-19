@@ -1,4 +1,4 @@
-import { getClearableKeys } from '../getClearableKeys'
+import { getClearableKeys } from '../getClearableKeys.js'
 
 describe('storage - getClearableKeys', () => {
     it('should not return properties that are part of the prototype', () => {

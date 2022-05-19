@@ -1,7 +1,7 @@
 import { act, renderHook } from '@testing-library/react-hooks'
-import { getCaptureAppUserDatabases } from '../getCaptureAppUserDatabases'
-import { getClearableDatabases } from '../getClearableDatabases'
-import { useClearableDatabaseKeys } from '../useClearableDatabaseKeys'
+import { getCaptureAppUserDatabases } from '../getCaptureAppUserDatabases.js'
+import { getClearableDatabases } from '../getClearableDatabases.js'
+import { useClearableDatabaseKeys } from '../useClearableDatabaseKeys.js'
 
 jest.mock('../getClearableDatabases', () => ({
     getClearableDatabases: jest.fn(() => Promise.reject()),

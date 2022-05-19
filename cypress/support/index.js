@@ -1,24 +1,24 @@
 import { enableAutoLogin, enableNetworkShim } from '@dhis2/cypress-commands'
-import './all'
+import './all.js'
 
 // storage
-import './clearStorage'
-import './localStorage'
-import './sessionStorage'
-import './getAllItems'
-import './getItem'
-import './setItems'
-import './storage'
+import './clearStorage.js'
+import './localStorage.js'
+import './sessionStorage.js'
+import './getAllItems.js'
+import './getItem.js'
+import './setItems.js'
+import './storage.js'
 
 // indexedDB
-import './addDataToObjectStore'
-import './createObjectStore'
-import './deleteIndexedDB'
-import './openIndexedDB'
-import './readDataFromObjectStore'
+import './addDataToObjectStore.js'
+import './createObjectStore.js'
+import './deleteIndexedDB.js'
+import './openIndexedDB.js'
+import './readDataFromObjectStore.js'
 
 // storage + indexedDB
-import './storageShouldHaveItems'
+import './storageShouldHaveItems.js'
 
 enableAutoLogin()
 enableNetworkShim()

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { getClearableKeys } from './getClearableKeys'
+import { getClearableKeys } from './getClearableKeys.js'
 
 export const useClearableStorageKeys = (storage) => {
     const [existingKeys, setExistingKeys] = useState([])

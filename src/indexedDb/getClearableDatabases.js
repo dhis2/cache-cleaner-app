@@ -1,5 +1,5 @@
-import { dbExists } from './dbExists'
-import { dhis2DatabaseNames } from './dhis2DatabaseNames'
+import { dbExists } from './dbExists.js'
+import { dhis2DatabaseNames } from './dhis2DatabaseNames.js'
 
 /**
  * @returns {Promise.<String[]>}
