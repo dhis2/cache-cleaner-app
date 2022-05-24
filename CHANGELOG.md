@@ -1,3 +1,10 @@
+## [100.1.5](https://github.com/dhis2/cache-cleaner-app/compare/v100.1.4...v100.1.5) (2022-05-24)
+
+
+### Bug Fixes
+
+* **translations:** sync translations from transifex (master) ([e171c64](https://github.com/dhis2/cache-cleaner-app/commit/e171c640afcdef9a07c20cd2f61777b3210ee776))
+
 ## [100.1.4](https://github.com/dhis2/cache-cleaner-app/compare/v100.1.3...v100.1.4) (2022-04-19)
 
 
