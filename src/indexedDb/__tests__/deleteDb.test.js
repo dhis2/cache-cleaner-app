@@ -1,6 +1,6 @@
-import 'fake-indexeddb/auto'
-import { dbExists } from '../dbExists'
-import { deleteDb } from '../deleteDb'
+import 'fake-indexeddb/auto.js'
+import { dbExists } from '../dbExists.js'
+import { deleteDb } from '../deleteDb.js'
 
 jest.mock('../dbExists', () => ({
     dbExists: jest.fn(),
@@ -32,7 +32,7 @@ describe('indexedDB - deleteDb', () => {
 
     it('should delete an existing db', async () => {
         const dbExistsReturnMock = {
-            then: callback => callback(true),
+            then: (callback) => callback(true),
         }
         dbExists.mockImplementationOnce(() => dbExistsReturnMock)
 
@@ -65,7 +65,7 @@ describe('indexedDB - deleteDb', () => {
 
     it("should reject if the database doesn't exist", () => {
         const dbExistsReturnMock = {
-            then: callback => callback(false),
+            then: (callback) => callback(false),
         }
         dbExists.mockImplementationOnce(() => dbExistsReturnMock)
 

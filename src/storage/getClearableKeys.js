@@ -1,8 +1,8 @@
-import { reservedStorageKeys } from './reservedStorageKeys'
+import { reservedStorageKeys } from './reservedStorageKeys.js'
 
 /**
  * @param {Storage} strage
  * @returns {String[]}
  */
-export const getClearableKeys = storage =>
-    Object.keys(storage).filter(key => !reservedStorageKeys.includes(key))
+export const getClearableKeys = (storage) =>
+    Object.keys(storage).filter((key) => !reservedStorageKeys.includes(key))

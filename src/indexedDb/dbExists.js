@@ -1,10 +1,10 @@
-import { deleteDb } from './deleteDb'
+import { deleteDb } from './deleteDb.js'
 
 /**
  * @param {string} name
  * @returns {Promise.<bool>}
  */
-export const dbExists = name =>
+export const dbExists = (name) =>
     new Promise((resolve, reject) => {
         let alreadyExists = true
         const request = window.indexedDB.open(name)
@@ -19,6 +19,6 @@ export const dbExists = name =>
             }
         }
 
-        request.onerror = error => reject(error)
+        request.onerror = (error) => reject(error)
         request.onupgradeneeded = () => (alreadyExists = false)
     })

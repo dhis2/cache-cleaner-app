@@ -31,21 +31,21 @@ const dbExists = (win, name) =>
             }
         }
 
-        request.onerror = error => reject(error)
+        request.onerror = (error) => reject(error)
         request.onupgradeneeded = () => (alreadyExists = false)
     })
 
-const sum = numbers =>
+const sum = (numbers) =>
     numbers.reduce((curSum, curNumber) => curSum + curNumber, 0)
 
-const storageShouldHaveItems = storageType => {
+const storageShouldHaveItems = (storageType) => {
     if (storageType === 'indexedDb') {
-        cy.window().then(async win => {
+        cy.window().then(async (win) => {
             const existenceMap = await Promise.all(
                 dhis2DatabaseNames.map(
-                    dbName =>
-                        new Promise(resolve => {
-                            dbExists(win, dbName).then(exists =>
+                    (dbName) =>
+                        new Promise((resolve) => {
+                            dbExists(win, dbName).then((exists) =>
                                 exists ? resolve(1) : resolve(0)
                             )
                         })
@@ -56,7 +56,7 @@ const storageShouldHaveItems = storageType => {
             expect(existingDbCount).to.equal(0)
         })
     } else {
-        cy.storage(storageType).should(storage => {
+        cy.storage(storageType).should((storage) => {
             expect(storage.length).to.equal(0)
         })
     }

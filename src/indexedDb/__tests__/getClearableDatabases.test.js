@@ -1,6 +1,6 @@
-import { dbExists } from '../dbExists'
-import { dhis2DatabaseNames } from '../dhis2DatabaseNames'
-import { getClearableDatabases } from '../getClearableDatabases'
+import { dbExists } from '../dbExists.js'
+import { dhis2DatabaseNames } from '../dhis2DatabaseNames.js'
+import { getClearableDatabases } from '../getClearableDatabases.js'
 
 jest.mock('../dbExists', () => ({ dbExists: jest.fn() }))
 
@@ -17,7 +17,7 @@ describe('indexedDb', () => {
 
     it('should return an some names if some clearable db exists', async () => {
         const expected = dhis2DatabaseNames.slice(0, 4)
-        dbExists.mockImplementation(name => {
+        dbExists.mockImplementation((name) => {
             if (expected.includes(name)) {
                 return Promise.resolve(true)
             }

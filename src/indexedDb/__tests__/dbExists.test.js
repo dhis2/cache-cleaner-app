@@ -1,5 +1,5 @@
-import 'fake-indexeddb/auto'
-import { dbExists } from '../dbExists'
+import 'fake-indexeddb/auto.js'
+import { dbExists } from '../dbExists.js'
 
 describe('indexedDB - dbExists', () => {
     const indexedDB = window.indexedDB
@@ -48,7 +48,7 @@ describe('indexedDB - dbExists', () => {
         return expect(dbExists('foo')).rejects.toEqual(expected)
     })
 
-    it('should close the database connection after evaluation when the database exists', done => {
+    it('should close the database connection after evaluation when the database exists', (done) => {
         const closeMock = jest.fn()
 
         window.indexedDB.open = jest.fn(() => {

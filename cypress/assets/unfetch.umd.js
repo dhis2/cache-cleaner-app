@@ -73,8 +73,9 @@
                 }),
                 (r.onerror = o),
                 (r.withCredentials = 'include' == n.credentials),
-                n.headers))
+                n.headers)) {
                     r.setRequestHeader(a, n.headers[a])
+                }
                 r.send(n.body || null)
             })
         )

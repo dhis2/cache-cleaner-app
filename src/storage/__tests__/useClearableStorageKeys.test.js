@@ -1,5 +1,5 @@
 import { act, renderHook } from '@testing-library/react-hooks'
-import { useClearableStorageKeys } from '../useClearableStorageKeys'
+import { useClearableStorageKeys } from '../useClearableStorageKeys.js'
 
 describe('storage - useClearableStorageKeys', () => {
     const storage = window.localStorage

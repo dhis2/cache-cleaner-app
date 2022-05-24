@@ -1,4 +1,4 @@
-const getAllItems = storage => {
+const getAllItems = (storage) => {
     // this way we won't get all the internal properties
     const entries = Object.entries(storage)
     const allItems = entries.reduce(

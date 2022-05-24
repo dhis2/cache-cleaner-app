@@ -1,11 +1,11 @@
-import { dbExists } from './dbExists'
-import { getKeyFromObjectStore } from './getKeyFromObjectStore'
-import { openDb } from './openDb'
+import { dbExists } from './dbExists.js'
+import { getKeyFromObjectStore } from './getKeyFromObjectStore.js'
+import { openDb } from './openDb.js'
 
 const userCachesStoreName = 'userCaches'
 
 export const getCaptureAppUserDatabases = () =>
-    dbExists('dhis2ca').then(async captureDbExists => {
+    dbExists('dhis2ca').then(async (captureDbExists) => {
         let db
         let dbNames = []
 

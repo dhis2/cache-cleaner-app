@@ -1,15 +1,21 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 
-const getStorageSelector = type => {
-    if (type === 'local') return '{localstoragekeys}'
-    if (type === 'session') return '{sessionstoragekeys}'
-    if (type === 'indexedDb') return '{indexeddatabasekeys}'
+const getStorageSelector = (type) => {
+    if (type === 'local') {
+        return '{localstoragekeys}'
+    }
+    if (type === 'session') {
+        return '{sessionstoragekeys}'
+    }
+    if (type === 'indexedDb') {
+        return '{indexeddatabasekeys}'
+    }
 }
 
 const setInitialState = () => {
     cy.get('@section')
         .find('[type="checkbox"]')
-        .then($checkboxes => $checkboxes.filter(':checked'))
+        .then(($checkboxes) => $checkboxes.filter(':checked'))
         .invoke('map', (index, checked) => {
             const $checked = Cypress.$(checked)
 
@@ -21,22 +27,22 @@ const setInitialState = () => {
         .as('initialState')
 }
 
-Given(/the (.*) has items/, section => {
+Given(/the (.*) has items/, (section) => {
     const selector = getStorageSelector(section)
     cy.getWithDataTest(selector).as('section')
 
     const items = ['dhis2ou', 'dhis2', 'dhis2tc']
 
     if (section === 'local' || section === 'session') {
-        const storageItems = items.map(name => ({ name, value: name }))
+        const storageItems = items.map((name) => ({ name, value: name }))
         cy.storage(section).setItems(storageItems)
     }
 
     if (section === 'indexedDb') {
-        cy.window().then(async win => {
+        cy.window().then(async (win) => {
             await Promise.all(
-                items.map(name => {
-                    return new Promise(resolve => {
+                items.map((name) => {
+                    return new Promise((resolve) => {
                         const request = win.indexedDB.open(name)
                         request.onsuccess = resolve
                     })
@@ -86,7 +92,7 @@ Then('no selected state should change', () => {
         cy
             .get('@section')
             .find('[type="checkbox"]')
-            .then($checkboxes => $checkboxes.filter(':checked'))
+            .then(($checkboxes) => $checkboxes.filter(':checked'))
             .invoke('map', (index, checked) => {
                 const $checked = Cypress.$(checked)
 

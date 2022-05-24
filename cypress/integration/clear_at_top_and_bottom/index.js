@@ -24,7 +24,7 @@ Given('some storage items have been selected', () => {
 
     cy.get('@selectedCheckbox').parent().click()
 
-    cy.get('@selectedCheckbox').then($checkbox => {
+    cy.get('@selectedCheckbox').then(($checkbox) => {
         const name = $checkbox.attr('name')
         const value = $checkbox.attr('value')
         cy.wrap([{ name, value }]).as('selected')
@@ -54,7 +54,7 @@ When('the user clicks the clear button at the bottom', () => {
 })
 
 Then('the selected storage items should be deleted', () => {
-    cy.get('@selected').then(selected => {
+    cy.get('@selected').then((selected) => {
         selected.forEach(({ name, value }) => {
             cy.get(`[name="${name}"][value="${value}"]`).should('not.exist')
         })

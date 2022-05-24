@@ -3,13 +3,13 @@ import propTypes from '@dhis2/prop-types'
 import { Button, Help, ReactFinalForm } from '@dhis2/ui'
 import { FORM_ERROR } from 'final-form'
 import React from 'react'
-import { Actions } from '../actions/Actions'
+import { Actions } from '../actions/Actions.js'
 import styles from './ClearForm.module.css'
-import { FormSection } from './FormSection'
+import { FormSection } from './FormSection.js'
 
 const { Form } = ReactFinalForm
 
-const validate = values => {
+const validate = (values) => {
     const errors = {}
 
     if (
@@ -30,7 +30,7 @@ export const ClearForm = ({
     sessionStorageKeys,
     indexedDatabaseKeys,
 }) => {
-    const selectAll = form => {
+    const selectAll = (form) => {
         form.batch(() => {
             form.change('localStorageKeys', localStorageKeys)
             form.change('sessionStorageKeys', sessionStorageKeys)
@@ -38,7 +38,7 @@ export const ClearForm = ({
         })
     }
 
-    const deselectAll = form => {
+    const deselectAll = (form) => {
         form.batch(() => {
             form.change('localStorageKeys', [])
             form.change('sessionStorageKeys', [])
@@ -46,7 +46,7 @@ export const ClearForm = ({
         })
     }
 
-    const onFormSubmit = values => {
+    const onFormSubmit = (values) => {
         onSubmit(values)
     }
 

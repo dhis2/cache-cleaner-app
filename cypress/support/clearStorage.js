@@ -9,7 +9,7 @@ const dhis2DatabaseNames = [
 ]
 
 const openDb = (win, name) =>
-    new Promise(resolve => {
+    new Promise((resolve) => {
         const request = win.indexedDB.open(name)
 
         request.onsuccess = () => {
@@ -25,16 +25,16 @@ const delDb = (win, name) =>
         delRequest.onerror = reject
     })
 
-const clearStorage = name => {
+const clearStorage = (name) => {
     if (name === 'local' || name === 'session') {
-        cy.storage(name).then(storage => storage.clear())
+        cy.storage(name).then((storage) => storage.clear())
     }
 
     if (name === 'indexedDb') {
-        cy.window().then(async win => {
+        cy.window().then(async (win) => {
             // clear indexedDBs
             await Promise.all(
-                dhis2DatabaseNames.map(name =>
+                dhis2DatabaseNames.map((name) =>
                     // opening a db will inevitably create one
                     // -> clearing pre-existing DBs = open + delete
                     openDb(win, name).then(() => delDb(win, name))

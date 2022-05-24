@@ -1,6 +1,6 @@
-import 'fake-indexeddb/auto'
-import FDBDatabase from 'fake-indexeddb/lib/FDBDatabase'
-import { openDb } from '../openDb'
+import 'fake-indexeddb/auto.js'
+import FDBDatabase from 'fake-indexeddb/lib/FDBDatabase.js'
+import { openDb } from '../openDb.js'
 
 describe('indexedDB - openDb', () => {
     let db
@@ -49,7 +49,7 @@ describe('indexedDB - openDb', () => {
         let error
         delete window.indexedDB
 
-        await openDb('foo').catch(e => (error = e))
+        await openDb('foo').catch((e) => (error = e))
         expect(error).toBeInstanceOf(Error)
         expect(error.message).toBe("Cannot read property 'open' of undefined")
     })

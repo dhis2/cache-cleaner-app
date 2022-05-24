@@ -6,7 +6,7 @@ import {
     CheckboxFieldFF,
 } from '@dhis2/ui'
 import React from 'react'
-import { Actions } from '../actions/Actions'
+import { Actions } from '../actions/Actions.js'
 import styles from './FormSection.module.css'
 
 const { Field } = ReactFinalForm
@@ -53,7 +53,7 @@ export const FormSection = ({
                 </Actions>
             )}
             <FieldGroupFF>
-                {storageKeys.map(key => {
+                {storageKeys.map((key) => {
                     return (
                         <Field
                             type="checkbox"
