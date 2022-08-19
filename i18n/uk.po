@@ -2,13 +2,14 @@
 # Translators:
 # phil_dhis2, 2020
 # Nadiia <semchuk@aph.org.ua>, 2021
+# Éva Tamási, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2020-04-16T12:59:23.976Z\n"
 "PO-Revision-Date: 2020-12-02 13:50+0000\n"
-"Last-Translator: Nadiia <semchuk@aph.org.ua>, 2021\n"
+"Last-Translator: Éva Tamási, 2022\n"
 "Language-Team: Ukrainian (https://www.transifex.com/hisp-uio/teams/100509/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,43 +30,43 @@ msgid "Clear all selected items"
 msgstr "Очистити усі вибрані елементи"
 
 msgid "Local storage empty"
-msgstr ""
+msgstr "Локальне сховище порожнє"
 
 msgid "Select all local storage items"
-msgstr ""
+msgstr "Вибрати всі локальні об'єкти сховища"
 
 msgid "Deselect all local storage items"
-msgstr ""
+msgstr "Скасувати вибір всіх локальних об'єктів сховища"
 
 msgid "Local storage"
-msgstr ""
+msgstr "Локальне сховище"
 
 msgid "Session storage empty"
-msgstr ""
+msgstr "Сховище сеансу порожнє"
 
 msgid "Select all session storage items"
-msgstr ""
+msgstr "Вибрати всі об'єкти сховища сеансу"
 
 msgid "Deselect all session storage items"
-msgstr ""
+msgstr "Скасувати вибір всіх об'єктів сховища сеансу"
 
 msgid "Session storage"
-msgstr ""
+msgstr "Сховище сеансу"
 
 msgid "No indexed databases"
-msgstr ""
+msgstr "Немає індексованих баз даних"
 
 msgid "Select all databases"
-msgstr ""
+msgstr "Вибрати всі бази даних"
 
 msgid "Deselect all databases"
-msgstr ""
+msgstr "Скасувати вибір всіх баз даних"
 
 msgid "Indexed database"
-msgstr ""
+msgstr "Індексована база даних"
 
 msgid "Loading clearable data..."
-msgstr "Завантаження метаданих"
+msgstr "Завантаження даних, що очищуються..."
 
 msgid "DHIS 2 browser cache cleaner"
 msgstr "Очищувач кеша браузера DHIS 2"

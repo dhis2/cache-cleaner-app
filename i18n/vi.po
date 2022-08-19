@@ -3,13 +3,14 @@
 # phil_dhis2, 2020
 # Viktor Varland <viktor@dhis2.org>, 2020
 # Mai Nguyen <thanhmai.jica@gmail.com>, 2020
+# Thuy Nguyen <thuynguyen@hispvietnam.org>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2020-04-16T12:59:23.976Z\n"
 "PO-Revision-Date: 2020-12-02 13:50+0000\n"
-"Last-Translator: Mai Nguyen <thanhmai.jica@gmail.com>, 2020\n"
+"Last-Translator: Thuy Nguyen <thuynguyen@hispvietnam.org>, 2022\n"
 "Language-Team: Vietnamese (https://www.transifex.com/hisp-uio/teams/100509/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,31 +28,31 @@ msgid "Deselect all"
 msgstr "Bỏ chọn tất cả"
 
 msgid "Clear all selected items"
-msgstr "Xóa tất cả các mục đã chọn"
+msgstr "Xóa tất cả mục đã chọn"
 
 msgid "Local storage empty"
-msgstr "Bộ nhớ cục bộ trống"
+msgstr "Xóa lưu trữ cục bộ"
 
 msgid "Select all local storage items"
-msgstr "Chọn tất cả các mục lưu trữ cục bộ"
+msgstr "Chọn tất cả mục lưu trữ cục bộ"
 
 msgid "Deselect all local storage items"
-msgstr "Bỏ chọn tất cả các mục lưu trữ cục bộ"
+msgstr "Bỏ chọn tất cả mục lưu trữ cục bộ"
 
 msgid "Local storage"
 msgstr "Lưu trữ cục bộ"
 
 msgid "Session storage empty"
-msgstr "Bộ nhớ phiên trống"
+msgstr "Xóa lưu trữ phiên đăng nhập"
 
 msgid "Select all session storage items"
-msgstr "Chọn tất cả các mục lưu trữ phiên"
+msgstr "Chọn tất cả mục lưu trữ phiên đăng nhập"
 
 msgid "Deselect all session storage items"
-msgstr "Bỏ chọn tất cả các mục lưu trữ phiên"
+msgstr "Bỏ chọn tất cả mục lưu trữ phiên đăng nhập"
 
 msgid "Session storage"
-msgstr "Lưu trữ phiên"
+msgstr "Lưu trữ phiên đăng nhập"
 
 msgid "No indexed databases"
 msgstr "Không có cơ sở dữ liệu được lập chỉ mục"
@@ -66,7 +67,7 @@ msgid "Indexed database"
 msgstr "Cơ sở dữ liệu được lập chỉ mục"
 
 msgid "Loading clearable data..."
-msgstr "Đang tải dữ liệu  ..."
+msgstr "Đang tải dữ liệu có thể xóa..."
 
 msgid "DHIS 2 browser cache cleaner"
-msgstr "Trình xóa dữ liệu cục bộ trong DHIS 2"
+msgstr "Xóa dữ liệu trình duyệt của DHIS 2"
