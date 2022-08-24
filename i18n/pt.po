@@ -1,16 +1,16 @@
 # 
 # Translators:
-# phil_dhis2, 2020
 # Viktor Varland <viktor@dhis2.org>, 2020
 # Gabriela Rodriguez <grodriguezcoronado@gmail.com>, 2020
 # Ge Joao <gsimango@saudigitus.org>, 2020
+# Emilio Mosse, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2020-04-16T12:59:23.976Z\n"
 "PO-Revision-Date: 2020-12-02 13:50+0000\n"
-"Last-Translator: Ge Joao <gsimango@saudigitus.org>, 2020\n"
+"Last-Translator: Emilio Mosse, 2022\n"
 "Language-Team: Portuguese (https://www.transifex.com/hisp-uio/teams/100509/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,43 +22,43 @@ msgid "No data selected"
 msgstr "Nenhum dado selecionado "
 
 msgid "Select all"
-msgstr "Selec. todos"
+msgstr "Selecionar todos"
 
 msgid "Deselect all"
 msgstr "Desmarcar todos"
 
 msgid "Clear all selected items"
-msgstr ""
+msgstr "Limpar todos os itens selecionados"
 
 msgid "Local storage empty"
-msgstr ""
+msgstr "Armazenamento local vazio"
 
 msgid "Select all local storage items"
-msgstr ""
+msgstr "Selecione todos os itens de armazenamento local"
 
 msgid "Deselect all local storage items"
-msgstr ""
+msgstr "Desmarcar todos os itens de armazenamento local"
 
 msgid "Local storage"
 msgstr "Armazenamento local"
 
 msgid "Session storage empty"
-msgstr ""
+msgstr "Armazenamento da sessão vazio"
 
 msgid "Select all session storage items"
-msgstr ""
+msgstr "Selecione todos os itens de armazenamento da sessão"
 
 msgid "Deselect all session storage items"
-msgstr ""
+msgstr "Desmarcar todos os itens de armazenamento da sessão"
 
 msgid "Session storage"
 msgstr "Armazenamento da sessão"
 
 msgid "No indexed databases"
-msgstr ""
+msgstr "Nenhuma base de dados indexada"
 
 msgid "Select all databases"
-msgstr ""
+msgstr "Selecione todas as bases de dados"
 
 msgid "Deselect all databases"
 msgstr ""
