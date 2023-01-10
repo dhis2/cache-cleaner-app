@@ -1,5 +1,5 @@
-import propTypes from '@dhis2/prop-types'
 import { ButtonStrip } from '@dhis2/ui'
+import PropTypes from 'prop-types'
 import React from 'react'
 import styles from './Actions.module.css'
 
@@ -10,5 +10,5 @@ export const Actions = ({ children }) => (
 )
 
 Actions.propTypes = {
-    children: propTypes.node,
+    children: PropTypes.node,
 }

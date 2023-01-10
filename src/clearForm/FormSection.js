@@ -1,10 +1,10 @@
-import propTypes from '@dhis2/prop-types'
 import {
     Button,
     FieldGroupFF,
     ReactFinalForm,
     CheckboxFieldFF,
 } from '@dhis2/ui'
+import PropTypes from 'prop-types'
 import React from 'react'
 import { Actions } from '../actions/Actions.js'
 import styles from './FormSection.module.css'
@@ -30,7 +30,10 @@ export const FormSection = ({
             <h2 className={styles.groupHeadline}>{headline}</h2>
 
             {!storageKeys.length && (
-                <p data-test="dhis2-cachecleaner-emptystoragemessage">
+                <p
+                    className={styles.empty}
+                    data-test="dhis2-cachecleaner-emptystoragemessage"
+                >
                     {emptyMessage}
                 </p>
             )}
@@ -38,6 +41,8 @@ export const FormSection = ({
             {!!storageKeys.length && (
                 <Actions>
                     <Button
+                        secondary
+                        small
                         onClick={() => form.change(storageName, storageKeys)}
                         dataTest={`dhis2-cachecleaner-formsection-selectall`}
                     >
@@ -45,6 +50,8 @@ export const FormSection = ({
                     </Button>
 
                     <Button
+                        secondary
+                        small
                         onClick={() => form.change(storageName, [])}
                         dataTest={`dhis2-cachecleaner-formsection-deselectall`}
                     >
@@ -71,13 +78,13 @@ export const FormSection = ({
 }
 
 FormSection.propTypes = {
-    deselectButtonLabel: propTypes.string.isRequired,
-    emptyMessage: propTypes.string.isRequired,
-    form: propTypes.shape({
-        change: propTypes.func.isRequired,
+    deselectButtonLabel: PropTypes.string.isRequired,
+    emptyMessage: PropTypes.string.isRequired,
+    form: PropTypes.shape({
+        change: PropTypes.func.isRequired,
     }).isRequired,
-    headline: propTypes.string.isRequired,
-    selectButtonLabel: propTypes.string.isRequired,
-    storageKeys: propTypes.arrayOf(propTypes.string).isRequired,
-    storageName: propTypes.string.isRequired,
+    headline: PropTypes.string.isRequired,
+    selectButtonLabel: PropTypes.string.isRequired,
+    storageKeys: PropTypes.arrayOf(PropTypes.string).isRequired,
+    storageName: PropTypes.string.isRequired,
 }
