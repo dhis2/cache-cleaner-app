@@ -1,11 +1,17 @@
+body {
+    background-color: var(--colors-grey100);
+}
+
 .container {
     width: 1024px;
     max-width: 100%;
     margin: 0 auto;
     padding: var(--spacers-dp16);
+    color: var(--colors-grey900);
 }
 
 .headline {
     font-size: 24px;
+    font-weight: 500;
     margin: 0 0 var(--spacers-dp16);
 }
