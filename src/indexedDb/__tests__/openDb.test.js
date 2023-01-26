@@ -51,6 +51,8 @@ describe('indexedDB - openDb', () => {
 
         await openDb('foo').catch((e) => (error = e))
         expect(error).toBeInstanceOf(Error)
-        expect(error.message).toBe("Cannot read property 'open' of undefined")
+        expect(error.message).toBe(
+            "Cannot read properties of undefined (reading 'open')"
+        )
     })
 })
