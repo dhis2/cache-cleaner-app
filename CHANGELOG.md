@@ -1,3 +1,10 @@
+## [100.1.9](https://github.com/dhis2/cache-cleaner-app/compare/v100.1.8...v100.1.9) (2023-01-27)
+
+
+### Bug Fixes
+
+* design, color, spacing adjustments ([d538691](https://github.com/dhis2/cache-cleaner-app/commit/d5386917517e22272b832b9f74f04a77f63d5b67))
+
 ## [100.1.8](https://github.com/dhis2/cache-cleaner-app/compare/v100.1.7...v100.1.8) (2022-08-25)
 
 
