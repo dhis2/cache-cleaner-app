@@ -16,13 +16,13 @@
         "start": "d2-app-scripts start",
         "start:nobrowser": "BROWSER=none d2-app-scripts start",
         "test": "d2-app-scripts test",
-        "cypress:capture": "start-server-and-test 'yarn start:nobrowser' http://localhost:3000 'yarn cypress run --env dhis2ApiVersion=37,networkMode=capture'",
-        "cypress:stub": "start-server-and-test 'yarn start:nobrowser' http://localhost:3000 'yarn cypress run --env dhis2ApiVersion=37,networkMode=stub'",
+        "cypress:capture": "start-server-and-test 'yarn start:nobrowser' http://localhost:3000 'yarn cypress run --env dhis2ApiVersion=40,networkMode=capture'",
+        "cypress:stub": "start-server-and-test 'yarn start:nobrowser' http://localhost:3000 'yarn cypress run --env dhis2ApiVersion=40,networkMode=stub'",
         "cypress:live": "start-server-and-test 'yarn start:nobrowser' http://localhost:3000 'yarn cypress open --env networkMode=live'"
     },
     "devDependencies": {
-        "@dhis2/cli-app-scripts": "^8.0.1",
-        "@dhis2/cli-style": "^10.4.1",
+        "@dhis2/cli-app-scripts": "^10.2.0",
+        "@dhis2/cli-style": "^10.5.1",
         "@dhis2/cli-utils-cypress": "^8.0.1",
         "@dhis2/cypress-commands": "^8.0.1",
         "@dhis2/cypress-plugins": "^8.0.1",
@@ -32,10 +32,10 @@
         "start-server-and-test": "^1.12.5"
     },
     "dependencies": {
-        "@dhis2/app-runtime": "^3.2.0",
+        "@dhis2/app-runtime": "^3.7.0",
         "@dhis2/d2-i18n": "^1.1.0",
-        "@dhis2/prop-types": "^1.6.4",
-        "@dhis2/ui": "^7.2.0",
+        "@dhis2/prop-types": "^3.1.2",
+        "@dhis2/ui": "^8.7.6",
         "final-form": "^4.19.1"
     }
 }

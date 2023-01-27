@@ -42,7 +42,7 @@ describe('indexedDB - dbExists', () => {
         delete window.indexedDB
 
         const expected = expect.objectContaining({
-            message: "Cannot read property 'open' of undefined",
+            message: "Cannot read properties of undefined (reading 'open')",
         })
 
         return expect(dbExists('foo')).rejects.toEqual(expected)

@@ -1,7 +1,7 @@
 import i18n from '@dhis2/d2-i18n'
-import propTypes from '@dhis2/prop-types'
 import { Button, Help, ReactFinalForm } from '@dhis2/ui'
 import { FORM_ERROR } from 'final-form'
+import PropTypes from 'prop-types'
 import React from 'react'
 import { Actions } from '../actions/Actions.js'
 import styles from './ClearForm.module.css'
@@ -152,13 +152,13 @@ ClearForm.defaultProps = {
 }
 
 ClearForm.propTypes = {
-    indexedDatabaseKeys: propTypes.arrayOf(propTypes.string).isRequired,
-    localStorageKeys: propTypes.arrayOf(propTypes.string).isRequired,
-    sessionStorageKeys: propTypes.arrayOf(propTypes.string).isRequired,
-    onSubmit: propTypes.func.isRequired,
-    initialValues: propTypes.shape({
-        indexedDatabaseKeys: propTypes.arrayOf(propTypes.string),
-        localStorageKeys: propTypes.arrayOf(propTypes.string),
-        sessionStorageKeys: propTypes.arrayOf(propTypes.string),
+    indexedDatabaseKeys: PropTypes.arrayOf(PropTypes.string).isRequired,
+    localStorageKeys: PropTypes.arrayOf(PropTypes.string).isRequired,
+    sessionStorageKeys: PropTypes.arrayOf(PropTypes.string).isRequired,
+    onSubmit: PropTypes.func.isRequired,
+    initialValues: PropTypes.shape({
+        indexedDatabaseKeys: PropTypes.arrayOf(PropTypes.string),
+        localStorageKeys: PropTypes.arrayOf(PropTypes.string),
+        sessionStorageKeys: PropTypes.arrayOf(PropTypes.string),
     }),
 }
