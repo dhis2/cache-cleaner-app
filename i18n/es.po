@@ -28,46 +28,47 @@ msgid "Deselect all"
 msgstr "Deseleccionar todo"
 
 msgid "Clear all selected items"
-msgstr ""
+msgstr "Borrar todos los elementos seleccionados"
 
 msgid "Local storage empty"
-msgstr ""
+msgstr "Almacenamiento local vacío"
 
 msgid "Select all local storage items"
-msgstr ""
+msgstr "Seleccionar todos los elementos de almacenamiento local"
 
 msgid "Deselect all local storage items"
-msgstr ""
+msgstr "Deshacer selección de todos los elementos de almacenamiento local"
 
 msgid "Local storage"
 msgstr "Almacenamiento local"
 
 msgid "Session storage empty"
-msgstr ""
+msgstr "Almacenamiento de sesión vacío"
 
 msgid "Select all session storage items"
-msgstr ""
+msgstr "Seleccionar todos los elementos de almacenamiento de la sesión"
 
 msgid "Deselect all session storage items"
 msgstr ""
+"Deshacer selección de todos los elementos de almacenamiento de la sesión"
 
 msgid "Session storage"
 msgstr "Almacenamiento de la sesión"
 
 msgid "No indexed databases"
-msgstr ""
+msgstr "Ninguna base de datos indexada"
 
 msgid "Select all databases"
-msgstr ""
+msgstr "Seleccionar todas las bases de datos"
 
 msgid "Deselect all databases"
-msgstr ""
+msgstr "Quitar selección de todas las bases de datos"
 
 msgid "Indexed database"
-msgstr ""
+msgstr "Base de datos indexada"
 
 msgid "Loading clearable data..."
-msgstr ""
+msgstr "Cargando datos para borrar..."
 
 msgid "DHIS 2 browser cache cleaner"
 msgstr "DHIS 2 limpiador de la caché del navegador"
