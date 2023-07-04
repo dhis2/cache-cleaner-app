@@ -1,0 +1,70 @@
+# 
+# Translators:
+# Enzo Nicolas Rossi <enzo@dhis2.org>, 2023
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: i18next-conv\n"
+"POT-Creation-Date: 2020-04-16T12:59:23.976Z\n"
+"PO-Revision-Date: 2020-12-02 13:50+0000\n"
+"Last-Translator: Enzo Nicolas Rossi <enzo@dhis2.org>, 2023\n"
+"Language-Team: Dutch (https://app.transifex.com/hisp-uio/teams/100509/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "No data selected"
+msgstr "Geen gegevens geselecteerd"
+
+msgid "Select all"
+msgstr "Selecteer alles"
+
+msgid "Deselect all"
+msgstr "Deselecteer alles"
+
+msgid "Clear all selected items"
+msgstr "Wis alle geselecteerde items"
+
+msgid "Local storage empty"
+msgstr "Lokale opslag leeg"
+
+msgid "Select all local storage items"
+msgstr "Selecteer alle lokale opslagitems"
+
+msgid "Deselect all local storage items"
+msgstr "Deselecteer alle lokale opslagitems"
+
+msgid "Local storage"
+msgstr "Lokale opslag"
+
+msgid "Session storage empty"
+msgstr "Sessieopslag leeg"
+
+msgid "Select all session storage items"
+msgstr "Selecteer alle sessieopslagitems"
+
+msgid "Deselect all session storage items"
+msgstr "Deselecteer alle sessieopslagitems"
+
+msgid "Session storage"
+msgstr "Sessie opslag"
+
+msgid "No indexed databases"
+msgstr "Geen geïndexeerde databases"
+
+msgid "Select all databases"
+msgstr "Selecteer alle databases"
+
+msgid "Deselect all databases"
+msgstr "Deselecteer alle databases"
+
+msgid "Indexed database"
+msgstr "Geïndexeerde database"
+
+msgid "Loading clearable data..."
+msgstr "Wisbare gegevens laden..."
+
+msgid "DHIS 2 browser cache cleaner"
+msgstr "DHIS 2 browsercachereiniger"
