@@ -1,0 +1,70 @@
+# 
+# Translators:
+# Yury Rogachev <yury@dhis2.org>, 2021
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: i18next-conv\n"
+"POT-Creation-Date: 2020-04-16T12:59:23.976Z\n"
+"PO-Revision-Date: 2020-12-02 13:50+0000\n"
+"Last-Translator: Yury Rogachev <yury@dhis2.org>, 2021\n"
+"Language-Team: Uzbek (Latin) (https://app.transifex.com/hisp-uio/teams/100509/uz@Latn/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uz@Latn\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "No data selected"
+msgstr "Maʼlumot tanlanmagan"
+
+msgid "Select all"
+msgstr "Barchasini tanlash"
+
+msgid "Deselect all"
+msgstr "Barchasini tanlanganligini bekor qilish"
+
+msgid "Clear all selected items"
+msgstr "barcha tanlangan elementlar boʼyicha tozalash"
+
+msgid "Local storage empty"
+msgstr "Lokal xotira boʼsh"
+
+msgid "Select all local storage items"
+msgstr "Barcha lokal xotira elementlarini tanlash"
+
+msgid "Deselect all local storage items"
+msgstr "Barcha lokal xotira elementlari tanlovini rad etish"
+
+msgid "Local storage"
+msgstr "Mahalliy zaxira"
+
+msgid "Session storage empty"
+msgstr "Sessiya xotirasi boʼsh"
+
+msgid "Select all session storage items"
+msgstr "Sessiya xotirasi elementlarini barchasini tanlash"
+
+msgid "Deselect all session storage items"
+msgstr "Sessiya xotirasi elementlarini barchasini tanlovini rad etish"
+
+msgid "Session storage"
+msgstr "Zaxira sessiyalari"
+
+msgid "No indexed databases"
+msgstr "Maʼlumotlar indeksatsiya qilinmagan"
+
+msgid "Select all databases"
+msgstr "Barcha maʼlumotlarni tanlash"
+
+msgid "Deselect all databases"
+msgstr "Barcha maʼlumotlar tanlovini rad etish"
+
+msgid "Indexed database"
+msgstr "Indeksatsiya qilingan maʼlumotlar"
+
+msgid "Loading clearable data..."
+msgstr "Tozalanadigan maʼlumotlar yuklanmoqda..."
+
+msgid "DHIS 2 browser cache cleaner"
+msgstr "DHIS2 brauzer keshini tozalash vositasi"
