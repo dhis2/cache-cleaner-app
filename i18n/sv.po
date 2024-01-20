@@ -1,15 +1,16 @@
 # 
 # Translators:
-# phil_dhis2, 2020
+# Philip Larsen Donnelly, 2020
 # Viktor Varland <viktor@dhis2.org>, 2020
+# Jason Pickering <jason@dhis2.org>, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2020-04-16T12:59:23.976Z\n"
 "PO-Revision-Date: 2020-12-02 13:50+0000\n"
-"Last-Translator: Viktor Varland <viktor@dhis2.org>, 2020\n"
-"Language-Team: Swedish (https://www.transifex.com/hisp-uio/teams/100509/sv/)\n"
+"Last-Translator: Jason Pickering <jason@dhis2.org>, 2024\n"
+"Language-Team: Swedish (https://app.transifex.com/hisp-uio/teams/100509/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,55 +18,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "No data selected"
-msgstr ""
+msgstr "Ingen data har valts"
 
 msgid "Select all"
 msgstr "Välj alla"
 
 msgid "Deselect all"
-msgstr ""
+msgstr "Avmarkera alla"
 
 msgid "Clear all selected items"
-msgstr ""
+msgstr "Rensa alla markerade objekt"
 
 msgid "Local storage empty"
-msgstr ""
+msgstr "Lokal lagring tom"
 
 msgid "Select all local storage items"
-msgstr ""
+msgstr "Välj alla lokala lagringsobjekt"
 
 msgid "Deselect all local storage items"
-msgstr ""
+msgstr "Avmarkera alla lokala lagringsobjekt"
 
 msgid "Local storage"
-msgstr ""
+msgstr "Lokal lagring"
 
 msgid "Session storage empty"
-msgstr ""
+msgstr "Sessionslagringen är tom"
 
 msgid "Select all session storage items"
-msgstr ""
+msgstr "Välj alla sessionslagringsobjekt"
 
 msgid "Deselect all session storage items"
-msgstr ""
+msgstr "Avmarkera alla sessionslagringsobjekt"
 
 msgid "Session storage"
-msgstr ""
+msgstr "Sessionslagring"
 
 msgid "No indexed databases"
-msgstr ""
+msgstr "Inga indexerade databaser"
 
 msgid "Select all databases"
-msgstr ""
+msgstr "Välj alla databaser"
 
 msgid "Deselect all databases"
-msgstr ""
+msgstr "Avmarkera alla databaser"
 
 msgid "Indexed database"
-msgstr ""
+msgstr "Indexerad databas"
 
 msgid "Loading clearable data..."
-msgstr ""
+msgstr "Läser in rensbar data..."
 
 msgid "DHIS 2 browser cache cleaner"
 msgstr "DHIS2 webbläsare cache rengörare"
