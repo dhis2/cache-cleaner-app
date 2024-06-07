@@ -1,16 +1,17 @@
 # 
 # Translators:
-# phil_dhis2, 2020
+# Philip Larsen Donnelly, 2020
 # Viktor Varland <viktor@dhis2.org>, 2020
 # Ulanbek Abakirov <ulans@mail.ru>, 2020
+# Yury Rogachev <yury@dhis2.org>, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2020-04-16T12:59:23.976Z\n"
 "PO-Revision-Date: 2020-12-02 13:50+0000\n"
-"Last-Translator: Ulanbek Abakirov <ulans@mail.ru>, 2020\n"
-"Language-Team: Russian (https://www.transifex.com/hisp-uio/teams/100509/ru/)\n"
+"Last-Translator: Yury Rogachev <yury@dhis2.org>, 2024\n"
+"Language-Team: Russian (https://app.transifex.com/hisp-uio/teams/100509/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 msgid "No data selected"
-msgstr ""
+msgstr "Данные не выбраны"
 
 msgid "Select all"
 msgstr "Выбрать все"
@@ -27,46 +28,46 @@ msgid "Deselect all"
 msgstr "Отменить выбор всего"
 
 msgid "Clear all selected items"
-msgstr ""
+msgstr "Очистить все выбранные элементы"
 
 msgid "Local storage empty"
-msgstr ""
+msgstr "Локальное хранилище пусто"
 
 msgid "Select all local storage items"
-msgstr ""
+msgstr "Выбрать все элементы локального хранилища"
 
 msgid "Deselect all local storage items"
-msgstr ""
+msgstr "Отменить выбор всех элементов локального хранилища"
 
 msgid "Local storage"
-msgstr "Местное хранилище"
+msgstr "Локальное хранилище"
 
 msgid "Session storage empty"
-msgstr ""
+msgstr "Хранилище сессий пусто"
 
 msgid "Select all session storage items"
-msgstr ""
+msgstr "Выбрать все элементы хранилища сессий"
 
 msgid "Deselect all session storage items"
-msgstr ""
+msgstr "Отменить выбор всех элементов хранилища сессий"
 
 msgid "Session storage"
 msgstr "Хранилище сессий"
 
 msgid "No indexed databases"
-msgstr ""
+msgstr "Нет индексированных баз данных"
 
 msgid "Select all databases"
-msgstr ""
+msgstr "Выбрать все базы данных"
 
 msgid "Deselect all databases"
-msgstr ""
+msgstr "Отменить выбор всех баз данных"
 
 msgid "Indexed database"
-msgstr ""
+msgstr "Индексированная база данных"
 
 msgid "Loading clearable data..."
-msgstr ""
+msgstr "Загрузка очищаемых данных..."
 
 msgid "DHIS 2 browser cache cleaner"
 msgstr "Приложение очистки кеша браузера DHIS 2"
