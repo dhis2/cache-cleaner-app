@@ -1,0 +1,70 @@
+# 
+# Translators:
+# Enzo Nicolas Rossi <enzo@dhis2.org>, 2024
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: i18next-conv\n"
+"POT-Creation-Date: 2020-04-16T12:59:23.976Z\n"
+"PO-Revision-Date: 2020-12-02 13:50+0000\n"
+"Last-Translator: Enzo Nicolas Rossi <enzo@dhis2.org>, 2024\n"
+"Language-Team: Spanish (Latin America) (https://app.transifex.com/hisp-uio/teams/100509/es_419/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_419\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+msgid "No data selected"
+msgstr "No hay datos seleccionados"
+
+msgid "Select all"
+msgstr "Seleccionar todo"
+
+msgid "Deselect all"
+msgstr "Deseleccionar todo"
+
+msgid "Clear all selected items"
+msgstr "Borrar todos los elementos seleccionados"
+
+msgid "Local storage empty"
+msgstr "Almacenamiento local vacío"
+
+msgid "Select all local storage items"
+msgstr "Seleccionar todos los elementos de almacenamiento local"
+
+msgid "Deselect all local storage items"
+msgstr "Deseleccionar todos los elementos de almacenamiento local"
+
+msgid "Local storage"
+msgstr "Almacenamiento local"
+
+msgid "Session storage empty"
+msgstr "Sesión de almacenamiento vacía"
+
+msgid "Select all session storage items"
+msgstr "Seleccionar todos los elementos de almacenamiento de la sesión"
+
+msgid "Deselect all session storage items"
+msgstr "Deseleccionar todos los elementos de almacenamiento de la sesión"
+
+msgid "Session storage"
+msgstr "Almacenamiento de la sesión"
+
+msgid "No indexed databases"
+msgstr "Sin bases de datos indexadas"
+
+msgid "Select all databases"
+msgstr "Seleccionar todas las bases de datos"
+
+msgid "Deselect all databases"
+msgstr "Deseleccionar todas las bases de datos"
+
+msgid "Indexed database"
+msgstr "Base de datos indexada"
+
+msgid "Loading clearable data..."
+msgstr "Cargando datos borrables..."
+
+msgid "DHIS 2 browser cache cleaner"
+msgstr "Limpiador de caché del navegador DHIS 2"
