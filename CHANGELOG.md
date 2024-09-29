@@ -1,3 +1,11 @@
+## [100.1.16](https://github.com/dhis2/cache-cleaner-app/compare/v100.1.15...v100.1.16) (2024-09-29)
+
+
+### Bug Fixes
+
+* **translations:** sync translations from transifex (master) ([0ec66b4](https://github.com/dhis2/cache-cleaner-app/commit/0ec66b423bf2bf9931bd322ed7f90aac5f6e0521))
+* upgrade app-plaform to prevent accidental plugin builds ([#624](https://github.com/dhis2/cache-cleaner-app/issues/624)) ([437a499](https://github.com/dhis2/cache-cleaner-app/commit/437a499155276154adc0de3717c7df0dec822a21))
+
 ## [100.1.15](https://github.com/dhis2/cache-cleaner-app/compare/v100.1.14...v100.1.15) (2024-07-24)
 
 
