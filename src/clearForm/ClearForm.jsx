@@ -3,9 +3,9 @@ import { Button, Help, ReactFinalForm } from '@dhis2/ui'
 import { FORM_ERROR } from 'final-form'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Actions } from '../actions/Actions.js'
+import { Actions } from '../actions/Actions.jsx'
 import styles from './ClearForm.module.css'
-import { FormSection } from './FormSection.js'
+import { FormSection } from './FormSection.jsx'
 
 const { Form } = ReactFinalForm
 
