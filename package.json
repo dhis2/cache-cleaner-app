@@ -26,7 +26,8 @@
         "@dhis2/cli-utils-cypress": "^8.0.1",
         "@dhis2/cypress-commands": "^8.0.1",
         "@dhis2/cypress-plugins": "^8.0.1",
-        "@testing-library/react-hooks": "^3.4.1",
+        "@testing-library/dom": "^10.4.0",
+        "@testing-library/react": "^16.2.0",
         "fake-indexeddb": "^3.0.2",
         "react-test-renderer": "^16.13.1",
         "start-server-and-test": "^1.12.5"
