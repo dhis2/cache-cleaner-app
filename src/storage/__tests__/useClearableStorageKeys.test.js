@@ -1,4 +1,4 @@
-import { act, renderHook } from '@testing-library/react'
+import { act, renderHook, waitFor } from '@testing-library/react'
 import { useClearableStorageKeys } from '../useClearableStorageKeys.js'
 
 describe('storage - useClearableStorageKeys', () => {
@@ -15,18 +15,15 @@ describe('storage - useClearableStorageKeys', () => {
     })
 
     it('should update the keys when the refetch function has been called', async () => {
-        const { result, waitForNextUpdate } = renderHook(() =>
-            useClearableStorageKeys(storage)
-        )
+        const { result } = renderHook(() => useClearableStorageKeys(storage))
 
         expect(result.current.keys).toEqual([])
 
         await act(async () => {
             storage.setItem('foo', 'foo')
             result.current.refetch()
-            await waitForNextUpdate()
         })
 
-        expect(result.current.keys).toEqual(['foo'])
+        await waitFor(() => expect(result.current.keys).toEqual(['foo']))
     })
 })
