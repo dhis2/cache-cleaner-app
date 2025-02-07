@@ -1,4 +1,4 @@
-import { act, renderHook } from '@testing-library/react-hooks'
+import { act, renderHook } from '@testing-library/react'
 import { getCaptureAppUserDatabases } from '../getCaptureAppUserDatabases.js'
 import { getClearableDatabases } from '../getClearableDatabases.js'
 import { useClearableDatabaseKeys } from '../useClearableDatabaseKeys.js'
