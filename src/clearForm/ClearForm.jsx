@@ -23,9 +23,18 @@ const validate = (values) => {
     return errors
 }
 
+// Use this as a stable reference for default props
+const defaultProps = {
+    initialValues: {
+        localStorageKeys: [],
+        sessionStorageKeys: [],
+        indexedDatabaseKeys: [],
+    },
+}
+
 export const ClearForm = ({
     onSubmit,
-    initialValues,
+    initialValues = defaultProps.initialValues,
     localStorageKeys,
     sessionStorageKeys,
     indexedDatabaseKeys,
@@ -141,14 +150,6 @@ export const ClearForm = ({
             )}
         </Form>
     )
-}
-
-ClearForm.defaultProps = {
-    initialValues: {
-        localStorageKeys: [],
-        sessionStorageKeys: [],
-        indexedDatabaseKeys: [],
-    },
 }
 
 ClearForm.propTypes = {
