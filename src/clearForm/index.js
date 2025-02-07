@@ -1,2 +1,2 @@
-export * from './ClearForm.js'
-export * from './FormSection.js'
+export * from './ClearForm.jsx'
+export * from './FormSection.jsx'
