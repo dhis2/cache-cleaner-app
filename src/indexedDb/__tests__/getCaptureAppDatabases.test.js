@@ -1,0 +1,244 @@
+import 'fake-indexeddb/auto.js'
+import crypto from 'crypto'
+import { TextEncoder, TextDecoder } from 'util'
+import * as dbExistsModule from '../dbExists.js'
+import { getCaptureAppDatabases } from '../getCaptureAppDatabases.js'
+
+Object.assign(global, { TextDecoder, TextEncoder, crypto: crypto.webcrypto })
+
+const deleteDatabases = (databases) =>
+    Promise.all(
+        databases.map(
+            (database) =>
+                new Promise((resolve, reject) => {
+                    const request = window.indexedDB.open(database)
+                    request.onerror = reject
+                    request.onsuccess = () => {
+                        request.result.close()
+                        const closeRequest =
+                            window.indexedDB.deleteDatabase(database)
+                        closeRequest.onsuccess = resolve
+                        closeRequest.onerror = reject
+                    }
+                })
+        )
+    )
+
+describe('indexedDB - getCaptureAppDatabases', () => {
+    const baseUrl = 'http://localhost:8080'
+    const baseUrlHash =
+        'a76d8c3e94eba61fc46b5cc05fc51e5f6df1d0f46d901d32e9c27bb251f155ae'
+    const indexedDB = window.indexedDB
+
+    const createDb = (name) =>
+        new Promise((resolve, reject) => {
+            const request = window.indexedDB.open(name)
+
+            request.onerror = reject
+            request.onsuccess = () => {
+                request.result.close()
+                resolve()
+            }
+        })
+
+    const createDBSet = async (
+        mainDb,
+        metadataDatabases,
+        offlineDataDatabases = []
+    ) => {
+        // create DBs
+        await Promise.all(
+            [...metadataDatabases, ...offlineDataDatabases].map((dbName) =>
+                createDb(dbName)
+            )
+        )
+
+        // create capture app DB with object store
+        const db = await new Promise((resolve, reject) => {
+            const request = window.indexedDB.open(mainDb)
+
+            request.onerror = reject
+
+            request.onupgradeneeded = (event) => {
+                const db = event.target.result
+                db.createObjectStore('userCaches')
+            }
+
+            request.onsuccess = (event) => {
+                const db = event.target.result
+                resolve(db)
+            }
+        })
+
+        // add user database names to capture app db
+        await new Promise((resolve, reject) => {
+            const transaction = db.transaction(['userCaches'], 'readwrite')
+
+            transaction.oncomplete = () => {
+                db.close()
+                resolve()
+            }
+
+            transaction.onerror = () => {
+                db.close()
+                reject()
+            }
+
+            const newObjectStore = transaction.objectStore('userCaches')
+            newObjectStore.put({ values: metadataDatabases }, 'accessHistory')
+            offlineDataDatabases &&
+                newObjectStore.put(
+                    { values: offlineDataDatabases },
+                    'offlineDataAccessHistory'
+                )
+        })
+    }
+
+    beforeEach(() => {
+        // Reset to the fake indexedDB in case it was overwritten
+        window.indexedDB = indexedDB
+    })
+
+    it('should return some capture app databases for old versions', async () => {
+        const captureAppDb = 'dhis2ca'
+        const userIds = ['foo', 'bar']
+        const userDatabases = userIds.map((id) => `${captureAppDb}${id}`)
+        const allDatabases = [captureAppDb, ...userDatabases]
+
+        try {
+            await createDBSet(captureAppDb, userDatabases)
+            const captureAppDatabases = await getCaptureAppDatabases(baseUrl)
+            expect(captureAppDatabases).toEqual(allDatabases)
+        } finally {
+            // Clean up databases
+            await deleteDatabases(allDatabases)
+        }
+    })
+
+    it('should return some capture app databases for new versions', async () => {
+        const captureAppDb = `dhis2ca-${baseUrlHash}`
+        const userIds = ['user1', 'user2']
+        const metadataDatabases = userIds.map((id) => `${captureAppDb}-${id}`)
+        const offlineDataDatabases = metadataDatabases.map(
+            (metadataDb) => `${metadataDb}-offline`
+        )
+        const userDatabases = [...metadataDatabases, ...offlineDataDatabases]
+        const allDatabases = [captureAppDb, ...userDatabases]
+        try {
+            await createDBSet(
+                captureAppDb,
+                metadataDatabases,
+                offlineDataDatabases
+            )
+            const captureAppDatabases = await getCaptureAppDatabases(baseUrl)
+            expect(captureAppDatabases).toEqual(allDatabases)
+        } finally {
+            // Clean up databases
+            await deleteDatabases(allDatabases)
+        }
+    })
+
+    it('should return some capture app databases for all app versions', async () => {
+        const userIds = ['user1', 'user2']
+
+        const captureAppDbOld = 'dhis2ca'
+        const userDatabasesOld = userIds.map((id) => `${captureAppDbOld}${id}`)
+
+        const captureAppDbNew = `dhis2ca-${baseUrlHash}`
+        const metadataDatabasesNew = userIds.map(
+            (id) => `${captureAppDbNew}-${id}`
+        )
+        const offlineDataDatabasesNew = metadataDatabasesNew.map(
+            (metadataDb) => `${metadataDb}-offline`
+        )
+        const userDatabasesNew = [
+            ...metadataDatabasesNew,
+            ...offlineDataDatabasesNew,
+        ]
+
+        // hash for http://localhost:8081
+        const otherInstanceUrlHash =
+            'b213eceaa0ae58456e20c6d87bb2cfe9825302cb8d9b9db30e0f22be97eadcff'
+        const captureAppDbNewOtherInstance = `dhis2ca-${otherInstanceUrlHash}`
+
+        const metadataDatabasesNewOtherInstance = userIds.map(
+            (id) => `${captureAppDbNewOtherInstance}-${id}`
+        )
+        const offlineDataDatabasesNewOtherInstance =
+            metadataDatabasesNewOtherInstance.map(
+                (metadataDb) => `${metadataDb}-offline`
+            )
+        const userDatabasesNewOtherInstance = [
+            ...metadataDatabasesNewOtherInstance,
+            ...offlineDataDatabasesNewOtherInstance,
+        ]
+
+        const databasesForInstance = [
+            captureAppDbOld,
+            ...userDatabasesOld,
+            captureAppDbNew,
+            ...userDatabasesNew,
+        ]
+        const allDatabases = [
+            ...databasesForInstance,
+            captureAppDbNewOtherInstance,
+            ...userDatabasesNewOtherInstance,
+        ]
+
+        try {
+            await Promise.all([
+                createDBSet(captureAppDbOld, userDatabasesOld),
+                createDBSet(
+                    captureAppDbNew,
+                    metadataDatabasesNew,
+                    offlineDataDatabasesNew
+                ),
+                createDBSet(
+                    captureAppDbNewOtherInstance,
+                    metadataDatabasesNewOtherInstance,
+                    offlineDataDatabasesNewOtherInstance
+                ),
+            ])
+
+            const captureAppDatabases = await getCaptureAppDatabases(baseUrl)
+            expect(captureAppDatabases).toEqual(databasesForInstance)
+        } finally {
+            // Clean up databases
+            await deleteDatabases(allDatabases)
+        }
+    })
+
+    it('should return an empty array if there is no capture app database', () => {
+        return expect(getCaptureAppDatabases(baseUrl)).resolves.toEqual([])
+    })
+
+    it('should return an empty array if indexedDB is not available', async () => {
+        delete window.indexedDB
+        return expect(getCaptureAppDatabases(baseUrl)).resolves.toEqual([])
+    })
+
+    it('should close the database connection after evaluation when the database exists', async () => {
+        const dbExistsSpy = jest
+            .spyOn(dbExistsModule, 'dbExists')
+            .mockImplementation(() => Promise.resolve(true))
+        const closeMock = jest.fn()
+
+        window.indexedDB.open = jest.fn(() => {
+            const mockedReturn = {
+                result: {
+                    close: closeMock,
+                },
+            }
+
+            setTimeout(() => {
+                mockedReturn.onsuccess()
+            }, 0)
+
+            return mockedReturn
+        })
+
+        await getCaptureAppDatabases(baseUrl)
+        expect(closeMock).toHaveBeenCalledTimes(2)
+        dbExistsSpy.mockRestore()
+    })
+})

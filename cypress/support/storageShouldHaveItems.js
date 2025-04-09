@@ -1,3 +1,5 @@
+import { dbExists } from './common/index.js'
+
 const dhis2DatabaseNames = [
     'dhis2ou',
     'dhis2',
@@ -7,33 +9,6 @@ const dhis2DatabaseNames = [
     'dhis2er',
     'dhis2ca',
 ]
-
-const deleteDb = (win, name) =>
-    new Promise((resolve, reject) => {
-        const request = win.indexedDB.deleteDatabase(name)
-
-        request.onsuccess = resolve
-        request.onerror = reject
-    })
-
-const dbExists = (win, name) =>
-    new Promise((resolve, reject) => {
-        let alreadyExists = true
-        const request = win.indexedDB.open(name)
-
-        request.onsuccess = () => {
-            request.result.close()
-
-            if (!alreadyExists) {
-                deleteDb(win, name).then(() => resolve(false))
-            } else {
-                resolve(true)
-            }
-        }
-
-        request.onerror = (error) => reject(error)
-        request.onupgradeneeded = () => (alreadyExists = false)
-    })
 
 const sum = (numbers) =>
     numbers.reduce((curSum, curNumber) => curSum + curNumber, 0)
