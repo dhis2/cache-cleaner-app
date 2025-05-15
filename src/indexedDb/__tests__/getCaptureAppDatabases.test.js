@@ -43,14 +43,15 @@ describe('indexedDB - getCaptureAppDatabases', () => {
 
     const createDBSet = async (
         mainDb,
-        metadataDatabases,
-        offlineDataDatabases = []
+        { userDatabases, userMetadataDatabases, userDataDatabases }
     ) => {
         // create DBs
         await Promise.all(
-            [...metadataDatabases, ...offlineDataDatabases].map((dbName) =>
-                createDb(dbName)
-            )
+            [
+                ...(userDatabases || []),
+                ...(userMetadataDatabases || []),
+                ...(userDataDatabases || []),
+            ].map((dbName) => createDb(dbName))
         )
 
         // create capture app DB with object store
@@ -85,11 +86,17 @@ describe('indexedDB - getCaptureAppDatabases', () => {
             }
 
             const newObjectStore = transaction.objectStore('userCaches')
-            newObjectStore.put({ values: metadataDatabases }, 'accessHistory')
-            offlineDataDatabases &&
+            userDatabases &&
+                newObjectStore.put({ values: userDatabases }, 'accessHistory')
+            userMetadataDatabases &&
                 newObjectStore.put(
-                    { values: offlineDataDatabases },
-                    'offlineDataAccessHistory'
+                    { values: userMetadataDatabases },
+                    'accessHistoryMetadata'
+                )
+            userDataDatabases &&
+                newObjectStore.put(
+                    { values: userDataDatabases },
+                    'accessHistoryData'
                 )
         })
     }
@@ -106,7 +113,7 @@ describe('indexedDB - getCaptureAppDatabases', () => {
         const allDatabases = [captureAppDb, ...userDatabases]
 
         try {
-            await createDBSet(captureAppDb, userDatabases)
+            await createDBSet(captureAppDb, { userDatabases })
             const captureAppDatabases = await getCaptureAppDatabases(baseUrl)
             expect(captureAppDatabases).toEqual(allDatabases)
         } finally {
@@ -118,18 +125,19 @@ describe('indexedDB - getCaptureAppDatabases', () => {
     it('should return some capture app databases for new versions', async () => {
         const captureAppDb = `dhis2ca-${baseUrlHash}`
         const userIds = ['user1', 'user2']
-        const metadataDatabases = userIds.map((id) => `${captureAppDb}-${id}`)
-        const offlineDataDatabases = metadataDatabases.map(
-            (metadataDb) => `${metadataDb}-offline`
+        const userMetadataDatabases = userIds.map(
+            (id) => `${captureAppDb}-${id}-metadata`
         )
-        const userDatabases = [...metadataDatabases, ...offlineDataDatabases]
+        const userDataDatabases = userIds.map(
+            (id) => `${captureAppDb}-${id}-data`
+        )
+        const userDatabases = [...userMetadataDatabases, ...userDataDatabases]
         const allDatabases = [captureAppDb, ...userDatabases]
         try {
-            await createDBSet(
-                captureAppDb,
-                metadataDatabases,
-                offlineDataDatabases
-            )
+            await createDBSet(captureAppDb, {
+                userMetadataDatabases,
+                userDataDatabases,
+            })
             const captureAppDatabases = await getCaptureAppDatabases(baseUrl)
             expect(captureAppDatabases).toEqual(allDatabases)
         } finally {
@@ -146,15 +154,12 @@ describe('indexedDB - getCaptureAppDatabases', () => {
 
         const captureAppDbNew = `dhis2ca-${baseUrlHash}`
         const metadataDatabasesNew = userIds.map(
-            (id) => `${captureAppDbNew}-${id}`
+            (id) => `${captureAppDbNew}-${id}-metadata`
         )
-        const offlineDataDatabasesNew = metadataDatabasesNew.map(
-            (metadataDb) => `${metadataDb}-offline`
+        const dataDatabasesNew = userIds.map(
+            (id) => `${captureAppDbNew}-${id}-data`
         )
-        const userDatabasesNew = [
-            ...metadataDatabasesNew,
-            ...offlineDataDatabasesNew,
-        ]
+        const userDatabasesNew = [...metadataDatabasesNew, ...dataDatabasesNew]
 
         // hash for http://localhost:8081
         const otherInstanceUrlHash =
@@ -162,15 +167,14 @@ describe('indexedDB - getCaptureAppDatabases', () => {
         const captureAppDbNewOtherInstance = `dhis2ca-${otherInstanceUrlHash}`
 
         const metadataDatabasesNewOtherInstance = userIds.map(
-            (id) => `${captureAppDbNewOtherInstance}-${id}`
+            (id) => `${captureAppDbNewOtherInstance}-${id}-metadata`
         )
-        const offlineDataDatabasesNewOtherInstance =
-            metadataDatabasesNewOtherInstance.map(
-                (metadataDb) => `${metadataDb}-offline`
-            )
+        const dataDatabasesNewOtherInstance = userIds.map(
+            (id) => `${captureAppDbNewOtherInstance}-${id}-data`
+        )
         const userDatabasesNewOtherInstance = [
             ...metadataDatabasesNewOtherInstance,
-            ...offlineDataDatabasesNewOtherInstance,
+            ...dataDatabasesNewOtherInstance,
         ]
 
         const databasesForInstance = [
@@ -187,17 +191,17 @@ describe('indexedDB - getCaptureAppDatabases', () => {
 
         try {
             await Promise.all([
-                createDBSet(captureAppDbOld, userDatabasesOld),
-                createDBSet(
-                    captureAppDbNew,
-                    metadataDatabasesNew,
-                    offlineDataDatabasesNew
-                ),
-                createDBSet(
-                    captureAppDbNewOtherInstance,
-                    metadataDatabasesNewOtherInstance,
-                    offlineDataDatabasesNewOtherInstance
-                ),
+                createDBSet(captureAppDbOld, {
+                    userDatabases: userDatabasesOld,
+                }),
+                createDBSet(captureAppDbNew, {
+                    userMetadataDatabases: metadataDatabasesNew,
+                    userDataDatabases: dataDatabasesNew,
+                }),
+                createDBSet(captureAppDbNewOtherInstance, {
+                    userMetadataDatabases: metadataDatabasesNewOtherInstance,
+                    userDataDatabases: dataDatabasesNewOtherInstance,
+                }),
             ])
 
             const captureAppDatabases = await getCaptureAppDatabases(baseUrl)

@@ -6,7 +6,7 @@ const userCachesStoreName = 'userCaches'
 
 const getDatabases = async (
     sourceDbName,
-    hasSeparateDatabaseForOfflineData = false
+    hasSeparateDatabaseForUserData = false
 ) => {
     let dbNames
     let db
@@ -23,22 +23,24 @@ const getDatabases = async (
         const accessHistory = await getKeyFromObjectStore(
             db,
             userCachesStoreName,
-            'accessHistory'
+            hasSeparateDatabaseForUserData
+                ? 'accessHistoryMetadata'
+                : 'accessHistory'
         )
 
         if (accessHistory?.values) {
             dbNames = [...dbNames, ...accessHistory.values]
         }
 
-        if (hasSeparateDatabaseForOfflineData) {
-            const offlineDataAccessHistory = await getKeyFromObjectStore(
+        if (hasSeparateDatabaseForUserData) {
+            const accessHistoryData = await getKeyFromObjectStore(
                 db,
                 userCachesStoreName,
-                'offlineDataAccessHistory'
+                'accessHistoryData'
             )
 
-            if (offlineDataAccessHistory?.values) {
-                dbNames = [...dbNames, ...offlineDataAccessHistory.values]
+            if (accessHistoryData?.values) {
+                dbNames = [...dbNames, ...accessHistoryData.values]
             }
         }
     } catch {

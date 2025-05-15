@@ -1,22 +1,26 @@
 import { Given, When, Then, Before } from 'cypress-cucumber-preprocessor/steps'
 import { dbExists, deleteDb } from '../../support/common/index.js'
 
+const objectStoreNameForUserCaches = 'userCaches'
+
 const instanceDbNameOld = 'dhis2ca'
 const userCachesOld = ['dhis2causer1', 'dhis2causer2']
 
 let instanceDbNameNew
-let userCachesNew
-let userCachesNewOfflineData
+let userCachesNewMetadata
+let userCachesNewData
 
 Before(async () => {
     instanceDbNameNew = `dhis2ca-${await hashSHA256(
         Cypress.env('dhis2BaseUrl')
     )}`
-    userCachesNew = ['userId1', 'userId2'].map(
-        (userId) => `${instanceDbNameNew}-${userId}`
+
+    const users = ['userId1', 'userId2']
+    userCachesNewMetadata = users.map(
+        (userId) => `${instanceDbNameNew}-${userId}-metadata`
     )
-    userCachesNewOfflineData = userCachesNew.map(
-        (userCache) => `${userCache}-offline`
+    userCachesNewData = users.map(
+        (userId) => `${instanceDbNameNew}-${userId}-data`
     )
 })
 
@@ -49,21 +53,28 @@ const openDb = (win, name, objectStoreName) =>
         }
     })
 
-const addData = (db, objectStoreName, { userCaches, userCachesOfflineData }) =>
+const addData = (db, { userCaches, userCachesMetadata, userCachesData }) =>
     new Promise((resolve, reject) => {
-        const transaction = db.transaction([objectStoreName], 'readwrite')
+        const transaction = db.transaction(
+            [objectStoreNameForUserCaches],
+            'readwrite'
+        )
         transaction.oncomplete = resolve
         transaction.onerror = reject
 
         // add user ids with custom indexedDBs
-        const newObjectStore = transaction.objectStore(objectStoreName)
-        newObjectStore.put({ values: userCaches }, 'accessHistory')
-        if (userCachesOfflineData) {
+        const newObjectStore = transaction.objectStore(
+            objectStoreNameForUserCaches
+        )
+        userCaches &&
+            newObjectStore.put({ values: userCaches }, 'accessHistory')
+        userCachesMetadata &&
             newObjectStore.put(
-                { values: userCachesOfflineData },
-                'offlineDataAccessHistory'
+                { values: userCachesMetadata },
+                'accessHistoryMetadata'
             )
-        }
+        userCachesData &&
+            newObjectStore.put({ values: userCachesData }, 'accessHistoryData')
     })
 
 const createDb = (win, name) =>
@@ -78,7 +89,7 @@ const createDb = (win, name) =>
         request.onerror = reject
     })
 
-const createDatabasesForOldAppVersion = async (win, objectStoreName) => {
+const createDatabasesForOldAppVersion = async (win) => {
     await deleteDb(win, instanceDbNameOld)
 
     // create user dbs
@@ -87,65 +98,87 @@ const createDatabasesForOldAppVersion = async (win, objectStoreName) => {
     )
 
     // create and open dhis2ca db
-    const db = await openDb(win, instanceDbNameOld, objectStoreName)
+    const db = await openDb(
+        win,
+        instanceDbNameOld,
+        objectStoreNameForUserCaches
+    )
 
     // add names of user dbs to dhis2ca db
-    await addData(db, objectStoreName, { userCaches: userCachesOld })
+    await addData(db, { userCaches: userCachesOld })
 
     db.close()
 }
 
-const createDatabasesForNewAppVersion = async (win, objectStoreName) => {
+const createDatabasesForNewAppVersion = async (win) => {
     await deleteDb(win, instanceDbNameNew)
 
     // create user dbs
     await Promise.all(
-        userCachesNew.map((userCache) => createDb(win, userCache))
+        userCachesNewMetadata.map((userCache) => createDb(win, userCache))
     )
 
     await Promise.all(
-        userCachesNewOfflineData.map((userCache) => createDb(win, userCache))
+        userCachesNewData.map((userCache) => createDb(win, userCache))
     )
 
     // create and open dhis2ca db
-    const db = await openDb(win, instanceDbNameNew, objectStoreName)
+    const db = await openDb(
+        win,
+        instanceDbNameNew,
+        objectStoreNameForUserCaches
+    )
 
     // add names of user dbs to dhis2ca db
-    await addData(db, objectStoreName, {
-        userCaches: userCachesNew,
-        userCachesOfflineData: userCachesNewOfflineData,
+    await addData(db, {
+        userCachesMetadata: userCachesNewMetadata,
+        userCachesData: userCachesNewData,
     })
 
     db.close()
 }
 
-const getNamesFromDb = async (win, instanceDb, objectStoreName) => {
-    const db = await openDb(win, instanceDb, objectStoreName)
+const getNamesFromDb = async (
+    win,
+    instanceDb,
+    hasSeparateDatabaseForUserData = false
+) => {
+    const db = await openDb(win, instanceDb)
 
     return new Promise((resolve, reject) => {
         // access store
         const objectStore = db
-            .transaction(objectStoreName, 'readwrite')
-            .objectStore(objectStoreName)
+            .transaction(objectStoreNameForUserCaches, 'readwrite')
+            .objectStore(objectStoreNameForUserCaches)
 
         // access value of an entry whos "keyPath" equals "accessHistory"
-        const accessHistoryRequest = objectStore.get('accessHistory')
+        const accessHistoryRequest = objectStore.get(
+            hasSeparateDatabaseForUserData
+                ? 'accessHistoryMetadata'
+                : 'accessHistory'
+        )
 
         accessHistoryRequest.onsuccess = (accessHistoryEvent) => {
-            const offlineDataRequest = objectStore.get(
-                'offlineDataAccessHistory'
-            )
-
-            offlineDataRequest.onsuccess = (offlineDataEvent) => {
+            if (!hasSeparateDatabaseForUserData) {
                 resolve({
                     userCaches: accessHistoryEvent.target.result.values,
-                    userCachesOfflineData:
-                        offlineDataEvent.target.result?.values,
+                })
+                return
+            }
+
+            const accessHistoryDataRequest =
+                objectStore.get('accessHistoryData')
+
+            accessHistoryDataRequest.onsuccess = (accessHistoryDataEvent) => {
+                resolve({
+                    userCachesMetadata: accessHistoryEvent.target.result.values,
+                    userCachesData:
+                        accessHistoryDataEvent.target.result?.values,
                 })
                 db.close()
             }
 
-            offlineDataRequest.onerror = reject
+            accessHistoryDataRequest.onerror = reject
         }
 
         accessHistoryRequest.onerror = reject
@@ -153,15 +186,13 @@ const getNamesFromDb = async (win, instanceDb, objectStoreName) => {
 }
 
 Given('some Capture app databases exist', () => {
-    const objectStoreName = 'userCaches'
-
     // make sure the page has finished loading
     // so all connections to databases have been closed
     cy.get('h1', { log: false })
 
     cy.window().then(async (win) => {
-        await createDatabasesForOldAppVersion(win, objectStoreName)
-        await createDatabasesForNewAppVersion(win, objectStoreName)
+        await createDatabasesForOldAppVersion(win)
+        await createDatabasesForNewAppVersion(win)
     })
 
     // Reload to ensure that DBs are being persisted
@@ -170,17 +201,16 @@ Given('some Capture app databases exist', () => {
     cy.window().then(async (win) => {
         const { userCaches: userCachesFromDbOld } = await getNamesFromDb(
             win,
-            instanceDbNameOld,
-            objectStoreName
+            instanceDbNameOld
         )
         expect(userCachesFromDbOld).to.eql(userCachesOld)
 
         const {
-            userCaches: userCachesFromDbNew,
-            userCachesOfflineData: userCachesOfflineDataFromDbNew,
-        } = await getNamesFromDb(win, instanceDbNameNew, objectStoreName)
-        expect(userCachesFromDbNew).to.eql(userCachesNew)
-        expect(userCachesOfflineDataFromDbNew).to.eql(userCachesNewOfflineData)
+            userCachesMetadata: userCachesMetadataFromDbNew,
+            userCachesData: userCachesDataFromDbNew,
+        } = await getNamesFromDb(win, instanceDbNameNew, true)
+        expect(userCachesMetadataFromDbNew).to.eql(userCachesNewMetadata)
+        expect(userCachesDataFromDbNew).to.eql(userCachesNewData)
     })
 
     cy.get('input[value="dhis2ca"]').should('exist')
@@ -200,8 +230,8 @@ Then('all the Capture app databases should be deleted', () => {
             instanceDbNameOld,
             ...userCachesOld,
             instanceDbNameNew,
-            ...userCachesNew,
-            ...userCachesNewOfflineData,
+            ...userCachesNewMetadata,
+            ...userCachesNewData,
         ].forEach((dbName) => {
             // use a cy command to ensure sequential execution
             cy.wrap(dbName).then(async (name) => {
