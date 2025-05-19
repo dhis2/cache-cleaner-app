@@ -6,9 +6,8 @@
     "defaultCommandTimeout": 20000,
     "experimentalInteractiveRunEvents": true,
     "env": {
-      "dhis2ApiVersion": "40",
-      "dhis2BaseUrl": "https://debug.dhis2.org/dev",
-      "dhis2DataTestPrefix": "dhis2-cachecleaner"
+        "dhis2ApiVersion": "40",
+        "dhis2BaseUrl": "https://debug.dhis2.org/dev",
+        "dhis2DataTestPrefix": "dhis2-cachecleaner"
     }
-  }
-  
+}
