@@ -3,9 +3,9 @@ import { Button, Help, ReactFinalForm } from '@dhis2/ui'
 import { FORM_ERROR } from 'final-form'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Actions } from '../actions/Actions.js'
+import { Actions } from '../actions/Actions.jsx'
 import styles from './ClearForm.module.css'
-import { FormSection } from './FormSection.js'
+import { FormSection } from './FormSection.jsx'
 
 const { Form } = ReactFinalForm
 
@@ -23,9 +23,18 @@ const validate = (values) => {
     return errors
 }
 
+// Use this as a stable reference for default props
+const defaultProps = {
+    initialValues: {
+        localStorageKeys: [],
+        sessionStorageKeys: [],
+        indexedDatabaseKeys: [],
+    },
+}
+
 export const ClearForm = ({
     onSubmit,
-    initialValues,
+    initialValues = defaultProps.initialValues,
     localStorageKeys,
     sessionStorageKeys,
     indexedDatabaseKeys,
@@ -141,14 +150,6 @@ export const ClearForm = ({
             )}
         </Form>
     )
-}
-
-ClearForm.defaultProps = {
-    initialValues: {
-        localStorageKeys: [],
-        sessionStorageKeys: [],
-        indexedDatabaseKeys: [],
-    },
 }
 
 ClearForm.propTypes = {

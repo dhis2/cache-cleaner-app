@@ -6,7 +6,7 @@ import {
 } from '@dhis2/ui'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Actions } from '../actions/Actions.js'
+import { Actions } from '../actions/Actions.jsx'
 import styles from './FormSection.module.css'
 
 const { Field } = ReactFinalForm
