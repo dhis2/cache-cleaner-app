@@ -21,23 +21,22 @@
         "cypress:live": "start-server-and-test 'yarn start:nobrowser' http://localhost:3000 'yarn cypress open --env networkMode=live'"
     },
     "devDependencies": {
-        "@dhis2/cli-app-scripts": "^11.7.1",
-        "@dhis2/cli-style": "^10.5.1",
+        "@dhis2/cli-app-scripts": "^12.3.0",
+        "@dhis2/cli-style": "^10.7.6",
         "@dhis2/cli-utils-cypress": "^8.0.1",
         "@dhis2/cypress-commands": "^8.0.1",
         "@dhis2/cypress-plugins": "^8.0.1",
-        "@testing-library/react-hooks": "^3.4.1",
+        "@testing-library/dom": "^10.4.0",
+        "@testing-library/react": "^16.2.0",
         "fake-indexeddb": "^3.0.2",
         "react-test-renderer": "^16.13.1",
         "start-server-and-test": "^1.12.5"
     },
     "dependencies": {
-        "@dhis2/app-runtime": "^3.7.0",
+        "@dhis2/app-runtime": "^3.13.1",
         "@dhis2/d2-i18n": "^1.1.0",
         "@dhis2/prop-types": "^3.1.2",
-        "@dhis2/ui": "^9.11.4",
-        "final-form": "^4.19.1",
-        "react": "~16.14.0",
-        "react-dom": "~16.14.0"
+        "@dhis2/ui": "^10.1.11",
+        "final-form": "^4.19.1"
     }
 }
