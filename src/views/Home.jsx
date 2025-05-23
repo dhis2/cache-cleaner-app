@@ -6,6 +6,7 @@ import { useClearableStorageKeys } from '../storage/index.js'
 import styles from './Home.module.css'
 import { deleteValues } from './Home/deleteValues.js'
 import { formatDeleteValues } from './Home/formatDeleteValues.js'
+import { CAPTURE_APP_VIEW_KEY } from './Home/viewKeys.js'
 
 export const Home = () => {
     const { keys: localStorageKeys, refetch: refetchLocalStorageKeys } =
@@ -20,7 +21,7 @@ export const Home = () => {
         data: indexedDatabaseKeys,
         refetch: refetchIndexedDatabaseKeys,
     } = useClearableDatabaseKeys()
-    const { staticDatabases, userDatabases } = indexedDatabaseKeys
+    const { staticDatabases, captureAppDatabases } = indexedDatabaseKeys
 
     const refetch = async () => {
         refetchLocalStorageKeys()
@@ -29,7 +30,7 @@ export const Home = () => {
     }
 
     const onSubmit = async (values) => {
-        const formattedValues = formatDeleteValues(values, userDatabases)
+        const formattedValues = formatDeleteValues(values, captureAppDatabases)
         await deleteValues(formattedValues)
         await refetch()
     }
@@ -58,7 +59,12 @@ export const Home = () => {
                         // are kept for rejection in the confirmation step
                         localStorageKeys={localStorageKeys}
                         sessionStorageKeys={sessionStorageKeys}
-                        indexedDatabaseKeys={staticDatabases}
+                        indexedDatabaseKeys={[
+                            ...staticDatabases,
+                            ...(captureAppDatabases.length
+                                ? [CAPTURE_APP_VIEW_KEY]
+                                : []),
+                        ]}
                         onSubmit={onSubmit}
                     />
                 </>

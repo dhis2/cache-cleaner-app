@@ -1,5 +1,6 @@
+import { useConfig } from '@dhis2/app-runtime'
 import { useEffect, useState } from 'react'
-import { getCaptureAppUserDatabases } from './getCaptureAppUserDatabases.js'
+import { getCaptureAppDatabases } from './getCaptureAppDatabases.js'
 import { getClearableDatabases } from './getClearableDatabases.js'
 
 export const useClearableDatabaseKeys = () => {
@@ -12,10 +13,10 @@ export const useClearableDatabaseKeys = () => {
         // "dhis2DatabaseNames" file that acutally exist
         staticDatabases: [],
 
-        // these won't be listed, but should be deleted
-        // if the static database "dhis2ca" is deleted by the user
-        userDatabases: [],
+        // If there are any capture app databases, these can all be deleted by selecting "dhis2ca" from the UI
+        captureAppDatabases: [],
     })
+    const { baseUrl } = useConfig()
 
     useEffect(() => {
         const operation = async () => {
@@ -24,13 +25,12 @@ export const useClearableDatabaseKeys = () => {
             const staticDatabases = await getClearableDatabases().catch(
                 () => []
             )
-            const userDatabases = await getCaptureAppUserDatabases().catch(
-                () => []
-            )
+
+            const captureAppDatabases = await getCaptureAppDatabases(baseUrl)
 
             const allDatabases = {
                 staticDatabases,
-                userDatabases,
+                captureAppDatabases,
             }
 
             setData(allDatabases)
@@ -38,7 +38,7 @@ export const useClearableDatabaseKeys = () => {
         }
 
         operation()
-    }, [refetchCounter])
+    }, [refetchCounter, baseUrl])
 
     return { loading, data, refetch }
 }

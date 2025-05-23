@@ -11,7 +11,6 @@ import './setItems.js'
 import './storage.js'
 
 // indexedDB
-import './addDataToObjectStore.js'
 import './createObjectStore.js'
 import './deleteIndexedDB.js'
 import './openIndexedDB.js'

@@ -1,5 +1,5 @@
 import { act, renderHook, waitFor } from '@testing-library/react'
-import { getCaptureAppUserDatabases } from '../getCaptureAppUserDatabases.js'
+import { getCaptureAppDatabases } from '../getCaptureAppDatabases.js'
 import { getClearableDatabases } from '../getClearableDatabases.js'
 import { useClearableDatabaseKeys } from '../useClearableDatabaseKeys.js'
 
@@ -7,27 +7,27 @@ jest.mock('../getClearableDatabases', () => ({
     getClearableDatabases: jest.fn(() => Promise.reject()),
 }))
 
-jest.mock('../getCaptureAppUserDatabases', () => ({
-    getCaptureAppUserDatabases: jest.fn(() => {
+jest.mock('../getCaptureAppDatabases', () => ({
+    getCaptureAppDatabases: jest.fn(() => {
         console.log('Mocked')
         return Promise.reject()
     }),
 }))
 
 describe('indexedDB - useClearableDatabaseKeys', () => {
-    const clearableDatabases = ['dhis2ca', 'dhis2ma']
-    const clearableUserDatabases = ['dhis2cafoo', 'dhis2cabar']
+    const clearableDatabases = ['dhis2ma']
+    const clearableCaptureAppDatabases = ['dhis2ca', 'dhis2cafoo', 'dhis2cabar']
 
     getClearableDatabases.mockImplementation(
         () => new Promise((resolve) => resolve(clearableDatabases))
     )
-    getCaptureAppUserDatabases.mockImplementation(
-        () => new Promise((resolve) => resolve(clearableUserDatabases))
+    getCaptureAppDatabases.mockImplementation(
+        () => new Promise((resolve) => resolve(clearableCaptureAppDatabases))
     )
 
     afterEach(() => {
         getClearableDatabases.mockClear()
-        getCaptureAppUserDatabases.mockClear()
+        getCaptureAppDatabases.mockClear()
     })
 
     it('should load the databases in the beginning', () => {
@@ -51,11 +51,11 @@ describe('indexedDB - useClearableDatabaseKeys', () => {
         await waitFor(() =>
             expect(result.current.data).toEqual({
                 staticDatabases: clearableDatabases,
-                userDatabases: clearableUserDatabases,
+                captureAppDatabases: clearableCaptureAppDatabases,
             })
         )
         expect(getClearableDatabases).toHaveBeenCalledTimes(1)
-        expect(getCaptureAppUserDatabases).toHaveBeenCalledTimes(1)
+        expect(getCaptureAppDatabases).toHaveBeenCalledTimes(1)
     })
 
     it('should refetch the databases when refetch is called', async () => {
@@ -64,16 +64,16 @@ describe('indexedDB - useClearableDatabaseKeys', () => {
         await waitFor(() =>
             expect(result.current.data).toEqual({
                 staticDatabases: clearableDatabases,
-                userDatabases: clearableUserDatabases,
+                captureAppDatabases: clearableCaptureAppDatabases,
             })
         )
         expect(getClearableDatabases).toHaveBeenCalledTimes(1)
-        expect(getCaptureAppUserDatabases).toHaveBeenCalledTimes(1)
+        expect(getCaptureAppDatabases).toHaveBeenCalledTimes(1)
 
         getClearableDatabases.mockImplementationOnce(
             () => new Promise((resolve) => resolve(['foo', 'bar']))
         )
-        getCaptureAppUserDatabases.mockImplementationOnce(
+        getCaptureAppDatabases.mockImplementationOnce(
             () => new Promise((resolve) => resolve(['baz', 'foobar']))
         )
 
@@ -84,10 +84,10 @@ describe('indexedDB - useClearableDatabaseKeys', () => {
         await waitFor(() =>
             expect(result.current.data).toEqual({
                 staticDatabases: ['foo', 'bar'],
-                userDatabases: ['baz', 'foobar'],
+                captureAppDatabases: ['baz', 'foobar'],
             })
         )
         expect(getClearableDatabases).toHaveBeenCalledTimes(2)
-        expect(getCaptureAppUserDatabases).toHaveBeenCalledTimes(2)
+        expect(getCaptureAppDatabases).toHaveBeenCalledTimes(2)
     })
 })
