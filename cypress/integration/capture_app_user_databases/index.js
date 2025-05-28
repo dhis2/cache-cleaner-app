@@ -118,6 +118,7 @@ Given('some user databases exist', () => {
 
 When('the user deletes the dhis2ca database', () => {
     cy.getWithDataTest('{selectall}').click()
+    cy.getWithDataTest('{clear-top}').should('not.be.disabled')
     cy.getWithDataTest('{clear-top}').click()
     cy.getWithDataTest('{loading}')
     cy.get('h1')
