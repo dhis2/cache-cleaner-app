@@ -1,3 +1,10 @@
+# [100.2.0](https://github.com/dhis2/cache-cleaner-app/compare/v100.1.19...v100.2.0) (2025-08-11)
+
+
+### Features
+
+* [DHIS2-15903] support new capture app caching logic ([#631](https://github.com/dhis2/cache-cleaner-app/issues/631)) ([65a6871](https://github.com/dhis2/cache-cleaner-app/commit/65a6871c629101a30ab0236b6d3742bcae5b7d25))
+
 ## [100.1.19](https://github.com/dhis2/cache-cleaner-app/compare/v100.1.18...v100.1.19) (2025-05-28)
 
 
