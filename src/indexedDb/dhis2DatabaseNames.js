@@ -5,5 +5,4 @@ export const dhis2DatabaseNames = [
     'dhis2ec',
     'dhis2de',
     'dhis2er',
-    'dhis2ca',
 ]
