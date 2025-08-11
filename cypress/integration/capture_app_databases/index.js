@@ -218,8 +218,9 @@ Given('some Capture app databases exist', () => {
 
 When('the user clears dhis2ca', () => {
     cy.getWithDataTest('{selectall}').click()
+    cy.getWithDataTest('{clear-top}').should('not.be.disabled')
     cy.getWithDataTest('{clear-top}').click()
-    cy.getWithDataTest('{loading}')
+    cy.getWithDataTest('{clear-top}').should('be.disabled')
     cy.get('h1')
 })
 
