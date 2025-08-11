@@ -1,3 +1,13 @@
+## [100.1.19](https://github.com/dhis2/cache-cleaner-app/compare/v100.1.18...v100.1.19) (2025-05-28)
+
+
+### Bug Fixes
+
+* format ([5f64c86](https://github.com/dhis2/cache-cleaner-app/commit/5f64c868a94d3d4cb8091259074650bd6dba2942))
+* try adding assertion ([57c7720](https://github.com/dhis2/cache-cleaner-app/commit/57c7720185c0fee034f4f7214828ab0fd91a2435))
+* try resetting refetch counter using previous value ([f490713](https://github.com/dhis2/cache-cleaner-app/commit/f49071309c67e67cd38d0825b4b452fee5a5de36))
+* **app-platform:** upgrade platform tools to use vite and react 18 ([16a26ba](https://github.com/dhis2/cache-cleaner-app/commit/16a26ba87dbbc2be41785c694d63d7f5c562c81d))
+
 ## [100.1.18](https://github.com/dhis2/cache-cleaner-app/compare/v100.1.17...v100.1.18) (2025-02-04)
 
 

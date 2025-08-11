@@ -5,7 +5,10 @@ import { getClearableDatabases } from './getClearableDatabases.js'
 
 export const useClearableDatabaseKeys = () => {
     const [refetchCounter, setRefetchCounter] = useState(0)
-    const refetch = () => setRefetchCounter(refetchCounter + 1)
+    const refetch = () =>
+        setRefetchCounter(
+            (previousRefetchCounter) => previousRefetchCounter + 1
+        )
 
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState({
