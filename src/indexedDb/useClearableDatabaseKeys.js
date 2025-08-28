@@ -19,7 +19,11 @@ export const useClearableDatabaseKeys = () => {
         // If there are any capture app databases, these can all be deleted by selecting "dhis2ca" from the UI
         captureAppDatabases: [],
     })
-    const { baseUrl } = useConfig()
+
+    // We need the ABSOLUTE base url for the instance when getting the Capture app databases
+    // The baseUrl of the root object returned by useConfig is not reliable here as it returns a relative url for: some backend versions (v41 and below) / app-shell versions
+    // The latest app-shell will inject the backend's contextPath into the app as baseUrl for backend versions 42 and above, but since we currently need support for older backends we are grabbing the contextPath directly
+    const { systemInfo: { contextPath } = {} } = useConfig()
 
     useEffect(() => {
         const operation = async () => {
@@ -29,7 +33,9 @@ export const useClearableDatabaseKeys = () => {
                 () => []
             )
 
-            const captureAppDatabases = await getCaptureAppDatabases(baseUrl)
+            const captureAppDatabases = await getCaptureAppDatabases(
+                contextPath
+            )
 
             const allDatabases = {
                 staticDatabases,
@@ -41,7 +47,7 @@ export const useClearableDatabaseKeys = () => {
         }
 
         operation()
-    }, [refetchCounter, baseUrl])
+    }, [refetchCounter, contextPath])
 
     return { loading, data, refetch }
 }
