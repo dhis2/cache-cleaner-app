@@ -1,3 +1,10 @@
+## [100.2.1](https://github.com/dhis2/cache-cleaner-app/compare/v100.2.0...v100.2.1) (2025-09-16)
+
+
+### Bug Fixes
+
+* [DHIS2-15903] prod env fix for Capture app caching logic ([#633](https://github.com/dhis2/cache-cleaner-app/issues/633)) ([9f37981](https://github.com/dhis2/cache-cleaner-app/commit/9f37981aa1ac4789fe29c5192decdff20eaad985))
+
 # [100.2.0](https://github.com/dhis2/cache-cleaner-app/compare/v100.1.19...v100.2.0) (2025-08-11)
 
 
