@@ -6,3 +6,7 @@ build
 
 cypress.env.json
 cypress/screenshots
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
