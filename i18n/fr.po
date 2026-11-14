@@ -1,21 +1,20 @@
-# 
 # Translators:
 # Philip Larsen Donnelly, 2020
 # Viktor Varland <viktor@dhis2.org>, 2020
 # Karoline Tufte Lien <karoline@dhis2.org>, 2020
 # Gabriela Rodriguez <grodriguezcoronado@gmail.com>, 2020
 # Yayra Gomado <ygomado@hispwca.org>, 2021
-# Esther Tokouli, 2025
+# Esther Tokouli, 2026
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
 "POT-Creation-Date: 2020-04-16T12:59:23.976Z\n"
 "PO-Revision-Date: 2020-12-02 13:50+0000\n"
-"Last-Translator: Esther Tokouli, 2025\n"
+"Last-Translator: Esther Tokouli, 2026\n"
 "Language-Team: French (https://app.transifex.com/hisp-uio/teams/100509/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
@@ -36,10 +35,10 @@ msgid "Local storage empty"
 msgstr "Stockage local vide"
 
 msgid "Select all local storage items"
-msgstr "Sélectionnez tous les éléments de stockage local"
+msgstr "Sélectionnez tous les éléments du stockage local"
 
 msgid "Deselect all local storage items"
-msgstr "Désélectionnez tous les éléments de stockage local"
+msgstr "Désélectionnez tous les éléments du stockage local"
 
 msgid "Local storage"
 msgstr "Stockage local"
@@ -48,10 +47,10 @@ msgid "Session storage empty"
 msgstr "Le stockage de la session est vide"
 
 msgid "Select all session storage items"
-msgstr "Sélectionnez tous les éléments de stockage de session"
+msgstr "Sélectionnez tous les éléments du stockage de session"
 
 msgid "Deselect all session storage items"
-msgstr "Désélectionnez tous les éléments de stockage de session"
+msgstr "Désélectionnez tous les éléments du stockage de session"
 
 msgid "Session storage"
 msgstr "Stockage de session"
